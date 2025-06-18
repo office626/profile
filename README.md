@@ -4,6 +4,8 @@
 ## about me
 I'm Toshihiro Tsuchiya—a Smart City advocate passionate about enhancing community well-being through innovative technology. I research, promote, and implement smart city and supercity initiatives to build healthier, more livable urban environments.
 
+Well-beingなまちと暮らしを目指して、新しい技術をよりよく活かす】スマートシティ(略してスシ)屋のツチ屋です。
+
 ## 略歴
 - 1979年6月26日　長野県小諸市生まれ
 - 1998年3月　長野県上田高等学校卒業
