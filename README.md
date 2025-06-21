@@ -21,6 +21,9 @@ Well-beingなまちと暮らしを目指して、新しい技術をよりよく�
 
 ## 資格等
 - 経済産業大臣認定　中小企業診断士（2013年10月認定）
+- JDLA Deep Learning for GENERAL 2025 #3
+　https://www.openbadge-global.com/ns/portal/openbadge/public/assertions/user/TnE5dW81aXZDYzVXdEpxVXZzU0Z1QT09
+- 
 
 ## 業務経歴
 （今後整理予定）
