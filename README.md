@@ -4,7 +4,7 @@
 ## about me
 I'm Toshihiro Tsuchiya—a Smart City advocate passionate about enhancing community well-being through innovative technology. I research, promote, and implement smart city and supercity initiatives to build healthier, more livable urban environments.
 
-Well-beingなまちと暮らしを目指して、新しい技術をよりよく活かす】スマートシティ(略してスシ)屋のツチ屋です。
+Well-beingなまちと暮らしを目指して、新しい技術をよりよく活かす。まちとしごととくらしの研究所
 
 ## 略歴
 - 1979年6月26日　長野県小諸市生まれ
@@ -18,6 +18,9 @@ Well-beingなまちと暮らしを目指して、新しい技術をよりよく�
 - 2019年6月　内閣府科学技術・イノベーション推進本部 出向
 - 2021年6月　日本電気株式会社 スーパーシティ事業推進本部　復帰
 - 2022年6月　一般社団法人スマートシティ社会実装コンソーシアム　出向
+- 2025年6月　日本電気株式退社　退職
+- 2025年10月　まちとしごととくらしの研究所　所長/主任研究員
+- 2025年12月　株式会社子ラボ屋　代表取締役
 
 ## 資格等
 - 経済産業大臣認定　中小企業診断士（2013年10月認定）
