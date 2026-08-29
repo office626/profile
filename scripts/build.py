@@ -145,9 +145,10 @@ dl.contact { margin: 0; }
 .form-grid textarea { min-height: 120px; resize: vertical; }
 .btn { display: inline-block; padding: 12px 24px; background: var(--accent); color: #fff;
   border: 0; border-radius: 2px; font: inherit; cursor: pointer; }
-.lang-divider { margin: 64px 0 32px; padding-top: 48px; border-top: 3px double var(--rule);
-  text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: .2em;
-  color: var(--ink-soft); }
+.endnotes { color: var(--ink-soft); font-size: 12.5px; line-height: 1.9; }
+.endnotes h2 { font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em;
+  color: var(--ink-soft); margin-bottom: 14px; }
+.endnotes p { margin: 0 0 8px; }
 footer { padding: 40px 0 0; font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); }
 @media (max-width: 640px) {
   .timeline > li { grid-template-columns: 1fr; }
@@ -357,14 +358,11 @@ def build_html(d, portfolio):
 
     npo = d.get("npo_offering", {})
     eng = d.get("engagement", {})
-    pol = d.get("policies", {})
-    ord_ent = d.get("ordering_entities", [])
 
-    en = d.get("en", {})
-    en_audience = "".join(
-        f'<div class="audience-card"><strong>{e(g["label"])}</strong>'
-        f'<p>{e(g["summary"])}</p></div>'
-        for g in en.get("audience_guides", [])
+    endn = d.get("endnotes", {})
+    endnote_items = "".join(
+        f'<p><strong>{e(n["label"])}：</strong>{e(n["body"])}</p>'
+        for n in endn.get("items", [])
     )
 
     return f"""<!DOCTYPE html>
@@ -382,7 +380,6 @@ def build_html(d, portfolio):
     <a href="#services">サービス</a>
     <a href="portfolio.html">実績・ポートフォリオ</a>
     <a href="#contact">お仕事のご相談</a>
-    <a href="#english">English</a>
   </nav>
 
   <header>
@@ -463,22 +460,6 @@ def build_html(d, portfolio):
     <p class="lead" style="margin-top:16px">{e(eng.get('fees', '').strip())}</p>
   </section>
 
-  <section>
-    <h2>方針</h2>
-    <p><strong>中立性：</strong>{e(pol.get('neutrality', ''))}</p>
-    <p><strong>守秘：</strong>{e(pol.get('confidentiality', ''))}</p>
-    <p><strong>リモート：</strong>{e(pol.get('remote', ''))}</p>
-  </section>
-
-  <section>
-    <h2>発注先の別</h2>
-    <ul class="plainlist">{''.join(
-        f'<li><strong>{e(o["entity"])}</strong> — {e(o["use_for"])}</li>'
-        for o in ord_ent
-    )}</ul>
-    <p class="lead">{e(d.get("invoice_note", ""))}</p>
-  </section>
-
   <section id="contact">
     <h2>連絡先・お仕事のご相談</h2>
     <dl class="contact">{contacts}</dl>
@@ -487,34 +468,9 @@ def build_html(d, portfolio):
     {build_contact_form(d)}
   </section>
 
-  <div class="lang-divider" id="english">ENGLISH PROFILE</div>
-
-  <header style="padding-top:24px;border:0">
-    <h1 style="font-size:clamp(28px,5vw,42px)">{e(b['name_en'])}</h1>
-    <p class="tagline">{e(en.get('tagline', ''))}</p>
-    <p class="affil-line">{e(b['organization'])} — {e(b['title'])}</p>
-  </header>
-
-  <section>
-    <h2>For whom</h2>
-    <div class="audience-grid">{en_audience}</div>
-  </section>
-
-  <section>
-    <h2>{e(en.get('section_titles', {}).get('offerings', 'Services'))}</h2>
-    <p class="lead">{e(en.get('offerings_note', ''))}</p>
-    <div class="cards">{build_offerings_html(d, 'Experience')}</div>
-  </section>
-
-  <section>
-    <h2>{e(en.get('section_titles', {}).get('career', 'Career'))}</h2>
-    <ul class="timeline">{build_career_html(d)}</ul>
-  </section>
-
-  <section>
-    <h2>{e(en.get('section_titles', {}).get('contact', 'Contact'))}</h2>
-    <dl class="contact">{contacts}</dl>
-    {build_contact_form(d)}
+  <section class="endnotes">
+    <h2>{e(endn.get('title', '補足事項（参考情報）'))}</h2>
+    {endnote_items}
   </section>
 
   <footer>LAST UPDATED {e(str(meta.get('updated')))} ｜
@@ -670,6 +626,13 @@ def build_readme(d, portfolio):
         v = f"<{c['value']}>" if c.get("link") else c["value"]
         a(f"- **{c['label']}**　{v}")
     a("")
+    endn = d.get("endnotes", {})
+    if endn.get("items"):
+        a(f"## {endn.get('title', '補足事項（参考情報）')}")
+        a("")
+        for n in endn["items"]:
+            a(f"- {n['label']}：{n['body']}")
+        a("")
     a(f"最終更新：{meta.get('updated')}")
     return "\n".join(o) + "\n"
 

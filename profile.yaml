@@ -397,18 +397,17 @@ engagement:
     自治体向けは委員報酬・謝金・業務委託のいずれかで、過去の契約実績に沿った形態をご提案します。
     詳細は初回ヒアリング後にお見積りいたします。
 
-policies:
-  neutrality: "2025年6月にNECを退職済みです。現在、いかなるベンダーとも資本関係・販売関係・専属契約はありません。案件ごとに利益相反が生じる場合は、事前に開示し、必要に応じて辞退または役割を限定します。"
-  confidentiality: "守秘契約の締結に対応します。公開プロフィール・ポートフォリオに掲載する事例は、クライアントの許諾または匿名化・一般化した表現に限定します。"
-  remote: "オンライン参加・リモート伴走に対応します。福島県・千葉県・関東圏は対面訪問も可能です。"
-
-ordering_entities:
-  - entity: "まちとしごととくらしの研究所（土屋俊博）"
-    use_for: "コンサルティング、自治体委員・講師、中小企業支援、研修・講演"
-  - entity: "株式会社子ラボ屋"
-    use_for: "法人契約が必要な案件、商品・サービス開発関連（内容により使い分け）"
-
-invoice_note: "適格請求書発行事業者の登録は行っておりません。お見積り・お支払い条件は個別にご相談ください。"
+endnotes:
+  title: "補足事項（参考情報）"
+  items:
+    - label: "中立性"
+      body: "2025年6月にNECを退職済みです。現在、いかなるベンダーとも資本関係・専属契約はありません。案件ごとに利益相反が生じる場合は、事前に開示し、必要に応じて辞退または役割を限定します。"
+    - label: "守秘"
+      body: "守秘契約の締結に対応します。公開プロフィール・ポートフォリオに掲載する事例は、クライアントの許諾または匿名化・一般化した表現に限定します。"
+    - label: "リモート"
+      body: "オンライン参加・リモート伴走に対応します。福島県・千葉県・関東圏は対面訪問も可能です。"
+    - label: "適格請求書"
+      body: "適格請求書発行事業者の登録は行っておりません。お見積り・お支払い条件は個別にご相談ください。"
 
 contact_form:
   action: "https://formsubmit.co/tutti@office626.com"
@@ -426,37 +425,3 @@ contacts:
   - { label: "Tel",       value: "090-4432-5156",                                  public: false, link: false }
   - { label: "住所",      value: "〒965-0817 福島県会津若松市千石町3-43-603号 エスパーダ千石", public: false, link: false }
   - { label: "LINE",      value: "tutti666",                                       public: false, link: false }
-
-# 英語版（公開ページ下部に表示）
-en:
-  tagline: "Management consultant with inside experience across national policy, local government, large enterprises, and SMEs."
-  audience_guides:
-    - label: "Government & public sector"
-      summary: "Planning, committees, workshops. Remote participation available."
-    - label: "SME owners"
-      summary: "Start with free consultation entry points. Business improvement and productivity support."
-    - label: "Large enterprises"
-      summary: "Public-private collaboration coordination. No vendor exclusivity."
-    - label: "NPOs & community groups"
-      summary: "Pro bono or reduced-fee consultation slots available."
-    - label: "Training & events"
-      summary: "Keynotes, workshops, moderation from 90 minutes to half-day."
-  free_entry:
-    headline: "Free or low-cost entry points are available"
-    intro: "SME owners in Fukushima can start through public support programs."
-  section_titles:
-    offerings: "Services"
-    portfolio: "Selected work"
-    publications: "Public deliverables"
-    media: "Media coverage"
-    writings: "Writings & columns"
-    career: "Career"
-    affiliations: "Current roles"
-    credentials: "Credentials & appointments"
-    fields: "Focus areas"
-    engagement: "How to engage"
-    policies: "Neutrality & confidentiality"
-    contact: "Contact"
-    training: "Training topics"
-    npo: "Support for NPOs & communities"
-  offerings_note: "See Japanese section above for full service descriptions."
