@@ -218,6 +218,16 @@ def build_media_html(mc):
     )
 
 
+def cred_item_html(item, e):
+    if isinstance(item, dict):
+        label = item.get("label", "")
+        url = item.get("url")
+        if url:
+            return f'<li><a href="{e(url)}">{e(label)}</a></li>'
+        return f"<li>{e(label)}</li>"
+    return f"<li>{e(item)}</li>"
+
+
 def build_writings_html(wr):
     e = html.escape
     if not wr:
@@ -331,7 +341,7 @@ def build_html(d, portfolio):
 
     creds = ""
     for g in d.get("credentials", []):
-        items = "".join(f"<li>{e(i)}</li>" for i in g["items"])
+        items = "".join(cred_item_html(i, e) for i in g["items"])
         creds += f'<div class="credgroup"><h3>{e(g["group"])}</h3><ul>{items}</ul></div>'
 
     fields = "".join(f"<li>{e(x)}</li>" for x in d.get("fields", []))
