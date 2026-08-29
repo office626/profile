@@ -237,7 +237,9 @@ def build_html(d, portfolio):
 
     fe = d.get("free_entry", {})
     free_items = "".join(
-        f'<div class="highlight-box"><h3>{e(it["title"])}</h3><p>{e(it["body"])}</p></div>'
+        f'<div class="highlight-box"><h3>'
+        f'{"<a href=\"" + e(it["url"]) + "\">" + e(it["title"]) + "</a>" if it.get("url") else e(it["title"])}'
+        f'</h3><p>{e(it["body"])}</p></div>'
         for it in fe.get("items", [])
     )
 
@@ -529,7 +531,10 @@ def build_readme(d, portfolio):
     a(fe.get("intro", ""))
     a("")
     for it in fe.get("items", []):
-        a(f"- **{it['title']}** — {it['body']}")
+        if it.get("url"):
+            a(f"- [{it['title']}]({it['url']}) — {it['body']}")
+        else:
+            a(f"- **{it['title']}** — {it['body']}")
     a("")
     a("## お任せいただけること")
     a("")
