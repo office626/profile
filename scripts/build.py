@@ -63,9 +63,95 @@ def public_contacts(d):
     return [c for c in d.get("contacts", []) if c.get("public")]
 
 
-def layer_labels(d, keys):
-    L = d.get("layers", {})
+def layer_labels(d, keys, lang="ja"):
+    if lang == "ja":
+        L = d.get("layers", {})
+    else:
+        L = d.get("en", {}).get("layers", {})
     return [L[k]["label"] for k in (keys or []) if k in L]
+
+
+def localized(d, lang):
+    """Return language-specific view used by generators."""
+    b = d["basic"]
+    if lang == "ja":
+        return {
+            "lang": "ja",
+            "layers": d["layers"],
+            "basic": b,
+            "tagline": d["tagline"],
+            "intros": d["intros"],
+            "career": d.get("career", []),
+            "affiliations": d.get("affiliations", []),
+            "credentials": d.get("credentials", []),
+            "fields": d.get("fields", []),
+            "offerings": d.get("offerings", []),
+            "ui": {
+                "eyebrow": "Profile",
+                "intro": "紹介文",
+                "intro_note": "登壇者紹介や寄稿プロフィールにそのままお使いください",
+                "offerings": "お任せいただけること",
+                "offerings_legend": "それぞれの依頼が、どの立場の相手に効くかを示しています。",
+                "proof": "根拠となる経験",
+                "proof_prefix": "　根拠となる経験：",
+                "career": "経歴",
+                "affiliations": "現在の所属",
+                "credentials": "資格・委嘱",
+                "fields": "主な活動分野",
+                "contact": "連絡先",
+            },
+        }
+    e = d["en"]
+    ja_offerings = d.get("offerings", [])
+    en_offerings = []
+    for i, item in enumerate(e.get("offerings", [])):
+        layers = ja_offerings[i].get("layers", []) if i < len(ja_offerings) else []
+        en_offerings.append({**item, "layers": layers})
+    ja_career = d.get("career", [])
+    en_career = []
+    for i, item in enumerate(e.get("career", [])):
+        layers = ja_career[i].get("layers", []) if i < len(ja_career) else []
+        en_career.append({**item, "layers": layers})
+    layers = {}
+    for k, v in d.get("layers", {}).items():
+        layers[k] = {**v, "label": e["layers"][k]["label"]}
+    return {
+        "lang": "en",
+        "layers": layers,
+        "basic": {**b, **e["basic"]},
+        "tagline": e["tagline"],
+        "intros": e["intros"],
+        "career": en_career,
+        "affiliations": e.get("affiliations", []),
+        "credentials": e.get("credentials", []),
+        "fields": e.get("fields", []),
+        "offerings": en_offerings,
+        "ui": {
+            **e["ui"],
+            "intro": "Introduction",
+            "intro_note": "",
+            "proof_prefix": "Relevant experience: ",
+        },
+    }
+
+
+def localized_contacts(d, lang):
+    if lang == "ja":
+        return public_contacts(d)
+    ui = d["en"]["ui"]
+    contacts = []
+    for c in public_contacts(d):
+        if c["label"] == "オフィス":
+            continue
+        contacts.append(c)
+    for office in ui.get("offices", []):
+        contacts.append({
+            "label": ui.get("office_label", "Office"),
+            "value": office,
+            "public": True,
+            "link": False,
+        })
+    return contacts
 
 
 def write(path, text):
@@ -79,40 +165,54 @@ def write(path, text):
 # --------------------------------------------------------------------------
 # README.md
 # --------------------------------------------------------------------------
-def build_readme(d):
-    b = d["basic"]
-    meta = d["meta"]
+def build_readme_section(d, lang):
+    loc = localized(d, lang)
+    b = loc["basic"]
+    ui = loc["ui"]
     o = []
     a = o.append
 
-    a(f"# {b['name_ja']}（{b['name_kana']} / {b['name_en']}）")
+    if lang == "en":
+        a("---")
+        a("")
+        a(f"# {b['name_en']}")
+        a("")
+    else:
+        a(f"# {b['name_ja']}（{b['name_kana']} / {b['name_en']}）")
+        a("")
+
+    a(f"> {loc['tagline']}")
     a("")
-    a(f"> {d['tagline']}")
-    a("")
-    if b.get("photo"):
+    if lang == "ja" and b.get("photo"):
         a(f'<img src="{b["photo"]}" alt="{b["name_ja"]}" width="200">')
         a("")
     a(f"**{b['organization']}**　{b['title']}")
     a(f"{b['organization_note']}")
     a("")
-    a(f"{b['hometown']}／{b['base']}")
+    if lang == "ja":
+        a(f"{b['hometown']}／{b['base']}")
+    else:
+        a(f"{b['hometown']} / {b['base']}")
     a("")
-    a("---")
-    a("")
+    if lang == "ja":
+        a("---")
+        a("")
 
-    a("## 紹介文")
+    a(f"## {ui['intro']}")
     a("")
-    a("<!-- 登壇者紹介や寄稿プロフィールにそのままお使いください -->")
+    if lang == "ja":
+        a(f"<!-- {ui['intro_note']} -->")
+        a("")
+    a(loc["intros"]["medium"].strip())
     a("")
-    a(d["intros"]["medium"].strip())
-    a("")
-    a("より短い版・長い版は [`out/`](out/) にあります。")
-    a("")
+    if lang == "ja":
+        a("より短い版・長い版は [`out/`](out/) にあります。")
+        a("")
 
-    a("## お任せいただけること")
+    a(f"## {ui['offerings']}")
     a("")
-    for x in d.get("offerings", []):
-        tags = "　".join(f"`{t}`" for t in layer_labels(d, x.get("layers")))
+    for x in loc.get("offerings", []):
+        tags = "　".join(f"`{t}`" for t in layer_labels(d, x.get("layers"), lang))
         a(f"### {x['title']}")
         if tags:
             a(tags)
@@ -120,12 +220,12 @@ def build_readme(d):
         a(x["body"].strip())
         if x.get("proof"):
             a("")
-            a(f"　根拠となる経験：{x['proof']}")
+            a(f"{ui['proof_prefix']}{x['proof']}")
         a("")
 
-    a("## 経歴")
+    a(f"## {ui['career']}")
     a("")
-    for c in d.get("career", []):
+    for c in loc.get("career", []):
         head = f"**{c['title']}**"
         if c.get("period"):
             head = f"**{c['period']}**　{c['title']}"
@@ -136,37 +236,44 @@ def build_readme(d):
             a(f"  　{c['detail']}")
     a("")
 
-    a("## 現在の所属")
+    a(f"## {ui['affiliations']}")
     a("")
-    for x in d.get("affiliations", []):
+    for x in loc.get("affiliations", []):
         a(f"- **{x['since']}**　{x['name']}")
     a("")
 
-    a("## 資格・委嘱")
+    a(f"## {ui['credentials']}")
     a("")
-    for g in d.get("credentials", []):
+    for g in loc.get("credentials", []):
         a(f"### {g['group']}")
         a("")
         for i in g["items"]:
             a(f"- {i}")
         a("")
 
-    a("## 主な活動分野")
+    a(f"## {ui['fields']}")
     a("")
-    for x in d.get("fields", []):
+    for x in loc.get("fields", []):
         a(f"- {x}")
     a("")
 
-    a("## 連絡先")
+    a(f"## {ui['contact']}")
     a("")
-    for c in public_contacts(d):
+    for c in localized_contacts(d, lang):
         v = f"<{c['value']}>" if c.get("link") else c["value"]
         a(f"- **{c['label']}**　{v}")
     a("")
-    a("---")
-    a("")
-    a(f"最終更新：{meta.get('updated')}　｜　"
-      f"このページは [`profile.yaml`](profile.yaml) から自動生成しています。")
+    return o
+
+
+def build_readme(d):
+    meta = d["meta"]
+    o = build_readme_section(d, "ja")
+    o.extend(build_readme_section(d, "en"))
+    o.append("---")
+    o.append("")
+    o.append(f"最終更新：{meta.get('updated')}　｜　"
+               f"このページは [`profile.yaml`](profile.yaml) から自動生成しています。")
     return "\n".join(o) + "\n"
 
 
@@ -217,9 +324,11 @@ def build_full_md(d):
 # --------------------------------------------------------------------------
 # docs/index.html
 # --------------------------------------------------------------------------
-def build_html(d):
-    b = d["basic"]
-    L = d.get("layers", {})
+def build_html_lang_block(d, lang):
+    loc = localized(d, lang)
+    b = loc["basic"]
+    L = loc["layers"]
+    ui = loc["ui"]
     e = html.escape
 
     def chips(keys):
@@ -237,9 +346,9 @@ def build_html(d):
     )
 
     offerings = ""
-    for i, x in enumerate(d.get("offerings", []), 1):
+    for x in loc.get("offerings", []):
         proof = (
-            f'<p class="proof"><span>根拠となる経験</span>{e(x["proof"])}</p>'
+            f'<p class="proof"><span>{e(ui["proof"])}</span>{e(x["proof"])}</p>'
             if x.get("proof") else ""
         )
         offerings += f"""
@@ -251,7 +360,7 @@ def build_html(d):
       </article>"""
 
     career = ""
-    for c in d.get("career", []):
+    for c in loc.get("career", []):
         career += f"""
       <li>
         <div class="when">{e(c.get('period') or '')}</div>
@@ -266,24 +375,101 @@ def build_html(d):
     affil = "".join(
         f'<li><span class="when">{e(x["since"])}</span>'
         f'<span class="what">{e(x["name"])}</span></li>'
-        for x in d.get("affiliations", [])
+        for x in loc.get("affiliations", [])
     )
 
     creds = ""
-    for g in d.get("credentials", []):
+    for g in loc.get("credentials", []):
         items = "".join(f"<li>{e(i)}</li>" for i in g["items"])
         creds += f'<div class="credgroup"><h3>{e(g["group"])}</h3><ul>{items}</ul></div>'
 
-    fields = "".join(f"<li>{e(x)}</li>" for x in d.get("fields", []))
+    fields = "".join(f"<li>{e(x)}</li>" for x in loc.get("fields", []))
 
     contacts = ""
-    for c in public_contacts(d):
+    for c in localized_contacts(d, lang):
         v = (f'<a href="{e(c["value"])}">{e(c["value"])}</a>'
              if c.get("link") else e(c["value"]))
         contacts += f'<div class="row"><dt>{e(c["label"])}</dt><dd>{v}</dd></div>'
 
+    if lang == "ja":
+        hometown_base = f"{e(b['hometown'])}／{e(b['base'])}"
+        header = f"""
+  <header>
+    <p class="eyebrow">{e(ui['eyebrow'])}</p>
+    <h1>{e(b['name_ja'])}</h1>
+    <p class="kana">{e(b['name_kana'])} &nbsp;/&nbsp; {e(b['name_en'])}</p>
+    <p class="tagline">{e(loc['tagline'])}</p>
+    <p class="affil-line">
+      <strong>{e(b['organization'])}</strong>　{e(b['title'])}<br>
+      {e(b['organization_note'])}<br>
+      {hometown_base}
+    </p>
+  </header>"""
+    else:
+        hometown_base = f"{e(b['hometown'])} / {e(b['base'])}"
+        header = f"""
+  <div class="lang-divider" id="english"></div>
+  <header class="lang-en">
+    <p class="eyebrow">{e(ui['eyebrow'])} (English)</p>
+    <h1>{e(b['name_en'])}</h1>
+    <p class="kana">{e(b['name_ja'])} &nbsp;/&nbsp; {e(b['name_kana'])}</p>
+    <p class="tagline">{e(loc['tagline'])}</p>
+    <p class="affil-line">
+      <strong>{e(b['organization'])}</strong> — {e(b['title'])}<br>
+      {e(b['organization_note'])}<br>
+      {hometown_base}
+    </p>
+  </header>"""
+
+    return f"""{header}
+
+  <section>
+    <h2>{e(ui['offerings'])}</h2>
+    <div class="legend">
+      <p>{e(ui['offerings_legend'])}</p>
+      <div class="chips">{legend}</div>
+    </div>
+    <div class="cards">{offerings}
+    </div>
+  </section>
+
+  <section>
+    <h2>{e(ui['career'])}</h2>
+    <ul class="timeline">{career}
+    </ul>
+  </section>
+
+  <section>
+    <h2>{e(ui['affiliations'])}</h2>
+    <ul class="plainlist">{affil}</ul>
+  </section>
+
+  <section>
+    <h2>{e(ui['credentials'])}</h2>
+    <div class="creds">{creds}</div>
+  </section>
+
+  <section>
+    <h2>{e(ui['fields'])}</h2>
+    <ul class="plainlist">{fields}</ul>
+  </section>
+
+  <section>
+    <h2>{e(ui['contact'])}</h2>
+    <dl class="contact">{contacts}</dl>
+  </section>
+"""
+
+
+def build_html(d):
+    b = d["basic"]
+    e = html.escape
     photo = (f'<img class="portrait" src="../{e(b["photo"])}" alt="{e(b["name_ja"])}">'
              if b.get("photo") else "")
+    ja_block = build_html_lang_block(d, "ja")
+    if photo:
+        ja_block = ja_block.replace("<header>", f"<header>\n    {photo}", 1)
+    en_block = build_html_lang_block(d, "en")
 
     return f"""<!DOCTYPE html>
 <html lang="ja">
@@ -306,6 +492,8 @@ def build_html(d):
   --mincho: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
   --gothic: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
   --mono: ui-monospace, "SFMono-Regular", "Menlo", monospace;
+  --serif-en: Georgia, "Times New Roman", "Noto Serif", serif;
+  --sans-en: system-ui, -apple-system, "Segoe UI", sans-serif;
 }}
 * {{ box-sizing: border-box; }}
 body {{
@@ -338,6 +526,18 @@ h1 {{
 .affil-line strong {{ color: var(--ink); font-weight: 600; }}
 .portrait {{ width: 108px; height: 108px; object-fit: cover; border-radius: 2px; margin: 0 0 24px; }}
 
+.lang-divider {{
+  margin: 72px 0 0; padding-top: 8px;
+  border-top: 3px solid var(--ink);
+}}
+.lang-en {{
+  font-family: var(--sans-en);
+}}
+.lang-en h1, .lang-en h2, .lang-en h3, .lang-en .tagline {{
+  font-family: var(--serif-en);
+}}
+.lang-en .kana {{ font-family: var(--mono); }}
+
 /* ---- section ---- */
 section {{ padding: 56px 0 8px; border-bottom: 1px solid var(--rule); }}
 section:last-of-type {{ border-bottom: 0; }}
@@ -346,6 +546,7 @@ h2 {{
   margin: 0 0 28px; letter-spacing: .08em; display: flex; align-items: baseline; gap: 14px;
 }}
 h2::after {{ content: ""; flex: 1; height: 1px; background: var(--rule); }}
+.lang-en h2 {{ font-family: var(--serif-en); letter-spacing: .04em; }}
 
 /* ---- layer chips: this page's through-line ---- */
 .chips {{ display: flex; flex-wrap: wrap; gap: 6px; }}
@@ -365,6 +566,7 @@ h2::after {{ content: ""; flex: 1; height: 1px; background: var(--rule); }}
   border-left: 3px solid var(--accent); padding: 24px 26px;
 }}
 .card h3 {{ font-family: var(--mincho); font-size: 19px; margin: 12px 0 10px; letter-spacing: .03em; }}
+.lang-en .card h3 {{ font-family: var(--serif-en); }}
 .card p {{ margin: 0; font-size: 14.5px; }}
 .proof {{
   margin-top: 14px !important; padding-top: 12px; border-top: 1px dotted var(--rule);
@@ -383,6 +585,7 @@ h2::after {{ content: ""; flex: 1; height: 1px; background: var(--rule); }}
   letter-spacing: .04em; padding-top: 5px; border-top: 2px solid var(--ink);
 }}
 .what h3 {{ font-family: var(--mincho); font-size: 17.5px; margin: 0 0 6px; letter-spacing: .03em; }}
+.lang-en .what h3 {{ font-family: var(--serif-en); }}
 .what p {{ margin: 0 0 10px; font-size: 14px; color: var(--ink-soft); }}
 .what .org {{ font-size: 13px; margin-bottom: 6px; }}
 
@@ -421,54 +624,8 @@ footer {{ padding: 40px 0 0; font-family: var(--mono); font-size: 11.5px; color:
 <body>
 <div class="wrap">
 
-  <header>
-    <p class="eyebrow">Profile</p>
-    {photo}
-    <h1>{e(b['name_ja'])}</h1>
-    <p class="kana">{e(b['name_kana'])} &nbsp;/&nbsp; {e(b['name_en'])}</p>
-    <p class="tagline">{e(d['tagline'])}</p>
-    <p class="affil-line">
-      <strong>{e(b['organization'])}</strong>　{e(b['title'])}<br>
-      {e(b['organization_note'])}<br>
-      {e(b['hometown'])}／{e(b['base'])}
-    </p>
-  </header>
-
-  <section>
-    <h2>お任せいただけること</h2>
-    <div class="legend">
-      <p>それぞれの依頼が、どの立場の相手に効くかを示しています。</p>
-      <div class="chips">{legend}</div>
-    </div>
-    <div class="cards">{offerings}
-    </div>
-  </section>
-
-  <section>
-    <h2>経歴</h2>
-    <ul class="timeline">{career}
-    </ul>
-  </section>
-
-  <section>
-    <h2>現在の所属</h2>
-    <ul class="plainlist">{affil}</ul>
-  </section>
-
-  <section>
-    <h2>資格・委嘱</h2>
-    <div class="creds">{creds}</div>
-  </section>
-
-  <section>
-    <h2>主な活動分野</h2>
-    <ul class="plainlist">{fields}</ul>
-  </section>
-
-  <section>
-    <h2>連絡先</h2>
-    <dl class="contact">{contacts}</dl>
-  </section>
+{ja_block}
+{en_block}
 
   <footer>LAST UPDATED {e(str(d['meta'].get('updated')))}</footer>
 </div>

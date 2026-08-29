@@ -19,6 +19,8 @@
   --mincho: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
   --gothic: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
   --mono: ui-monospace, "SFMono-Regular", "Menlo", monospace;
+  --serif-en: Georgia, "Times New Roman", "Noto Serif", serif;
+  --sans-en: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
 body {
@@ -51,6 +53,18 @@ h1 {
 .affil-line strong { color: var(--ink); font-weight: 600; }
 .portrait { width: 108px; height: 108px; object-fit: cover; border-radius: 2px; margin: 0 0 24px; }
 
+.lang-divider {
+  margin: 72px 0 0; padding-top: 8px;
+  border-top: 3px solid var(--ink);
+}
+.lang-en {
+  font-family: var(--sans-en);
+}
+.lang-en h1, .lang-en h2, .lang-en h3, .lang-en .tagline {
+  font-family: var(--serif-en);
+}
+.lang-en .kana { font-family: var(--mono); }
+
 /* ---- section ---- */
 section { padding: 56px 0 8px; border-bottom: 1px solid var(--rule); }
 section:last-of-type { border-bottom: 0; }
@@ -59,6 +73,7 @@ h2 {
   margin: 0 0 28px; letter-spacing: .08em; display: flex; align-items: baseline; gap: 14px;
 }
 h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.lang-en h2 { font-family: var(--serif-en); letter-spacing: .04em; }
 
 /* ---- layer chips: this page's through-line ---- */
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -78,6 +93,7 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
   border-left: 3px solid var(--accent); padding: 24px 26px;
 }
 .card h3 { font-family: var(--mincho); font-size: 19px; margin: 12px 0 10px; letter-spacing: .03em; }
+.lang-en .card h3 { font-family: var(--serif-en); }
 .card p { margin: 0; font-size: 14.5px; }
 .proof {
   margin-top: 14px !important; padding-top: 12px; border-top: 1px dotted var(--rule);
@@ -96,6 +112,7 @@ h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
   letter-spacing: .04em; padding-top: 5px; border-top: 2px solid var(--ink);
 }
 .what h3 { font-family: var(--mincho); font-size: 17.5px; margin: 0 0 6px; letter-spacing: .03em; }
+.lang-en .what h3 { font-family: var(--serif-en); }
 .what p { margin: 0 0 10px; font-size: 14px; color: var(--ink-soft); }
 .what .org { font-size: 13px; margin-bottom: 6px; }
 
@@ -134,9 +151,9 @@ footer { padding: 40px 0 0; font-family: var(--mono); font-size: 11.5px; color: 
 <body>
 <div class="wrap">
 
+
   <header>
     <p class="eyebrow">Profile</p>
-    
     <h1>土屋俊博</h1>
     <p class="kana">つちや としひろ &nbsp;/&nbsp; Tsuchiya Toshihiro</p>
     <p class="tagline">国の政策づくりから中小企業の現場まで、4つの立場を内側から経験した経営コンサルタント。</p>
@@ -284,6 +301,159 @@ footer { padding: 40px 0 0; font-family: var(--mono); font-size: 11.5px; color: 
     <h2>連絡先</h2>
     <dl class="contact"><div class="row"><dt>Web</dt><dd><a href="https://www.office626.com/">https://www.office626.com/</a></dd></div><div class="row"><dt>note</dt><dd><a href="https://note.com/office626">https://note.com/office626</a></dd></div><div class="row"><dt>Spotify</dt><dd><a href="https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3">https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3</a></dd></div><div class="row"><dt>Facebook</dt><dd><a href="https://www.facebook.com/tutti666">https://www.facebook.com/tutti666</a></dd></div><div class="row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/tutti0626/">https://www.instagram.com/tutti0626/</a></dd></div><div class="row"><dt>オフィス</dt><dd>福島県会津若松市</dd></div><div class="row"><dt>オフィス</dt><dd>千葉県流山市</dd></div></dl>
   </section>
+
+
+  <div class="lang-divider" id="english"></div>
+  <header class="lang-en">
+    <p class="eyebrow">Profile (English)</p>
+    <h1>Tsuchiya Toshihiro</h1>
+    <p class="kana">土屋俊博 &nbsp;/&nbsp; つちや としひろ</p>
+    <p class="tagline">A management consultant who has experienced four perspectives from the inside—from national policy to the front lines of SMEs.</p>
+    <p class="affil-line">
+      <strong>Institute for Towns, Work, and Living</strong> — Director / Lead Researcher<br>
+      Certified Management Innovation Support Organization / Sole Proprietorship<br>
+      Born in Komoro, Nagano / Aizuwakamatsu, Fukushima &amp; Nagareyama, Chiba (dual-base since April 2024)
+    </p>
+  </header>
+
+  <section>
+    <h2>What I Can Help With</h2>
+    <div class="legend">
+      <p>Tags show which stakeholder context each assignment fits.</p>
+      <div class="chips"><span class="chip" style="--c:#2E5E8A">National / Policy</span><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#6B5B95">Large Enterprise</span><span class="chip" style="--c:#B08423">SMEs / Regional</span><span class="chip" style="--c:#A8553A">Talent / Community</span></div>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#2E5E8A">National / Policy</span></div>
+        <h3>Local government planning and policy development</h3>
+        <p>Support for comprehensive plans, industrial promotion plans, and DX promotion plans; advisory committees; and design and facilitation of in-house workshops. Experience drafting plans on the national policy side helps bridge upper-level plans and grant requirements with what communities actually want to do.</p>
+        <p class="proof"><span>Relevant experience</span>Science, Technology and Innovation Basic Plan at the Cabinet Office / Comprehensive Plan Review Committee, Minamiizu Town / Advisor to Kobe and Kusatsu cities</p>
+      </article>
+      <article class="card">
+        <div class="chips"><span class="chip" style="--c:#B08423">SMEs / Regional</span></div>
+        <h3>SME business improvement and financial planning with follow-through</h3>
+        <p>From financial statement analysis to bank-ready improvement plans, cash-flow forecasts, and numerical plans—with ongoing monitoring. As a certified support organization, documents meet formal requirements.</p>
+        <p class="proof"><span>Relevant experience</span>SME Management Consultant / Certified Management Innovation Support Organization / SME Advisor, Organization for SME and Regional Innovation / Credit Guarantee Corporation expert registration</p>
+      </article>
+      <article class="card">
+        <div class="chips"><span class="chip" style="--c:#B08423">SMEs / Regional</span><span class="chip" style="--c:#6B5B95">Large Enterprise</span></div>
+        <h3>On-site productivity improvement and business reform</h3>
+        <p>From time studies (cycle time, lead time, uptime/downtime) to improvement planning through the 5M+1E lens. Applies large-enterprise experience in shared services and approval systems at SME scale.</p>
+        <p class="proof"><span>Relevant experience</span>Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base / NEC corporate transformation</p>
+      </article>
+      <article class="card">
+        <div class="chips"><span class="chip" style="--c:#B08423">SMEs / Regional</span><span class="chip" style="--c:#3F7A6E">Local Government</span></div>
+        <h3>AI and ICT adoption—from concept to working tools</h3>
+        <p>Goes beyond “what can AI do?” seminars to building things that actually work in operations: generative AI use cases, internal rules, and small in-house tool prototypes.</p>
+        <p class="proof"><span>Relevant experience</span>JDLA Deep Learning for GENERAL / Vibe Coder Bootcamp / Financial and Accounting DX Advisor, MIC</p>
+      </article>
+      <article class="card">
+        <div class="chips"><span class="chip" style="--c:#A8553A">Talent / Community</span></div>
+        <h3>Training, lectures, and workshop design and delivery</h3>
+        <p>Programs for business advisors, government staff, and executives—designed with exercises and deliverables, not lectures alone. Also moderates panels and plans and runs events end to end.</p>
+        <p class="proof"><span>Relevant experience</span>FM Aizu personality / training and workshop design / Digital Agency Well-being Indicators Facilitator</p>
+      </article>
+      <article class="card">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#B08423">SMEs / Regional</span></div>
+        <h3>Regional diagnosis and area-based support for industrial districts and shopping streets</h3>
+        <p>Diagnosis at the area level, not company by company: reading statistics, mapping regional economic circulation, identifying key people, and linking usable national policies into one report.</p>
+        <p class="proof"><span>Relevant experience</span>Regional diagnosis and area support in Minamiizu Town since 2018 / Board Member, NPO SME and Regional Revitalization Network</p>
+      </article>
+      <article class="card">
+        <div class="chips"><span class="chip" style="--c:#6B5B95">Large Enterprise</span><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#2E5E8A">National / Policy</span></div>
+        <h3>Co-creation and pilot coordination between large companies and local governments</h3>
+        <p>Bridges companies that want to work with municipalities and municipalities that want corporate partners, accounting for differences in how each side decides. Can also design consortium-style platforms.</p>
+        <p class="proof"><span>Relevant experience</span>Founded Smart City Social Implementation Consortium (~300 organizations) / Chiba Prefecture DX Promotion Council, Citizen Co-creation Promotion Committee</p>
+      </article>
+      <article class="card">
+        <div class="chips"><span class="chip" style="--c:#6B5B95">Large Enterprise</span><span class="chip" style="--c:#B08423">SMEs / Regional</span></div>
+        <h3>Corporate functions and group management design for growing companies</h3>
+        <p>Meeting structures, approval rules, governance including subsidiaries, and articulating and embedding vision and values—scaled down to what works at each company’s size, not copied from big-company playbooks.</p>
+        <p class="proof"><span>Relevant experience</span>NEC corporate planning: group management (~400 companies), company-wide councils, approval system, vision and values</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Career</h2>
+    <ul class="timeline">
+      <li>
+        <div class="when">Oct 2025–</div>
+        <div class="what">
+          <h3>Founded the Institute for Towns, Work, and Living</h3>
+          <p class="org">Director / Lead Researcher</p>
+          <p>Established as a sole proprietorship supporting local government policy and DX, and SME business improvement and productivity. Certified as a Management Innovation Support Organization in February 2026.</p>
+          <div class="chips"><span class="chip" style="--c:#B08423">SMEs / Regional</span><span class="chip" style="--c:#3F7A6E">Local Government</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="when">May 2022–Jun 2025</div>
+        <div class="what">
+          <h3>Founded and operated the Smart City Social Implementation Consortium</h3>
+          
+          <p>Promoted new digital services with participation from roughly 300 companies, local governments, universities, and nonprofits. Left NEC in June 2025.</p>
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#6B5B95">Large Enterprise</span><span class="chip" style="--c:#2E5E8A">National / Policy</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="when">2019–2021</div>
+        <div class="what">
+          <h3>Cabinet Office, Headquarters for Science, Technology and Innovation (secondment)</h3>
+          
+          <p>Led work on the Science, Technology and Innovation Basic Plan, smart-city reference architecture, the Smart City Guidebook, and coordination of smart-city plans across government policies.</p>
+          <div class="chips"><span class="chip" style="--c:#2E5E8A">National / Policy</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="when">NEC, Business Planning (Smart City)</div>
+        <div class="what">
+          <h3>Business development with local governments</h3>
+          <p class="org">NEC Corporation</p>
+          <p>Created smart-city-related businesses through partnerships with municipalities.</p>
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#6B5B95">Large Enterprise</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="when">NEC, Corporate Planning</div>
+        <div class="what">
+          <h3>Group management and corporate transformation</h3>
+          <p class="org">NEC Corporation</p>
+          <p>Top-support work, company-wide council operations, shared services for indirect functions, company-wide approval system implementation, group management for roughly 400 subsidiaries including about 100 direct subsidiaries, global HR strategy, vision and values development, culture change, and new business creation through partnerships.</p>
+          <div class="chips"><span class="chip" style="--c:#6B5B95">Large Enterprise</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="when"></div>
+        <div class="what">
+          <h3>Graduated, Faculty of Engineering, University of Tokyo</h3>
+          
+          
+          <div class="chips"></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Current Positions</h2>
+    <ul class="plainlist"><li><span class="when">Apr 2026–</span><span class="what">Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base</span></li><li><span class="when">Jan 2026–</span><span class="what">FM Aizu personality (Tue 11:00–13:00, “Hirukyun! Palette”)</span></li><li><span class="when">Dec 2025–</span><span class="what">Representative Director, Kodomo Laboya Inc.</span></li><li><span class="when">Feb 2023–</span><span class="what">Board Member, NPO SME and Regional Revitalization Network</span></li></ul>
+  </section>
+
+  <section>
+    <h2>Credentials &amp; Appointments</h2>
+    <div class="creds"><div class="credgroup"><h3>Government</h3><ul><li>Advisor for Financial and Accounting DX, Ministry of Internal Affairs and Communications program for strengthening local government management</li><li>Completed Digital Agency Well-being Indicators Facilitator Training (Cohort 1)</li><li>Certified Digital Promotion Officer, Digital Agency</li><li>Operations, Chiba Prefecture DX Promotion Council, Citizen Co-creation Promotion Committee</li><li>Operations, “Jichi Lab” community association improvement project with Nagareyama City, Chiba</li><li>Smart City Advisor, Kobe City, Hyogo Prefecture</li><li>Smart City Social Implementation Advisor, Kusatsu City, Shiga Prefecture</li><li>Comprehensive Plan Review Committee Member, Minamiizu Town, Shizuoka (regional diagnosis, industrial promotion planning, and area-based business support since 2018)</li></ul></div><div class="credgroup"><h3>Business</h3><ul><li>Certified SME Management Consultant, METI (since 2013)</li><li>Member, Fukushima SME Management Consultant Association (since 2024)</li><li>SME Advisor [Management Support], Organization for SME and Regional Innovation (since Apr 2024)</li><li>Certified Management Innovation Support Organization, METI (since Feb 2026)</li><li>Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base (since Apr 2026)</li><li>Registered expert with Fukushima Credit Guarantee Corporation, SME organizations, and related bodies</li></ul></div><div class="credgroup"><h3>AI &amp; Digital</h3><ul><li>JDLA Deep Learning for GENERAL 2025 #3 (passed)</li><li>Vibe Coder Bootcamp (completed Mar 2026)</li></ul></div></div>
+  </section>
+
+  <section>
+    <h2>Areas of Practice</h2>
+    <ul class="plainlist"><li>Policy development and DX promotion support for local governments</li><li>Business strategy, business planning, and new business development support for private companies</li><li>Training and workshop design, event moderation, and facilitation</li><li>Business reform through ICT and AI, including hands-on implementation</li></ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <dl class="contact"><div class="row"><dt>Web</dt><dd><a href="https://www.office626.com/">https://www.office626.com/</a></dd></div><div class="row"><dt>note</dt><dd><a href="https://note.com/office626">https://note.com/office626</a></dd></div><div class="row"><dt>Spotify</dt><dd><a href="https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3">https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3</a></dd></div><div class="row"><dt>Facebook</dt><dd><a href="https://www.facebook.com/tutti666">https://www.facebook.com/tutti666</a></dd></div><div class="row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/tutti0626/">https://www.instagram.com/tutti0626/</a></dd></div><div class="row"><dt>Office</dt><dd>Aizuwakamatsu, Fukushima Prefecture</dd></div><div class="row"><dt>Office</dt><dd>Nagareyama, Chiba Prefecture</dd></div></dl>
+  </section>
+
 
   <footer>LAST UPDATED 2026-08-29</footer>
 </div>

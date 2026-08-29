@@ -152,4 +152,152 @@
 
 ---
 
+# Tsuchiya Toshihiro
+
+> A management consultant who has experienced four perspectives from the inside—from national policy to the front lines of SMEs.
+
+**Institute for Towns, Work, and Living**　Director / Lead Researcher
+Certified Management Innovation Support Organization / Sole Proprietorship
+
+Born in Komoro, Nagano / Aizuwakamatsu, Fukushima & Nagareyama, Chiba (dual-base since April 2024)
+
+## Introduction
+
+After graduating from the Faculty of Engineering at the University of Tokyo, Toshihiro Tsuchiya joined NEC Corporation.
+In corporate planning, he supported top management, ran company-wide councils, led shared services for indirect functions,
+and managed a group of roughly 400 subsidiaries while shaping vision, values, and culture change.
+From 2019 to 2021 he was seconded to the Cabinet Office, where he worked on the Science, Technology and Innovation Basic Plan
+and smart-city policy. In 2022 he founded the Smart City Social Implementation Consortium, bringing together roughly 300 organizations
+to create new digital services. In October 2025 he established the Institute for Towns, Work, and Living.
+As a certified SME management consultant, he supports local government policy and DX, SME business improvement and AI adoption,
+and the design and delivery of training and workshops.
+
+## What I Can Help With
+
+### Local government planning and policy development
+`Local Government`　`National / Policy`
+
+Support for comprehensive plans, industrial promotion plans, and DX promotion plans; advisory committees; and design and facilitation of in-house workshops. Experience drafting plans on the national policy side helps bridge upper-level plans and grant requirements with what communities actually want to do.
+
+Relevant experience: Science, Technology and Innovation Basic Plan at the Cabinet Office / Comprehensive Plan Review Committee, Minamiizu Town / Advisor to Kobe and Kusatsu cities
+
+### SME business improvement and financial planning with follow-through
+`SMEs / Regional`
+
+From financial statement analysis to bank-ready improvement plans, cash-flow forecasts, and numerical plans—with ongoing monitoring. As a certified support organization, documents meet formal requirements.
+
+Relevant experience: SME Management Consultant / Certified Management Innovation Support Organization / SME Advisor, Organization for SME and Regional Innovation / Credit Guarantee Corporation expert registration
+
+### On-site productivity improvement and business reform
+`SMEs / Regional`　`Large Enterprise`
+
+From time studies (cycle time, lead time, uptime/downtime) to improvement planning through the 5M+1E lens. Applies large-enterprise experience in shared services and approval systems at SME scale.
+
+Relevant experience: Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base / NEC corporate transformation
+
+### AI and ICT adoption—from concept to working tools
+`SMEs / Regional`　`Local Government`
+
+Goes beyond “what can AI do?” seminars to building things that actually work in operations: generative AI use cases, internal rules, and small in-house tool prototypes.
+
+Relevant experience: JDLA Deep Learning for GENERAL / Vibe Coder Bootcamp / Financial and Accounting DX Advisor, MIC
+
+### Training, lectures, and workshop design and delivery
+`Talent / Community`
+
+Programs for business advisors, government staff, and executives—designed with exercises and deliverables, not lectures alone. Also moderates panels and plans and runs events end to end.
+
+Relevant experience: FM Aizu personality / training and workshop design / Digital Agency Well-being Indicators Facilitator
+
+### Regional diagnosis and area-based support for industrial districts and shopping streets
+`Local Government`　`SMEs / Regional`
+
+Diagnosis at the area level, not company by company: reading statistics, mapping regional economic circulation, identifying key people, and linking usable national policies into one report.
+
+Relevant experience: Regional diagnosis and area support in Minamiizu Town since 2018 / Board Member, NPO SME and Regional Revitalization Network
+
+### Co-creation and pilot coordination between large companies and local governments
+`Large Enterprise`　`Local Government`　`National / Policy`
+
+Bridges companies that want to work with municipalities and municipalities that want corporate partners, accounting for differences in how each side decides. Can also design consortium-style platforms.
+
+Relevant experience: Founded Smart City Social Implementation Consortium (~300 organizations) / Chiba Prefecture DX Promotion Council, Citizen Co-creation Promotion Committee
+
+### Corporate functions and group management design for growing companies
+`Large Enterprise`　`SMEs / Regional`
+
+Meeting structures, approval rules, governance including subsidiaries, and articulating and embedding vision and values—scaled down to what works at each company’s size, not copied from big-company playbooks.
+
+Relevant experience: NEC corporate planning: group management (~400 companies), company-wide councils, approval system, vision and values
+
+## Career
+
+- **Oct 2025–**　Founded the Institute for Towns, Work, and Living
+  　Director / Lead Researcher
+  　Established as a sole proprietorship supporting local government policy and DX, and SME business improvement and productivity. Certified as a Management Innovation Support Organization in February 2026.
+- **May 2022–Jun 2025**　Founded and operated the Smart City Social Implementation Consortium
+  　Promoted new digital services with participation from roughly 300 companies, local governments, universities, and nonprofits. Left NEC in June 2025.
+- **2019–2021**　Cabinet Office, Headquarters for Science, Technology and Innovation (secondment)
+  　Led work on the Science, Technology and Innovation Basic Plan, smart-city reference architecture, the Smart City Guidebook, and coordination of smart-city plans across government policies.
+- **NEC, Business Planning (Smart City)**　Business development with local governments
+  　NEC Corporation
+  　Created smart-city-related businesses through partnerships with municipalities.
+- **NEC, Corporate Planning**　Group management and corporate transformation
+  　NEC Corporation
+  　Top-support work, company-wide council operations, shared services for indirect functions, company-wide approval system implementation, group management for roughly 400 subsidiaries including about 100 direct subsidiaries, global HR strategy, vision and values development, culture change, and new business creation through partnerships.
+- **Graduated, Faculty of Engineering, University of Tokyo**
+
+## Current Positions
+
+- **Apr 2026–**　Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base
+- **Jan 2026–**　FM Aizu personality (Tue 11:00–13:00, “Hirukyun! Palette”)
+- **Dec 2025–**　Representative Director, Kodomo Laboya Inc.
+- **Feb 2023–**　Board Member, NPO SME and Regional Revitalization Network
+
+## Credentials & Appointments
+
+### Government
+
+- Advisor for Financial and Accounting DX, Ministry of Internal Affairs and Communications program for strengthening local government management
+- Completed Digital Agency Well-being Indicators Facilitator Training (Cohort 1)
+- Certified Digital Promotion Officer, Digital Agency
+- Operations, Chiba Prefecture DX Promotion Council, Citizen Co-creation Promotion Committee
+- Operations, “Jichi Lab” community association improvement project with Nagareyama City, Chiba
+- Smart City Advisor, Kobe City, Hyogo Prefecture
+- Smart City Social Implementation Advisor, Kusatsu City, Shiga Prefecture
+- Comprehensive Plan Review Committee Member, Minamiizu Town, Shizuoka (regional diagnosis, industrial promotion planning, and area-based business support since 2018)
+
+### Business
+
+- Certified SME Management Consultant, METI (since 2013)
+- Member, Fukushima SME Management Consultant Association (since 2024)
+- SME Advisor [Management Support], Organization for SME and Regional Innovation (since Apr 2024)
+- Certified Management Innovation Support Organization, METI (since Feb 2026)
+- Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base (since Apr 2026)
+- Registered expert with Fukushima Credit Guarantee Corporation, SME organizations, and related bodies
+
+### AI & Digital
+
+- JDLA Deep Learning for GENERAL 2025 #3 (passed)
+- Vibe Coder Bootcamp (completed Mar 2026)
+
+## Areas of Practice
+
+- Policy development and DX promotion support for local governments
+- Business strategy, business planning, and new business development support for private companies
+- Training and workshop design, event moderation, and facilitation
+- Business reform through ICT and AI, including hands-on implementation
+
+## Contact
+
+- **Web**　<https://www.office626.com/>
+- **note**　<https://note.com/office626>
+- **Spotify**　<https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3>
+- **Facebook**　<https://www.facebook.com/tutti666>
+- **Instagram**　<https://www.instagram.com/tutti0626/>
+- **Office**　Aizuwakamatsu, Fukushima Prefecture
+- **Office**　Nagareyama, Chiba Prefecture
+
+---
+
 最終更新：2026-08-29　｜　このページは [`profile.yaml`](profile.yaml) から自動生成しています。
