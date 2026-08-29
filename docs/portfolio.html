@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>実績・ポートフォリオ｜土屋俊博</title>
+<meta name="description" content="自治体・大企業・中小企業・支援機関向けに実施した支援事例を、依頼者を特定できない形に整理して掲載しています。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="実績・ポートフォリオ｜土屋俊博">
+<meta property="og:description" content="自治体・大企業・中小企業・支援機関向けに実施した支援事例を、依頼者を特定できない形に整理して掲載しています。">
 <style>
 :root {
   --ink: #16232E; --ink-soft: #4A5A66; --paper: #F2F1ED; --panel: #FBFAF7;
@@ -88,438 +92,516 @@ dl.contact { margin: 0; }
 .form-grid textarea { min-height: 120px; resize: vertical; }
 .btn { display: inline-block; padding: 12px 24px; background: var(--accent); color: #fff;
   border: 0; border-radius: 2px; font: inherit; cursor: pointer; }
-.lang-divider { margin: 64px 0 32px; padding-top: 48px; border-top: 3px double var(--rule);
-  text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: .2em;
-  color: var(--ink-soft); }
-footer { padding: 40px 0 0; font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); }
+.endnotes { color: var(--ink-soft); font-size: 12.5px; line-height: 1.9; }
+.endnotes h2 { font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em;
+  color: var(--ink-soft); margin-bottom: 14px; }
+.endnotes p { margin: 0 0 8px; }
+footer { padding: 40px 0 96px; font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); }
+
+/* --- 顧客属性別のアクセント（低彩度） --- */
+[data-target="municipality"] { --c: #3D6B99; }
+[data-target="enterprise"]   { --c: #2F4A6B; }
+[data-target="sme"]          { --c: #3F7A6E; }
+[data-target="support"]      { --c: #A9713C; }
+[data-target="training"]     { --c: #6B5A8E; }
+
+/* --- HERO --- */
+.hero { padding: 40px 0 44px; border-bottom: 1px solid var(--rule); }
+.hero h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.28; margin: 0 0 18px; }
+.hero .sub { font-size: 15.5px; line-height: 1.9; max-width: 34em; margin: 0 0 24px; }
+.hero .who { color: var(--ink-soft); font-size: 13.5px; line-height: 1.85; margin: 0 0 18px; }
+.hero .who strong { color: var(--ink); font-size: 16px; font-family: var(--mincho);
+  display: block; margin-bottom: 4px; }
+.hero-top { display: flex; gap: 26px; align-items: flex-start; flex-wrap: wrap-reverse; }
+.hero-body { flex: 1 1 380px; }
+.domains { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; padding: 0; list-style: none; }
+.domains li { font-size: 12px; color: var(--ink-soft); border: 1px solid var(--rule);
+  background: var(--panel); padding: 5px 10px; border-radius: 2px; }
+.cta-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.btn.ghost { background: transparent; color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--rule)); }
+.btn.sm { padding: 8px 16px; font-size: 13px; }
+.btn:hover { opacity: .88; }
+.cta-note { font-size: 12.5px; color: var(--ink-soft); margin: 12px 0 0; }
+
+/* --- 対象者カード --- */
+.audience-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.audience-card { border-top: 3px solid var(--c, var(--accent)); display: flex; flex-direction: column; }
+.audience-card strong { font-family: var(--mincho); font-size: 16px; }
+.audience-card p { flex: 1; margin-bottom: 12px; }
+.audience-card .btn { align-self: flex-start; }
+
+/* --- 相談例 --- */
+.voice-grid { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.voice { background: var(--panel); border: 1px solid var(--rule); border-radius: 2px;
+  padding: 14px 16px; font-size: 14px; position: relative; }
+.voice::before { content: "“"; font-family: var(--mincho); color: var(--accent);
+  font-size: 22px; line-height: 1; margin-right: 4px; }
+.closing { margin: 22px 0 0; font-size: 14.5px; font-weight: 600; }
+
+/* --- サービスメニュー --- */
+.filterbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.filterbar button { font: inherit; font-size: 13px; padding: 7px 15px; cursor: pointer;
+  background: transparent; color: var(--ink-soft); border: 1px solid var(--rule); border-radius: 2px; }
+.filterbar button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+.menu-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.menu-card { background: var(--panel); border: 1px solid var(--rule); border-top: 3px solid var(--c, var(--accent));
+  padding: 20px 22px 22px; display: flex; flex-direction: column;
+  transition: transform .15s ease, box-shadow .15s ease; }
+.menu-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(22,35,46,.07); }
+.menu-card.is-hidden { display: none; }
+.menu-card .no { font-family: var(--mono); font-size: 10.5px; letter-spacing: .16em;
+  color: var(--ink-soft); margin: 0 0 8px; }
+.menu-card h3 { font-size: 17px; margin: 6px 0 8px; }
+.menu-card .summary { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 14px; }
+.menu-card details { border-top: 1px dotted var(--rule); padding-top: 10px; margin-bottom: 12px; }
+.menu-card details + details { margin-top: -4px; }
+.menu-card summary { font-size: 12.5px; color: var(--accent); cursor: pointer; }
+.menu-card details ul { margin: 8px 0 0; padding-left: 1.1em; font-size: 13px; color: var(--ink-soft); }
+.menu-card details li { margin-bottom: 4px; }
+.menu-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: auto 0 14px;
+  padding-top: 12px; border-top: 1px solid var(--rule); }
+.menu-meta dt { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; color: var(--ink-soft); }
+.menu-meta dd { margin: 2px 0 0; font-size: 14.5px; font-weight: 600; }
+.menu-card .note { font-size: 12px; color: var(--ink-soft); margin: 0 0 12px; }
+.menu-card .for { font-size: 13px; margin: 0 0 12px; padding-left: 1.1em; color: var(--ink-soft); }
+.menu-card .for li { margin-bottom: 3px; }
+.menu-card .flag { font-size: 12.5px; background: color-mix(in srgb, var(--accent) 9%, transparent);
+  border-left: 2px solid var(--accent); padding: 8px 10px; margin: 0 0 12px; }
+.menu-empty { color: var(--ink-soft); font-size: 14px; }
+
+/* --- 発注までの流れ --- */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+.steps li { background: var(--panel); border: 1px solid var(--rule); padding: 16px 18px; }
+.steps .num { font-family: var(--mono); font-size: 10.5px; letter-spacing: .16em; color: var(--accent); }
+.steps h3 { font-size: 15px; margin: 6px 0 6px; }
+.steps p { margin: 0; font-size: 13px; color: var(--ink-soft); }
+
+/* --- 発注条件早見表 --- */
+.conditions { width: 100%; border-collapse: collapse; font-size: 14px; }
+.conditions th, .conditions td { text-align: left; padding: 10px 12px;
+  border-bottom: 1px dotted var(--rule); }
+.conditions th { width: 42%; font-weight: 600; color: var(--ink); }
+.conditions td { color: var(--ink-soft); }
+
+/* --- 選ばれる理由 --- */
+.reasons { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.reason { border-top: 2px solid var(--ink); padding-top: 14px; }
+.reason .num { font-family: var(--mono); font-size: 11px; letter-spacing: .16em; color: var(--accent); }
+.reason h3 { font-size: 16px; margin: 6px 0 8px; }
+.reason p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
+
+/* --- 代表実績 --- */
+.case-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.case-card { background: var(--panel); border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent); padding: 20px 22px; }
+.case-card.is-hidden { display: none; }
+.case-card h3 { font-size: 16px; margin: 10px 0 10px; }
+.case-card dl { margin: 0; display: grid; grid-template-columns: 68px 1fr; gap: 4px 12px; }
+.case-card dt { font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
+  color: var(--ink-soft); padding-top: 4px; }
+.case-card dd { margin: 0; font-size: 13.5px; }
+.case-card ul { margin: 10px 0 0; padding-left: 1.1em; font-size: 13px; }
+
+/* --- 支援機関向け --- */
+.taglist { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 18px 0; padding: 0; }
+.taglist li { font-size: 13px; background: #fff; border: 1px solid var(--rule); padding: 6px 12px; }
+
+/* --- 常時表示CTA --- */
+.sticky-cta { position: fixed; right: 24px; bottom: 24px; z-index: 20;
+  box-shadow: 0 4px 16px rgba(22,35,46,.16); text-decoration: none; }
 @media (max-width: 640px) {
   .timeline > li { grid-template-columns: 1fr; }
   .row { grid-template-columns: 1fr; }
+  .wrap { padding-bottom: 120px; }
+  .menu-meta { grid-template-columns: 1fr; gap: 6px; }
+  .case-card dl { grid-template-columns: 1fr; gap: 0 0; }
+  .case-card dt { padding-top: 8px; }
+  .conditions, .conditions tbody, .conditions tr, .conditions th, .conditions td { display: block; }
+  .conditions tr { border: 1px solid var(--rule); background: var(--panel);
+    padding: 10px 12px; margin-bottom: 8px; }
+  .conditions th, .conditions td { width: auto; border: 0; padding: 0; }
+  .conditions td { margin-top: 2px; }
+  .sticky-cta { right: 0; left: 0; bottom: 0; text-align: center; border-radius: 0; padding: 15px; }
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <nav class="topnav"><a href="index.html">← プロフィールに戻る</a></nav>
-  <header>
+  <nav class="topnav">
+    <a href="index.html">← プロフィールに戻る</a>
+    <a href="index.html#menu">サンプルメニュー</a>
+    <a href="#contact">お仕事のご相談</a>
+  </nav>
+  <header class="hero">
     <p class="eyebrow">Portfolio</p>
-    <h1>実績・ポートフォリオ</h1>
-    <p class="lead">2012年から2026年時点で262件の活動記録をもとに、守秘義務のある案件は業種・規模・期間・関与内容・成果の5点に整理して掲載しています。
+    <h1 style="font-size:clamp(30px,6vw,44px)">実績・ポートフォリオ</h1>
+    <p class="sub">2012年から2026年時点で262件の活動記録をもとに、守秘義務のある案件は業種・規模・期間・関与内容・成果の5点に整理して掲載しています。
 経営診断・イベント企画運営・講師登壇・委員・審議会など、事案分類ごとに幅広い実績があります。
 各事例はプロフィールページのサービスメニューと対応づけています。詳細は個別のご相談でもお伝えできます。</p>
+    <div class="cta-row">
+      <a class="btn ghost" href="index.html#menu">相談できるメニューを見る</a>
+    </div>
   </header>
-  <section>
-    <div class="cards">
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">国・政策</span></div>
-          <h3>科学技術・イノベーション基本計画の策定支援</h3>
-          <p><strong>クライアント：</strong>中央省庁（科学技術・イノベーション政策部門）</p>
-          <p><strong>関与：</strong>企画・起草チームのコアメンバー（2019–2021年）</p>
-          <p><strong>内容：</strong>国の基本計画の文案作成、関係府省庁・有識者との調整、政策文書の構造化</p>
-          <p><strong>成果：</strong>全国の自治体・研究機関・事業者が参照する上位計画として公表。政策と現場実装をつなぐ共通言語を整備</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">国・政策</span></div>
-          <h3>スマートシティガイドブック・参照アーキテクチャの策定</h3>
-          <p><strong>クライアント：</strong>中央省庁（デジタル・まちづくり政策）</p>
-          <p><strong>関与：</strong>起草・調整担当（2019–2021年）</p>
-          <p><strong>内容：</strong>全国自治体向けガイドの構成設計、実装指針の整理、関連政策との整合</p>
-          <p><strong>成果：</strong>公表資料として継続参照される形で整備。自治体のDX・まちづくり計画のたたき台として利用</p>
-          <ul><li><a href="https://www8.cao.go.jp/cstp/society5_0/smartcity/index.html">内閣府 スマートシティ関連資料</a></li></ul>
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">国・政策</span></div>
-          <h3>スマートシティ国際学会の設立準備</h3>
-          <p><strong>クライアント：</strong>産官学の有識者・関係団体</p>
-          <p><strong>関与：</strong>設立準備委員会メンバー／事務局（2025年〜2026年）</p>
-          <p><strong>内容：</strong>学会設立に向けた規程・組織設計、準備委員会の運営、設立資料の整備</p>
-          <p><strong>成果：</strong>2026年7月に事務局として就任。国際連携と国内実装をつなぐ学会基盤の立ち上げに参画</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">国・政策</span></div>
-          <h3>政策アイデアコンテスト ファイナリスト向け研修</h3>
-          <p><strong>クライアント：</strong>国の政策立案支援プログラム</p>
-          <p><strong>関与：</strong>講師・ファシリテーター（2025年3月）</p>
-          <p><strong>内容：</strong>ファイナリスト向けの政策立案・プレゼンテーション研修の設計と登壇</p>
-          <p><strong>成果：</strong>参加者が政策提案を発表可能な水準まで整理。審査に向けたストーリー構成を支援</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>中核市の新たな総合計画策定（市民会議）</h3>
-          <p><strong>クライアント：</strong>地方自治体（中核市・歴史文化都市）</p>
-          <p><strong>関与：</strong>市民会議メンバー（2025年〜）</p>
-          <p><strong>内容：</strong>市民会議の継続的な審議、住民の声の整理、計画文案への反映</p>
-          <p><strong>成果：</strong>住民参加型の計画策定プロセスを継続運営。部局横断の議論と市民の意見を接続</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>総合計画・地域診断の継続支援</h3>
-          <p><strong>クライアント：</strong>地方自治体（観光・農業が基幹、人口1万人台の町）</p>
-          <p><strong>関与：</strong>総合計画審議委員／地域診断アドバイザー（2018年〜継続）</p>
-          <p><strong>内容：</strong>地域診断、産業振興計画の検討、地域事業者への面的支援、庁内ワークショップの設計・進行</p>
-          <p><strong>成果：</strong>計画策定プロセスを住民・事業者と共有。複数年にわたる面的支援の土台を整備</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>政令指定都市のスマートシティ実装アドバイザー</h3>
-          <p><strong>クライアント：</strong>地方自治体（政令指定都市・港湾都市）</p>
-          <p><strong>関与：</strong>スマートシティ推進アドバイザー（2023年〜）</p>
-          <p><strong>内容：</strong>フェア・シンポジウム登壇、フィールドリサーチ設計、ウォーターフロントWGのファシリテーション</p>
-          <p><strong>成果：</strong>実証案件の選定支援と部局横断の議論の場を定例化。市民・事業者を巻き込む検討会を継続運営</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>中核市のスマートシティ社会実装アドバイザー</h3>
-          <p><strong>クライアント：</strong>地方自治体（中核市・産業都市）</p>
-          <p><strong>関与：</strong>スマートシティ社会実装アドバイザー（2025年〜）</p>
-          <p><strong>内容：</strong>実証案件の選定支援、関係部局間の調整、市民・事業者を巻き込む検討会の設計</p>
-          <p><strong>成果：</strong>施策の優先順位づけと実装ロードマップのたたき台を整理</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>スマートシティ講演会・オープンデータワークショップ</h3>
-          <p><strong>クライアント：</strong>地方自治体（県庁所在地）</p>
-          <p><strong>関与：</strong>講師・ワークショップ設計（2026年1月）</p>
-          <p><strong>内容：</strong>スマートシティ入門講演、オープンデータ活用の演習ワークショップ</p>
-          <p><strong>成果：</strong>職員・市民がオープンデータの活用イメージを持てる形で設計・実施</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>自治体の財務・会計DX支援</h3>
-          <p><strong>クライアント：</strong>地方自治体（複数）</p>
-          <p><strong>関与：</strong>財務・会計DXアドバイザー（2023年〜）</p>
-          <p><strong>内容：</strong>経営・財務マネジメントの課題整理、DX施策の優先順位づけ、庁内ワークショップの進行</p>
-          <p><strong>成果：</strong>会計データの活用方針と業務改革の接続点を明確化。現場職員が動ける粒度の改善案に落とし込み</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>県のDX推進における市民共創の場づくり</h3>
-          <p><strong>クライアント：</strong>地方自治体（県）</p>
-          <p><strong>関与：</strong>市民共創推進部会 運営メンバー（2022年〜）</p>
-          <p><strong>内容：</strong>有識者・市民・事業者を巻き込む検討会の設計、議論の進行、成果の整理</p>
-          <p><strong>成果：</strong>県のDX方針と現場の声を接続する継続的な対話の場を運営</p>
-          <ul><li><a href="https://www.pref.chiba.lg.jp/chojusangyo/dx/index.html">千葉県 DX推進</a></li></ul>
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>オープンデータアイデアソン</h3>
-          <p><strong>クライアント：</strong>地方自治体（県内の市）</p>
-          <p><strong>関与：</strong>企画・ファシリテーション（2024年11月）</p>
-          <p><strong>内容：</strong>オープンデータを活用したアイデア創出ワークショップの設計・運営</p>
-          <p><strong>成果：</strong>市民・事業者がデータ活用のアイデアを具体化。行政へのフィードバック材料を整理</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>市民参加型・地域課題解決プログラムの企画支援</h3>
-          <p><strong>クライアント：</strong>地方自治体（県庁所在地）</p>
-          <p><strong>関与：</strong>企画アドバイザー（2026年）</p>
-          <p><strong>内容：</strong>市民参加プログラムの企画打ち合わせ、シビックテック手法の導入検討</p>
-          <p><strong>成果：</strong>行政主導ではなく市民起点の課題解決プログラムの設計方針を整理</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-          <h3>デジタル公共財とWell-Beingに関するシンポジウム</h3>
-          <p><strong>クライアント：</strong>国の政策支援団体・自治体関係者</p>
-          <p><strong>関与：</strong>企画・登壇（2025年3月）</p>
-          <p><strong>内容：</strong>デジタル公共財と地域のWell-Beingをテーマとしたイベントの企画・運営</p>
-          <p><strong>成果：</strong>政策と現場実装をつなぐ対話の場を設計。参加者間のネットワーク形成を促進</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>食品製造業の生産性向上</h3>
-          <p><strong>クライアント：</strong>従業員20名規模の食品製造業</p>
-          <p><strong>関与：</strong>生産性向上支援アドバイザー（6か月）</p>
-          <p><strong>内容：</strong>現場の時間観測、ボトルネック特定、改善計画と月次モニタリングの設計</p>
-          <p><strong>成果：</strong>リードタイム短縮と稼働の見える化。金融機関提出用の数値計画と接続</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>製造業の生産性向上支援</h3>
-          <p><strong>クライアント：</strong>従業員10〜30名規模の製造業</p>
-          <p><strong>関与：</strong>よろず支援拠点サポーター（2026年）</p>
-          <p><strong>内容：</strong>事前相談、初回訪問、現場観測、改善計画の策定</p>
-          <p><strong>成果：</strong>ボトルネックの可視化と改善の優先順位を整理。月次フォローの土台を整備</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>事業再生・経営改善計画の策定</h3>
-          <p><strong>クライアント：</strong>従業員10名規模の地域密着型事業者</p>
-          <p><strong>関与：</strong>認定支援機関／中小企業診断士（2026年）</p>
-          <p><strong>内容：</strong>資金繰りヒアリング、経営改善計画のキックオフ、金融機関とのバンクミーティング同席</p>
-          <p><strong>成果：</strong>再生に向けた数値計画と金融機関との合意形成を支援</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>建設業の再建相談（資金繰り・入札再開）</h3>
-          <p><strong>クライアント：</strong>従業員10名規模の建設業</p>
-          <p><strong>関与：</strong>中小企業診断士（2026年）</p>
-          <p><strong>内容：</strong>資金繰り改善、入札再開に向けた経営体制の整理、金融機関との調整</p>
-          <p><strong>成果：</strong>再建に向けた論点を整理し、実行可能な改善ステップを提示</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>信用保証協会 専門家派遣による経営診断</h3>
-          <p><strong>クライアント：</strong>小売・製造・手芸など複数業種（福島県内）</p>
-          <p><strong>関与：</strong>専門家派遣／中小企業診断士（2024年〜）</p>
-          <p><strong>内容：</strong>初回経営診断、経営改善計画の策定、金融機関への説明、モニタリング</p>
-          <p><strong>成果：</strong>制度要件を満たす計画書の作成と、実行後の数値フォローまで伴走</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>自動車関連サービス業の生産性向上推進</h3>
-          <p><strong>クライアント：</strong>従業員10名規模の自動車関連サービス業</p>
-          <p><strong>関与：</strong>生産性向上支援アドバイザー（2026年）</p>
-          <p><strong>内容：</strong>補助金申請書の作成、現地支援、実施報告書の作成</p>
-          <p><strong>成果：</strong>補助金交付と現場改善を接続。業務フローの見える化を実施</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>中小企業向け生成AI導入ワークショップ</h3>
-          <p><strong>クライアント：</strong>商工会・支援機関経由の中小企業（製造・小売・建設など）</p>
-          <p><strong>関与：</strong>講師・導入支援（90分〜半日（複数回））</p>
-          <p><strong>内容：</strong>業務適用の演習、社内ルールのたたき台作成、小さな業務ツールの試作</p>
-          <p><strong>成果：</strong>受講企業がその場で使える業務メモ・チェックリスト・プロンプト集を作成</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>経営改善計画と金融機関調整</h3>
-          <p><strong>クライアント：</strong>従業員10〜30名規模の卸売・サービス業（複数社）</p>
-          <p><strong>関与：</strong>認定支援機関／中小企業診断士（3〜12か月／社）</p>
-          <p><strong>内容：</strong>決算分析、経営改善計画・資金繰り表の作成、金融機関への説明同席、モニタリング</p>
-          <p><strong>成果：</strong>制度要件を満たす計画書の作成と、実行後の数値フォローまで伴走</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>伝統工芸・地域産業の経営診断</h3>
-          <p><strong>クライアント：</strong>伝統工芸品を扱う事業者（経営ラボ経由）</p>
-          <p><strong>関与：</strong>経営診断アドバイザー（2026年）</p>
-          <p><strong>内容：</strong>オンライン面談による経営状況の把握、改善の方向性の整理</p>
-          <p><strong>成果：</strong>伝統産業の持続可能性と事業モデルの見直し論点を整理</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
-          <h3>業界組合の不動産財産保全・譲渡に関する提言</h3>
-          <p><strong>クライアント：</strong>小売酒販組合（地方都市）</p>
-          <p><strong>関与：</strong>専門家アドバイザー（2026年）</p>
-          <p><strong>内容：</strong>不動産財産の現状整理、保全・譲渡に関する提言書の作成</p>
-          <p><strong>成果：</strong>組合員の資産保全に向けた方針と実行ステップを文書化</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span></div>
-          <h3>大手企業グループのコーポレート変革</h3>
-          <p><strong>クライアント：</strong>大手電機・IT企業グループ（約400社）</p>
-          <p><strong>関与：</strong>経営企画部門（2003–2018年）</p>
-          <p><strong>内容：</strong>トップサポート、全社会議体運営、間接部門のシェアードサービス化、全社稟議システム導入、グループ経営ポリシー策定</p>
-          <p><strong>成果：</strong>経営意思決定の速度向上と、子会社を含むガバナンスの標準化。理念・バリューの浸透施策を設計</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業・自治体</span></div>
-          <h3>業界横断コンソーシアムの立ち上げと運営</h3>
-          <p><strong>クライアント：</strong>企業・自治体・大学・NPOなど多様なステークホルダー</p>
-          <p><strong>関与：</strong>事務局代表／運営責任者（2022–2025年）</p>
-          <p><strong>内容：</strong>参画団体の募集、運営規程・会議体の設計、共創案件のマッチング、公開イベントの企画</p>
-          <p><strong>成果：</strong>のべ約300団体の参画。複数の実証・共創の場を継続運営し、新規サービス創出の接点を形成</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業・自治体</span></div>
-          <h3>インフラ利活用と地域防災の連携検討</h3>
-          <p><strong>クライアント：</strong>大手建設・インフラ関連企業と地方観光都市</p>
-          <p><strong>関与：</strong>地域連携アドバイザー（2025年〜）</p>
-          <p><strong>内容：</strong>調査計画の策定、企業と自治体の双方の論点整理、ワークショップ設計、実証に向けた論点の言語化</p>
-          <p><strong>成果：</strong>双方の意思決定の作法の違いを踏まえた提案ストーリーを整理。次年度実証設計への接続</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業・自治体</span></div>
-          <h3>スマートシティ社会実装フォーラム</h3>
-          <p><strong>クライアント：</strong>スマートシティ推進団体・自治体・企業</p>
-          <p><strong>関与：</strong>開会基調挨拶・講師（2025年）</p>
-          <p><strong>内容：</strong>特別フォーラムの開会挨拶、フェロー更新講義</p>
-          <p><strong>成果：</strong>全国のスマートシティ実装事例を共有する場の設計・運営に参画</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業・自治体</span></div>
-          <h3>大学PPP講座（スマートシティ）</h3>
-          <p><strong>クライアント：</strong>私立大学（首都圏）</p>
-          <p><strong>関与：</strong>講師（2026年）</p>
-          <p><strong>内容：</strong>官民連携（PPP）とスマートシティをテーマとした講義</p>
-          <p><strong>成果：</strong>学生・社会人受講者に実務に即したスマートシティの考え方を伝達</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">NPO・地域活動</span></div>
-          <h3>住民主体の自治会活動改善</h3>
-          <p><strong>クライアント：</strong>首都圏の市と地域住民団体</p>
-          <p><strong>関与：</strong>ファシリテーター／企画運営（2023年〜）</p>
-          <p><strong>内容：</strong>住民ワークショップの設計、活動の見える化、デジタル活用の試行、学会発表の相談</p>
-          <p><strong>成果：</strong>参加しやすい場づくりと活動記録の仕組みを整備。継続的な改善サイクルを開始</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">NPO・地域活動</span></div>
-          <h3>シビックテックによる市民参加型まちづくり</h3>
-          <p><strong>クライアント：</strong>首都圏の市（市民団体・行政連携）</p>
-          <p><strong>関与：</strong>企画・ファシリテーション（2017年〜）</p>
-          <p><strong>内容：</strong>オープンガバナンスチャレンジ、デザインスプリント、災害支援ナビゲーター、オープンデータ・AI活用</p>
-          <p><strong>成果：</strong>市民が中心となった政策提案とデータ活用の実践。広域シビックテック連携のモデル事例</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">NPO・地域活動</span></div>
-          <h3>子ども・地域を軸とした社会起業の事業承継</h3>
-          <p><strong>クライアント：</strong>地域シビックテック団体（法人化）</p>
-          <p><strong>関与：</strong>代表取締役（事業承継）（2025年12月〜）</p>
-          <p><strong>内容：</strong>社名変更・代表移譲、ミッション・ビジョンの再設計、共助システム研究の推進</p>
-          <p><strong>成果：</strong>地域活動の法人化と持続可能な事業モデルへの転換。子どもと地域をつなぐ活動基盤を整備</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">NPO・地域活動</span></div>
-          <h3>シビックパワーバトル全国大会の運営</h3>
-          <p><strong>クライアント：</strong>全国の自治体・高校・市民団体</p>
-          <p><strong>関与：</strong>実行委員会メンバー（2025年〜2026年）</p>
-          <p><strong>内容：</strong>全国大会の企画・運営調整、出展・決勝説明のサポート</p>
-          <p><strong>成果：</strong>市民起点のデータ活用コンテストの全国規模での展開を支援</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">NPO・地域活動</span></div>
-          <h3>アーバンデータチャレンジ（地域拠点）</h3>
-          <p><strong>クライアント：</strong>首都圏のシビックテック団体連携</p>
-          <p><strong>関与：</strong>拠点運営・企画（2025年）</p>
-          <p><strong>内容：</strong>キックオフ、中間シンポジウムの企画・運営</p>
-          <p><strong>成果：</strong>地域のオープンデータ活用チャレンジの拠点として活動を推進</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">NPO・地域活動</span></div>
-          <h3>商店街のイベント企画・面的支援</h3>
-          <p><strong>クライアント：</strong>東京の歴史ある商店街</p>
-          <p><strong>関与：</strong>経営支援アドバイザー（2013–2016年）</p>
-          <p><strong>内容：</strong>七福猫フェスタの企画・運営、インバウンド交流会、理事会・青年部への説明、来街者調査</p>
-          <p><strong>成果：</strong>商店街の来街促進イベントを企画運営。地域の魅力発信と関係者の巻き込みを実現</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">NPO・地域活動</span></div>
-          <h3>復興支援プログラムのサポーター運営</h3>
-          <p><strong>クライアント：</strong>国の復興支援プログラム</p>
-          <p><strong>関与：</strong>サポーター説明会 企画・運営（2014年）</p>
-          <p><strong>内容：</strong>プロボノ・サポート活動の説明会企画、メディア対応、サポーター会の運営</p>
-          <p><strong>成果：</strong>中小企業診断士のプロボノ参画を促進。復興支援のネットワーク形成に貢献</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">NPO・地域活動</span></div>
-          <h3>地域イノベーションプログラムのメンタリング</h3>
-          <p><strong>クライアント：</strong>県のイノベーション支援プログラム</p>
-          <p><strong>関与：</strong>メンター（2025年）</p>
-          <p><strong>内容：</strong>ビジネスデザインセッション、中間発表のファシリテーション</p>
-          <p><strong>成果：</strong>起業・事業化を目指す参加者のビジネスモデル整理と発表支援</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">研修・講演</span></div>
-          <h3>自治体職員向けDX・業務改革研修</h3>
-          <p><strong>クライアント：</strong>地方自治体・支援機関</p>
-          <p><strong>関与：</strong>講師・ワークショップ設計（複数回（90分〜半日））</p>
-          <p><strong>内容：</strong>生成AIの業務適用、庁内ルール整備、演習による業務フロー改善</p>
-          <p><strong>成果：</strong>受講者がその場で持ち帰れる成果物（業務メモ・チェックリスト）まで設計</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">研修・講演</span></div>
-          <h3>well-being指標を使った対話の場づくり</h3>
-          <p><strong>クライアント：</strong>自治体・地域団体</p>
-          <p><strong>関与：</strong>ファシリテーター（半日ワークショップ（複数回））</p>
-          <p><strong>内容：</strong>指標の読み解き、住民・職員間の対話設計、合意形成の進行</p>
-          <p><strong>成果：</strong>指標を「評価」ではなく「対話の材料」として使う進め方を現場に定着</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">研修・講演</span></div>
-          <h3>地域テクノロジーアカデミー講義</h3>
-          <p><strong>クライアント：</strong>地方の技術者・事業者向け教育プログラム</p>
-          <p><strong>関与：</strong>講師（2025年）</p>
-          <p><strong>内容：</strong>複数回にわたる講義（第4回〜第8回など）</p>
-          <p><strong>成果：</strong>地域の技術者・事業者にデジタル・まちづくりの実務知識を伝達</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">研修・講演</span></div>
-          <h3>シティプロモーションサミット登壇</h3>
-          <p><strong>クライアント：</strong>まちづくり・観光関連の全国イベント</p>
-          <p><strong>関与：</strong>講演・開会挨拶（2026年1月）</p>
-          <p><strong>内容：</strong>都市プロモーションに関する講演、開会挨拶</p>
-          <p><strong>成果：</strong>地域の魅力発信とデータ活用の考え方を全国の関係者に共有</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">研修・講演</span></div>
-          <h3>AIビジネス研究会講演「地域を動かすDX」</h3>
-          <p><strong>クライアント：</strong>経営者向け研究会</p>
-          <p><strong>関与：</strong>講師（2026年5月）</p>
-          <p><strong>内容：</strong>地域を動かすDXをテーマとした講演</p>
-          <p><strong>成果：</strong>経営者向けにAI・DXの地域実装の考え方を共有</p>
-          
-        </article>
-        <article class="card">
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">研修・講演</span></div>
-          <h3>オープンデータ基本研修</h3>
-          <p><strong>クライアント：</strong>県の行政・市民向け研修</p>
-          <p><strong>関与：</strong>講師（2020年）</p>
-          <p><strong>内容：</strong>オープンデータの基礎と活用方法の講義</p>
-          <p><strong>成果：</strong>行政・市民がオープンデータの活用イメージを持てる研修を実施</p>
-          
-        </article></div>
+  <section id="cases">
+    <div class="filterbar" id="case-filter"><button type="button" data-filter="all" aria-pressed="true">すべて<span style="opacity:.6"> 48</span></button><button type="button" data-filter="自治体・行政" aria-pressed="false">自治体・行政<span style="opacity:.6"> 19</span></button><button type="button" data-filter="大企業" aria-pressed="false">大企業<span style="opacity:.6"> 9</span></button><button type="button" data-filter="中小企業" aria-pressed="false">中小企業<span style="opacity:.6"> 10</span></button><button type="button" data-filter="支援機関" aria-pressed="false">支援機関<span style="opacity:.6"> 7</span></button><button type="button" data-filter="AI・DX" aria-pressed="false">AI・DX<span style="opacity:.6"> 13</span></button><button type="button" data-filter="スマートシティ" aria-pressed="false">スマートシティ<span style="opacity:.6"> 8</span></button><button type="button" data-filter="研修" aria-pressed="false">研修<span style="opacity:.6"> 9</span></button><button type="button" data-filter="地域づくり" aria-pressed="false">地域づくり<span style="opacity:.6"> 16</span></button><button type="button" data-filter="経営企画" aria-pressed="false">経営企画<span style="opacity:.6"> 10</span></button></div>
+    <div class="case-grid" id="case-grid">
+      <article class="case-card" data-tags="自治体・行政">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span></div>
+        <h3>科学技術・イノベーション基本計画の策定支援</h3>
+        <dl><dt>依頼者</dt><dd>中央省庁（科学技術・イノベーション政策部門）</dd><dt>担当</dt><dd>企画・起草チームのコアメンバー／国の基本計画の文案作成、関係府省庁・有識者との調整、政策文書の構造化</dd><dt>実施成果</dt><dd>全国の自治体・研究機関・事業者が参照する上位計画として公表。政策と現場実装をつなぐ共通言語を整備</dd><dt>期間</dt><dd>2019–2021年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|スマートシティ">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">スマートシティ</span></div>
+        <h3>スマートシティガイドブック・参照アーキテクチャの策定</h3>
+        <dl><dt>依頼者</dt><dd>中央省庁（デジタル・まちづくり政策）</dd><dt>担当</dt><dd>起草・調整担当／全国自治体向けガイドの構成設計、実装指針の整理、関連政策との整合</dd><dt>実施成果</dt><dd>公表資料として継続参照される形で整備。自治体のDX・まちづくり計画のたたき台として利用</dd><dt>期間</dt><dd>2019–2021年</dd></dl>
+        <ul><li><a href="https://www8.cao.go.jp/cstp/society5_0/smartcity/index.html">内閣府 スマートシティ関連資料</a></li></ul>
+      </article>
+      <article class="case-card" data-tags="自治体・行政|スマートシティ">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">スマートシティ</span></div>
+        <h3>スマートシティ国際学会の設立準備</h3>
+        <dl><dt>依頼者</dt><dd>産官学の有識者・関係団体</dd><dt>担当</dt><dd>設立準備委員会メンバー／事務局／学会設立に向けた規程・組織設計、準備委員会の運営、設立資料の整備</dd><dt>実施成果</dt><dd>2026年7月に事務局として就任。国際連携と国内実装をつなぐ学会基盤の立ち上げに参画</dd><dt>期間</dt><dd>2025年〜2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|スマートシティ|AI・DX">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">スマートシティ</span><span class="chip" style="--c:#3F7A6E">AI・DX</span></div>
+        <h3>スマートシティ推進に関する政府調査事業（データ連携の可能性調査）</h3>
+        <dl><dt>依頼者</dt><dd>政府</dd><dt>担当</dt><dd>地方中核市／政府のスマートシティ推進の調査事業を受託し、特定の中核市におけるデータ連携によるサービス開発の可能性について調査検討・報告資料作成</dd><dt>実施成果</dt><dd>データ連携によるサービス開発の可能性を整理し、政府向け報告資料として提出</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|研修">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">研修</span></div>
+        <h3>政策アイデアコンテスト ファイナリスト向け研修</h3>
+        <dl><dt>依頼者</dt><dd>国の政策立案支援プログラム</dd><dt>担当</dt><dd>講師・ファシリテーター／ファイナリスト向けの政策立案・プレゼンテーション研修の設計と登壇</dd><dt>実施成果</dt><dd>参加者が政策提案を発表可能な水準まで整理。審査に向けたストーリー構成を支援</dd><dt>期間</dt><dd>2025年3月</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>中核市の新たな総合計画策定（市民会議）</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（中核市・歴史文化都市）</dd><dt>担当</dt><dd>市民会議メンバー／市民会議の継続的な審議、住民の声の整理、計画文案への反映</dd><dt>実施成果</dt><dd>住民参加型の計画策定プロセスを継続運営。部局横断の議論と市民の意見を接続</dd><dt>期間</dt><dd>2025年〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>総合計画・地域診断の継続支援</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（観光・農業が基幹、人口1万人台の町）</dd><dt>担当</dt><dd>総合計画審議委員／地域診断アドバイザー／地域診断、産業振興計画の検討、地域事業者への面的支援、庁内ワークショップの設計・進行</dd><dt>実施成果</dt><dd>計画策定プロセスを住民・事業者と共有。複数年にわたる面的支援の土台を整備</dd><dt>期間</dt><dd>2018年〜継続</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|スマートシティ">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">スマートシティ</span></div>
+        <h3>政令指定都市のスマートシティ実装アドバイザー</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（政令指定都市・港湾都市）</dd><dt>担当</dt><dd>スマートシティ推進アドバイザー／フェア・シンポジウム登壇、フィールドリサーチ設計、ウォーターフロントWGのファシリテーション</dd><dt>実施成果</dt><dd>実証案件の選定支援と部局横断の議論の場を定例化。市民・事業者を巻き込む検討会を継続運営</dd><dt>期間</dt><dd>2023年〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|スマートシティ">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">スマートシティ</span></div>
+        <h3>中核市のスマートシティ社会実装アドバイザー</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（中核市・産業都市）</dd><dt>担当</dt><dd>スマートシティ社会実装アドバイザー／実証案件の選定支援、関係部局間の調整、市民・事業者を巻き込む検討会の設計</dd><dt>実施成果</dt><dd>施策の優先順位づけと実装ロードマップのたたき台を整理</dd><dt>期間</dt><dd>2025年〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|スマートシティ|AI・DX">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">スマートシティ</span><span class="chip" style="--c:#3F7A6E">AI・DX</span></div>
+        <h3>スマートシティ講演会・オープンデータワークショップ</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（県庁所在地）</dd><dt>担当</dt><dd>講師・ワークショップ設計／スマートシティ入門講演、オープンデータ活用の演習ワークショップ</dd><dt>実施成果</dt><dd>職員・市民がオープンデータの活用イメージを持てる形で設計・実施</dd><dt>期間</dt><dd>2026年1月</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|AI・DX">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">AI・DX</span></div>
+        <h3>自治体の財務・会計DX支援</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（複数）</dd><dt>担当</dt><dd>財務・会計DXアドバイザー／経営・財務マネジメントの課題整理、DX施策の優先順位づけ、庁内ワークショップの進行</dd><dt>実施成果</dt><dd>会計データの活用方針と業務改革の接続点を明確化。現場職員が動ける粒度の改善案に落とし込み</dd><dt>期間</dt><dd>2023年〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|AI・DX|地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">AI・DX</span><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>県のDX推進における市民共創の場づくり</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（県）</dd><dt>担当</dt><dd>市民共創推進部会 運営メンバー／有識者・市民・事業者を巻き込む検討会の設計、議論の進行、成果の整理</dd><dt>実施成果</dt><dd>県のDX方針と現場の声を接続する継続的な対話の場を運営</dd><dt>期間</dt><dd>2022年〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|AI・DX|研修">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">AI・DX</span><span class="chip" style="--c:#3F7A6E">研修</span></div>
+        <h3>オープンデータアイデアソン</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（市）</dd><dt>担当</dt><dd>企画・ファシリテーション／オープンデータを活用したアイデア創出ワークショップの設計・運営</dd><dt>実施成果</dt><dd>市民・事業者がデータ活用のアイデアを具体化。行政へのフィードバック材料を整理</dd><dt>期間</dt><dd>2024年11月</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>市民参加型・地域課題解決プログラムの企画支援</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（県庁所在地）</dd><dt>担当</dt><dd>企画アドバイザー／市民参加プログラムの企画打ち合わせ、シビックテック手法の導入検討</dd><dt>実施成果</dt><dd>行政主導ではなく市民起点の課題解決プログラムの設計方針を整理</dd><dt>期間</dt><dd>2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="自治体・行政|AI・DX|研修">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">AI・DX</span><span class="chip" style="--c:#3F7A6E">研修</span></div>
+        <h3>デジタル公共財とWell-Beingに関するシンポジウム</h3>
+        <dl><dt>依頼者</dt><dd>国の政策支援団体・自治体関係者</dd><dt>担当</dt><dd>企画・登壇／デジタル公共財と地域のWell-Beingをテーマとしたイベントの企画・運営</dd><dt>実施成果</dt><dd>政策と現場実装をつなぐ対話の場を設計。参加者間のネットワーク形成を促進</dd><dt>期間</dt><dd>2025年3月</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
+        <h3>食品製造業の生産性向上</h3>
+        <dl><dt>依頼者</dt><dd>従業員20名規模の食品製造業</dd><dt>担当</dt><dd>生産性向上支援アドバイザー／現場の時間観測、ボトルネック特定、改善計画と月次モニタリングの設計</dd><dt>実施成果</dt><dd>リードタイム短縮と稼働の見える化。金融機関提出用の数値計画と接続</dd><dt>期間</dt><dd>6か月</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業|支援機関">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span><span class="chip" style="--c:#3F7A6E">支援機関</span></div>
+        <h3>製造業の生産性向上支援</h3>
+        <dl><dt>依頼者</dt><dd>従業員10〜30名規模の製造業</dd><dt>担当</dt><dd>よろず支援拠点サポーター／事前相談、初回訪問、現場観測、改善計画の策定</dd><dt>実施成果</dt><dd>ボトルネックの可視化と改善の優先順位を整理。月次フォローの土台を整備</dd><dt>期間</dt><dd>2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業|支援機関|経営企画">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span><span class="chip" style="--c:#3F7A6E">支援機関</span><span class="chip" style="--c:#3F7A6E">経営企画</span></div>
+        <h3>事業再生・経営改善計画の策定</h3>
+        <dl><dt>依頼者</dt><dd>従業員10名規模の地域密着型事業者</dd><dt>担当</dt><dd>認定支援機関／中小企業診断士／資金繰りヒアリング、経営改善計画のキックオフ、金融機関とのバンクミーティング同席</dd><dt>実施成果</dt><dd>再生に向けた数値計画と金融機関との合意形成を支援</dd><dt>期間</dt><dd>2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業|経営企画">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span><span class="chip" style="--c:#3F7A6E">経営企画</span></div>
+        <h3>建設業の再建相談（資金繰り・入札再開）</h3>
+        <dl><dt>依頼者</dt><dd>従業員10名規模の建設業</dd><dt>担当</dt><dd>中小企業診断士／資金繰り改善、入札再開に向けた経営体制の整理、金融機関との調整</dd><dt>実施成果</dt><dd>再建に向けた論点を整理し、実行可能な改善ステップを提示</dd><dt>期間</dt><dd>2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業|支援機関|経営企画">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span><span class="chip" style="--c:#3F7A6E">支援機関</span><span class="chip" style="--c:#3F7A6E">経営企画</span></div>
+        <h3>信用保証協会 専門家派遣による経営診断</h3>
+        <dl><dt>依頼者</dt><dd>小売・製造・手芸など複数業種</dd><dt>担当</dt><dd>専門家派遣／中小企業診断士／初回経営診断、経営改善計画の策定、金融機関への説明、モニタリング</dd><dt>実施成果</dt><dd>制度要件を満たす計画書の作成と、実行後の数値フォローまで伴走</dd><dt>期間</dt><dd>2024年〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
+        <h3>自動車関連サービス業の生産性向上推進</h3>
+        <dl><dt>依頼者</dt><dd>従業員10名規模の自動車関連サービス業</dd><dt>担当</dt><dd>生産性向上支援アドバイザー／補助金申請書の作成、現地支援、実施報告書の作成</dd><dt>実施成果</dt><dd>補助金交付と現場改善を接続。業務フローの見える化を実施</dd><dt>期間</dt><dd>2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業|支援機関|AI・DX">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span><span class="chip" style="--c:#3F7A6E">支援機関</span><span class="chip" style="--c:#3F7A6E">AI・DX</span></div>
+        <h3>中小企業向け生成AI導入ワークショップ</h3>
+        <dl><dt>依頼者</dt><dd>商工会・支援機関経由の中小企業（製造・小売・建設など）</dd><dt>担当</dt><dd>講師・導入支援／業務適用の演習、社内ルールのたたき台作成、小さな業務ツールの試作</dd><dt>実施成果</dt><dd>受講企業がその場で使える業務メモ・チェックリスト・プロンプト集を作成</dd><dt>期間</dt><dd>90分〜半日（複数回）</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業|支援機関|経営企画">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span><span class="chip" style="--c:#3F7A6E">支援機関</span><span class="chip" style="--c:#3F7A6E">経営企画</span></div>
+        <h3>経営改善計画と金融機関調整</h3>
+        <dl><dt>依頼者</dt><dd>従業員10〜30名規模の卸売・サービス業（複数社）</dd><dt>担当</dt><dd>認定支援機関／中小企業診断士／決算分析、経営改善計画・資金繰り表の作成、金融機関への説明同席、モニタリング</dd><dt>実施成果</dt><dd>制度要件を満たす計画書の作成と、実行後の数値フォローまで伴走</dd><dt>期間</dt><dd>3〜12か月／社</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業|経営企画|地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span><span class="chip" style="--c:#3F7A6E">経営企画</span><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>伝統工芸・地域産業の経営診断</h3>
+        <dl><dt>依頼者</dt><dd>伝統工芸品を扱う事業者（経営ラボ経由）</dd><dt>担当</dt><dd>経営診断アドバイザー／オンライン面談による経営状況の把握、改善の方向性の整理</dd><dt>実施成果</dt><dd>伝統産業の持続可能性と事業モデルの見直し論点を整理</dd><dt>期間</dt><dd>2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="中小企業|支援機関|経営企画">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span><span class="chip" style="--c:#3F7A6E">支援機関</span><span class="chip" style="--c:#3F7A6E">経営企画</span></div>
+        <h3>業界組合の不動産財産保全・譲渡に関する提言</h3>
+        <dl><dt>依頼者</dt><dd>業界組合</dd><dt>担当</dt><dd>専門家アドバイザー／不動産財産の現状整理、保全・譲渡に関する提言書の作成</dd><dt>実施成果</dt><dd>組合員の資産保全に向けた方針と実行ステップを文書化</dd><dt>期間</dt><dd>2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="大企業|経営企画">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span><span class="chip" style="--c:#3F7A6E">経営企画</span></div>
+        <h3>経営トップの意思決定支援（トップサポート）</h3>
+        <dl><dt>依頼者</dt><dd>大手電機・IT企業グループ（約400社）</dd><dt>担当</dt><dd>経営企画部門／経営トップ向けの論点整理と資料作成、社内外の関係者調整、意思決定に必要な情報の集約</dd><dt>実施成果</dt><dd>経営トップが短時間で判断できる論点整理の型を定着。意思決定の速度向上に寄与</dd><dt>期間</dt><dd>2003–2018年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="大企業|経営企画">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span><span class="chip" style="--c:#3F7A6E">経営企画</span></div>
+        <h3>全社会議体の設計・運営</h3>
+        <dl><dt>依頼者</dt><dd>大手電機・IT企業グループ（約400社）</dd><dt>担当</dt><dd>経営企画部門／全社的な会議体の位置づけ整理、付議基準・運営ルールの設計、議事運営と決定事項の追跡</dd><dt>実施成果</dt><dd>会議体ごとの役割と付議基準を明確化。決定から実行までの引き継ぎ漏れを抑制</dd><dt>期間</dt><dd>2003–2018年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="大企業">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span></div>
+        <h3>間接部門のシェアードサービス化</h3>
+        <dl><dt>依頼者</dt><dd>大手電機・IT企業グループ（約400社）</dd><dt>担当</dt><dd>経営企画部門／間接業務の棚卸しと標準化、集約対象業務の切り出し、移管計画の策定と関係部門調整</dd><dt>実施成果</dt><dd>間接部門の業務を集約し標準化。重複業務の削減と品質のばらつき低減を実現</dd><dt>期間</dt><dd>2003–2018年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="大企業|AI・DX">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span><span class="chip" style="--c:#3F7A6E">AI・DX</span></div>
+        <h3>全社稟議システムの導入</h3>
+        <dl><dt>依頼者</dt><dd>大手電機・IT企業グループ（約400社）</dd><dt>担当</dt><dd>経営企画部門／決裁ルールの整理と業務要件の定義、システム導入の推進、全社展開に向けた運用設計と定着支援</dd><dt>実施成果</dt><dd>紙・属人的な決裁プロセスを電子化。決裁状況の可視化と処理期間の短縮を実現</dd><dt>期間</dt><dd>2003–2018年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="大企業|経営企画">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span><span class="chip" style="--c:#3F7A6E">経営企画</span></div>
+        <h3>グループ経営ポリシーの策定と理念・バリューの浸透</h3>
+        <dl><dt>依頼者</dt><dd>大手電機・IT企業グループ（約400社）</dd><dt>担当</dt><dd>経営企画部門／グループ経営ポリシーの策定、子会社を含む統制範囲の整理、ビジョン・バリューの検討と社内浸透施策の設計</dd><dt>実施成果</dt><dd>子会社を含むガバナンスの標準化。理念・バリューを行動に落とす浸透施策を設計・展開</dd><dt>期間</dt><dd>2003–2018年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="大企業|自治体・行政">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span><span class="chip" style="--c:#3F7A6E">自治体・行政</span></div>
+        <h3>業界横断コンソーシアムの立ち上げと運営</h3>
+        <dl><dt>依頼者</dt><dd>企業・自治体・大学・NPOなど多様なステークホルダー</dd><dt>担当</dt><dd>事務局代表／運営責任者／参画団体の募集、運営規程・会議体の設計、共創案件のマッチング、公開イベントの企画</dd><dt>実施成果</dt><dd>のべ約300団体の参画。複数の実証・共創の場を継続運営し、新規サービス創出の接点を形成</dd><dt>期間</dt><dd>2022–2025年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="大企業|自治体・行政|地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>インフラ利活用と地域防災の連携検討</h3>
+        <dl><dt>依頼者</dt><dd>大手建設・インフラ関連企業と地方観光都市</dd><dt>担当</dt><dd>地域連携アドバイザー／調査計画の策定、企業と自治体の双方の論点整理、ワークショップ設計、実証に向けた論点の言語化</dd><dt>実施成果</dt><dd>双方の意思決定の作法の違いを踏まえた提案ストーリーを整理。次年度実証設計への接続</dd><dt>期間</dt><dd>2025年〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="大企業|自治体・行政|スマートシティ">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">スマートシティ</span></div>
+        <h3>スマートシティ関連業界のイベント企画運営</h3>
+        <dl><dt>依頼者</dt><dd>スマートシティ推進団体・自治体・企業</dd><dt>担当</dt><dd>開会基調挨拶・講師／特別フォーラムの開会挨拶、フェロー更新講義</dd><dt>実施成果</dt><dd>全国のスマートシティ実装事例を共有する場の設計・運営に参画</dd><dt>期間</dt><dd>2025年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="大企業|自治体・行政|スマートシティ">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業</span><span class="chip" style="--c:#3F7A6E">自治体・行政</span><span class="chip" style="--c:#3F7A6E">スマートシティ</span></div>
+        <h3>大学PPP講座（スマートシティ）</h3>
+        <dl><dt>依頼者</dt><dd>私立大学</dd><dt>担当</dt><dd>講師／官民連携（PPP）とスマートシティをテーマとした講義</dd><dt>実施成果</dt><dd>学生・社会人受講者に実務に即したスマートシティの考え方を伝達</dd><dt>期間</dt><dd>2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>住民主体の自治会活動改善</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（市）と地域住民団体</dd><dt>担当</dt><dd>ファシリテーター／企画運営／住民ワークショップの設計、活動の見える化、デジタル活用の試行、学会発表の相談</dd><dt>実施成果</dt><dd>参加しやすい場づくりと活動記録の仕組みを整備。継続的な改善サイクルを開始</dd><dt>期間</dt><dd>2023年〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="地域づくり|AI・DX">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">地域づくり</span><span class="chip" style="--c:#3F7A6E">AI・DX</span></div>
+        <h3>シビックテックによる市民参加型まちづくり</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体（市）と市民団体の行政連携</dd><dt>担当</dt><dd>企画・ファシリテーション／オープンガバナンスチャレンジ、デザインスプリント、災害支援ナビゲーター、オープンデータ・AI活用</dd><dt>実施成果</dt><dd>市民が中心となった政策提案とデータ活用の実践。広域シビックテック連携のモデル事例</dd><dt>期間</dt><dd>2017年〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="地域づくり|経営企画">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">地域づくり</span><span class="chip" style="--c:#3F7A6E">経営企画</span></div>
+        <h3>子ども・地域を軸とした社会起業の事業承継</h3>
+        <dl><dt>依頼者</dt><dd>地域シビックテック団体（法人化）</dd><dt>担当</dt><dd>代表取締役（事業承継）／社名変更・代表移譲、ミッション・ビジョンの再設計、共助システム研究の推進</dd><dt>実施成果</dt><dd>地域活動の法人化と持続可能な事業モデルへの転換。子どもと地域をつなぐ活動基盤を整備</dd><dt>期間</dt><dd>2025年12月〜</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>シビックパワーバトル全国大会の運営</h3>
+        <dl><dt>依頼者</dt><dd>全国の自治体・高校・市民団体</dd><dt>担当</dt><dd>実行委員会メンバー／全国大会の企画・運営調整、出展・決勝説明のサポート</dd><dt>実施成果</dt><dd>市民起点のデータ活用コンテストの全国規模での展開を支援</dd><dt>期間</dt><dd>2025年〜2026年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="地域づくり|AI・DX">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">地域づくり</span><span class="chip" style="--c:#3F7A6E">AI・DX</span></div>
+        <h3>アーバンデータチャレンジ（地域拠点）</h3>
+        <dl><dt>依頼者</dt><dd>地域のシビックテック団体連携</dd><dt>担当</dt><dd>拠点運営・企画／キックオフ、中間シンポジウムの企画・運営</dd><dt>実施成果</dt><dd>地域のオープンデータ活用チャレンジの拠点として活動を推進</dd><dt>期間</dt><dd>2025年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>商店街のイベント企画・面的支援</h3>
+        <dl><dt>依頼者</dt><dd>都市部の歴史ある商店街</dd><dt>担当</dt><dd>経営支援アドバイザー／商店街イベントの企画・運営、インバウンド交流会、理事会・青年部への説明、来街者調査</dd><dt>実施成果</dt><dd>商店街の来街促進イベントを企画運営。地域の魅力発信と関係者の巻き込みを実現</dd><dt>期間</dt><dd>2013–2016年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>復興支援プログラムのサポーター運営</h3>
+        <dl><dt>依頼者</dt><dd>国の復興支援プログラム</dd><dt>担当</dt><dd>サポーター説明会 企画・運営／プロボノ・サポート活動の説明会企画、メディア対応、サポーター会の運営</dd><dt>実施成果</dt><dd>中小企業診断士のプロボノ参画を促進。復興支援のネットワーク形成に貢献</dd><dt>期間</dt><dd>2014年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>地域イノベーションプログラムのメンタリング</h3>
+        <dl><dt>依頼者</dt><dd>県のイノベーション支援プログラム</dd><dt>担当</dt><dd>メンター／ビジネスデザインセッション、中間発表のファシリテーション</dd><dt>実施成果</dt><dd>起業・事業化を目指す参加者のビジネスモデル整理と発表支援</dd><dt>期間</dt><dd>2025年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="研修|支援機関|AI・DX">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">研修</span><span class="chip" style="--c:#3F7A6E">支援機関</span><span class="chip" style="--c:#3F7A6E">AI・DX</span></div>
+        <h3>自治体職員向けDX・業務改革研修</h3>
+        <dl><dt>依頼者</dt><dd>地方自治体・支援機関</dd><dt>担当</dt><dd>講師・ワークショップ設計／生成AIの業務適用、庁内ルール整備、演習による業務フロー改善</dd><dt>実施成果</dt><dd>受講者がその場で持ち帰れる成果物（業務メモ・チェックリスト）まで設計</dd><dt>期間</dt><dd>複数回（90分〜半日）</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="研修">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">研修</span></div>
+        <h3>well-being指標を使った対話の場づくり</h3>
+        <dl><dt>依頼者</dt><dd>自治体・地域団体</dd><dt>担当</dt><dd>ファシリテーター／指標の読み解き、住民・職員間の対話設計、合意形成の進行</dd><dt>実施成果</dt><dd>指標を「評価」ではなく「対話の材料」として使う進め方を現場に定着</dd><dt>期間</dt><dd>半日ワークショップ（複数回）</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="研修|地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">研修</span><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>地域テクノロジーアカデミー講義</h3>
+        <dl><dt>依頼者</dt><dd>地方の技術者・事業者向け教育プログラム</dd><dt>担当</dt><dd>講師／複数回にわたる講義（第4回〜第8回など）</dd><dt>実施成果</dt><dd>地域の技術者・事業者にデジタル・まちづくりの実務知識を伝達</dd><dt>期間</dt><dd>2025年</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="研修">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">研修</span></div>
+        <h3>シティプロモーションサミット登壇</h3>
+        <dl><dt>依頼者</dt><dd>まちづくり・観光関連の全国イベント</dd><dt>担当</dt><dd>講演・開会挨拶／都市プロモーションに関する講演、開会挨拶</dd><dt>実施成果</dt><dd>地域の魅力発信とデータ活用の考え方を全国の関係者に共有</dd><dt>期間</dt><dd>2026年1月</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="研修|AI・DX|地域づくり">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">研修</span><span class="chip" style="--c:#3F7A6E">AI・DX</span><span class="chip" style="--c:#3F7A6E">地域づくり</span></div>
+        <h3>AIビジネス研究会講演「地域を動かすDX」</h3>
+        <dl><dt>依頼者</dt><dd>経営者向け研究会</dd><dt>担当</dt><dd>講師／地域を動かすDXをテーマとした講演</dd><dt>実施成果</dt><dd>経営者向けにAI・DXの地域実装の考え方を共有</dd><dt>期間</dt><dd>2026年5月</dd></dl>
+        
+      </article>
+      <article class="case-card" data-tags="研修|AI・DX">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">研修</span><span class="chip" style="--c:#3F7A6E">AI・DX</span></div>
+        <h3>オープンデータ基本研修</h3>
+        <dl><dt>依頼者</dt><dd>県の行政・市民向け研修</dd><dt>担当</dt><dd>講師／オープンデータの基礎と活用方法の講義</dd><dt>実施成果</dt><dd>行政・市民がオープンデータの活用イメージを持てる研修を実施</dd><dt>期間</dt><dd>2020年</dd></dl>
+        
+      </article></div>
   </section>
   <section id="contact">
     <h2>お仕事のご相談</h2>
-    <p class="lead">事例の詳細や類似案件のご相談は、<a href="index.html#contact">プロフィールページのフォーム</a>からお送りください。</p>
+    <p class="lead">事例の詳細や、類似案件のご相談を承ります。まだ依頼内容が決まっていない段階でも構いません。</p>
     
     <form class="form-grid" action="https://formsubmit.co/tutti@office626.com" method="POST">
       <input type="hidden" name="_subject" value="プロフィールサイトからのお仕事のご相談">
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="_honey" style="display:none">
-      <div><label for="name">お名前 *</label><input id="name" name="name" required></div>
-      <div><label for="org">ご所属</label><input id="org" name="organization"></div>
-      <div><label for="email">メールアドレス *</label><input id="email" name="email" type="email" required></div>
-      <div><label for="type">ご相談の種類</label>
-        <select id="type" name="inquiry_type">
-          <option>自治体・行政</option><option>中小企業</option><option>大企業</option>
-          <option>NPO・地域活動</option><option>研修・講演</option><option>その他</option>
-        </select></div>
-      <div><label for="message">ご相談内容 *</label>
-        <textarea id="message" name="message" required placeholder="課題・希望時期・予算感など"></textarea></div>
+      <div><label for="pf-name">お名前 *</label><input id="pf-name" name="name" required></div>
+      <div><label for="pf-org">団体・企業名</label><input id="pf-org" name="organization"></div>
+      <div><label for="pf-email">メールアドレス *</label><input id="pf-email" name="email" type="email" required></div>
+      <div><label for="pf-sel0">ご相談の種類</label><select id="pf-sel0" name="ご相談の種類"><option value="">選択してください</option><option>経営・事業戦略</option><option>経営改善</option><option>AI・DX</option><option>自治体政策</option><option>官民共創</option><option>地域産業支援</option><option>研修・講演</option><option>ファシリテーション</option><option>その他</option><option>まだ決まっていない</option></select></div><div><label for="pf-sel1">ご所属</label><select id="pf-sel1" name="ご所属"><option value="">選択してください</option><option>自治体</option><option>国・公共機関</option><option>大企業</option><option>中小企業</option><option>商工会・商工会議所</option><option>金融機関</option><option>その他支援機関</option><option>NPO・市民団体</option><option>その他</option></select></div><div><label for="pf-sel2">希望時期</label><select id="pf-sel2" name="希望時期"><option value="">選択してください</option><option>すぐに相談したい</option><option>1か月以内</option><option>3か月以内</option><option>半年以内</option><option>情報収集中</option></select></div><div><label for="pf-sel3">予算感（任意）</label><select id="pf-sel3" name="予算感"><option value="">選択してください</option><option>10万円未満</option><option>10〜30万円</option><option>30〜100万円</option><option>100万円以上</option><option>未定</option></select></div>
+      <div><label for="pf-message">ご相談内容 *</label>
+        <textarea id="pf-message" name="message" required placeholder="現在の状況、解決したいこと、希望時期など"></textarea>
+        <p class="cta-note">まだ整理できていなくても、そのままお書きください。</p></div>
       <button class="btn" type="submit">送信する</button>
     </form>
   </section>
   <footer>LAST UPDATED 2026-08-29</footer>
 </div>
+<a class="btn sticky-cta" href="#contact">仕事について相談する</a>
+<script>
+(function () {
+  function bind(barId, gridId, attr) {
+    var bar = document.getElementById(barId);
+    var grid = document.getElementById(gridId);
+    if (!bar || !grid) return;
+    var buttons = bar.querySelectorAll("button");
+    function apply(key) {
+      buttons.forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b.dataset.filter === key));
+      });
+      var shown = 0;
+      grid.querySelectorAll("[" + attr + "]").forEach(function (card) {
+        var hit = key === "all" ||
+          card.getAttribute(attr).split(/[|\s]+/).indexOf(key) !== -1;
+        card.classList.toggle("is-hidden", !hit);
+        if (hit) shown++;
+      });
+      var empty = grid.parentNode.querySelector(".menu-empty");
+      if (empty) empty.hidden = shown > 0;
+    }
+    bar.addEventListener("click", function (ev) {
+      var b = ev.target.closest("button");
+      if (b) apply(b.dataset.filter);
+    });
+    bar.dataset.apply = "1";
+    grid.filterApply = apply;
+    var q = new URLSearchParams(location.search).get(barId === "menu-filter" ? "target" : "tag");
+    var hash = (location.hash.split("?")[1] || "");
+    var hq = new URLSearchParams(hash).get("target");
+    if (q || hq) apply(q || hq);
+  }
+  bind("menu-filter", "menu-grid", "data-targets");
+  bind("case-filter", "case-grid", "data-tags");
+
+  document.querySelectorAll("[data-menu-filter]").forEach(function (a) {
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      var grid = document.getElementById("menu-grid");
+      if (grid && grid.filterApply) grid.filterApply(a.dataset.menuFilter);
+      var target = document.getElementById("menu");
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+})();
+</script>
 </body>
 </html>
