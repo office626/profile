@@ -32,8 +32,8 @@ cases:
     scope: 全国自治体向けガイドの構成設計、実装指針の整理、関連政策との整合
     result: 公表資料として継続参照される形で整備。自治体のDX・まちづくり計画のたたき台として利用
     public_links:
-      - label: デジタル庁 スマートシティ関連資料
-        url: "https://www.digital.go.jp/policies/smartcity"
+      - label: 内閣府 スマートシティ関連資料
+        url: "https://www8.cao.go.jp/cstp/society5_0/smartcity/index.html"
 
   - id: smartcity-intl-society
     category: 国・政策
