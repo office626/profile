@@ -45,6 +45,14 @@ cases:
     scope: 学会設立に向けた規程・組織設計、準備委員会の運営、設立資料の整備
     result: 2026年7月に事務局として就任。国際連携と国内実装をつなぐ学会基盤の立ち上げに参画
 
+  - id: smartcity-data-feasibility-study
+    category: 国・政策
+    related_service: "自治体の計画づくりと政策立案の伴走"
+    title: スマートシティ推進に関する政府調査事業（データ連携の可能性調査）
+    client: 政府
+    role: 地方中核市
+    scope: 政府のスマートシティ推進の調査事業を受託し、特定の中核市におけるデータ連携によるサービス開発の可能性について調査検討・報告資料作成
+
   - id: policy-idea-contest
     category: 国・政策
     related_service: "研修・講演・ワークショップの設計と登壇"

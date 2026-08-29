@@ -491,14 +491,20 @@ def build_portfolio_html(portfolio, profile):
         for lnk in c.get("public_links", []):
             links += f'<li><a href="{e(lnk["url"])}">{e(lnk["label"])}</a></li>'
         links_block = f"<ul>{links}</ul>" if links else ""
+        role = e(c.get("role", ""))
+        if c.get("period"):
+            role += f"（{e(c['period'])}）"
+        result_block = (
+            f'<p><strong>成果：</strong>{e(c["result"])}</p>' if c.get("result") else ""
+        )
         cases_html += f"""
         <article class="card">
           <div class="chips"><span class="chip" style="--c:#3F7A6E">{e(c.get('category',''))}</span></div>
           <h3>{e(c['title'])}</h3>
           <p><strong>クライアント：</strong>{e(c.get('client',''))}</p>
-          <p><strong>関与：</strong>{e(c.get('role',''))}（{e(c.get('period',''))}）</p>
+          <p><strong>関与：</strong>{role}</p>
           <p><strong>内容：</strong>{e(c.get('scope',''))}</p>
-          <p><strong>成果：</strong>{e(c.get('result',''))}</p>
+          {result_block}
           {links_block}
         </article>"""
 
