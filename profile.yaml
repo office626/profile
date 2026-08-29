@@ -95,10 +95,10 @@ free_entry:
 
 publications:
   - title: "スマートシティガイドブック（国の公表物）"
-    url: "https://www.digital.go.jp/policies/smartcity"
+    url: "https://www8.cao.go.jp/cstp/society5_0/smartcity/index.html"
     note: "内閣府出向時に策定に関与"
-  - title: "デジタル庁 スマートシティ政策・資料"
-    url: "https://www.digital.go.jp/policies/smartcity"
+  - title: "内閣府 スマートシティ政策・資料"
+    url: "https://www8.cao.go.jp/cstp/society5_0/smartcity/index.html"
     note: "参照アーキテクチャ等の関連資料"
   - title: "千葉県DX推進協議会（市民共創推進部会）"
     url: "https://www.pref.chiba.lg.jp/chojusangyo/dx/index.html"
