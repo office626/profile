@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+
+# 内部メモとローカル作業ファイルは公開しない
+強みと想定依頼者_内部メモ.md
+プロフィールページ_プレビュー.html
+tsuchiya-profile-repo.zip
+unzipped-profile/
