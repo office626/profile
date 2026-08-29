@@ -114,9 +114,19 @@
   ],
   "featured_notes": [
     {
-      "title": "まちとしごととくらしの研究所（note）",
-      "url": "https://note.com/office626",
-      "theme": "政策・地域・中小企業の実務メモ"
+      "title": "次世代のためにできること",
+      "url": "https://note.com/office626/n/nb2cbcd8551af",
+      "theme": "株式会社子ラボ屋の設立と、地域・子どもを軸にした活動方針"
+    },
+    {
+      "title": "新しいふるさとを創る",
+      "url": "https://note.com/office626/n/n0eec09c32adf",
+      "theme": "研究所設立の背景と、まち・しごと・くらしの3領域での活動"
+    },
+    {
+      "title": "2040年6月の日記　～退職エントリに代えて",
+      "url": "https://note.com/office626/n/nf058311b9bc8",
+      "theme": "独立への転機と、これまでの経験をどう活かすか"
     }
   ],
   "career": [
@@ -389,7 +399,7 @@
       "use_for": "法人契約が必要な案件、商品・サービス開発関連（内容により使い分け）"
     }
   ],
-  "invoice_note": "インボイス登録番号はお見積り時にご案内します。",
+  "invoice_note": "適格請求書発行事業者の登録は行っておりません。お見積り・お支払い条件は個別にご相談ください。",
   "contact_form": {
     "action": "https://formsubmit.co/tutti@office626.com",
     "email": "tutti@office626.com"

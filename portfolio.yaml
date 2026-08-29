@@ -1,67 +1,454 @@
 # ポートフォリオ — 匿名化した実績事例
-# 顧客名・組織の立場は一般化して記載しています。
+# 土屋俊博_実績一覧_マスター版.xlsx（262件・2012–2026年）をもとに整理
+# 顧客名・個人名・特定の自治体名・社名は記載しません。
 
 meta:
   updated: "2026-08-29"
   title: "実績・ポートフォリオ"
   intro: |
-    守秘義務のある案件は、業種・規模・期間・関与内容・成果の5点に整理して掲載しています。
-    詳細な事例や公開資料へのリンクは、個別のご相談でもお伝えできます。
+    2012年から2026年時点で262件の活動記録をもとに、守秘義務のある案件は業種・規模・期間・関与内容・成果の5点に整理して掲載しています。
+    経営診断・イベント企画運営・講師登壇・委員・審議会など、事案分類ごとに幅広い実績があります。
+    各事例はプロフィールページのサービスメニューと対応づけています。詳細は個別のご相談でもお伝えできます。
 
 cases:
-  - id: policy-guidebook
+  # --- 国・政策 ---
+  - id: national-innovation-plan
     category: 国・政策
-    title: スマートシティ関連の国の公表ガイド策定
-    client: 中央省庁（政策立案部門）
+    related_service: "自治体の計画づくりと政策立案の伴走"
+    title: 科学技術・イノベーション基本計画の策定支援
+    client: 中央省庁（科学技術・イノベーション政策部門）
     role: 企画・起草チームのコアメンバー
     period: "2019–2021年"
-    scope: 全国自治体向けガイドブックと参照アーキテクチャの検討・文案作成、関連府省庁との調整
-    result: 公表物として全国の自治体・事業者が参照できる形で整備。政策と現場実装の橋渡し資料として継続利用
+    scope: 国の基本計画の文案作成、関係府省庁・有識者との調整、政策文書の構造化
+    result: 全国の自治体・研究機関・事業者が参照する上位計画として公表。政策と現場実装をつなぐ共通言語を整備
+
+  - id: smartcity-guidebook
+    category: 国・政策
+    related_service: "自治体の計画づくりと政策立案の伴走"
+    title: スマートシティガイドブック・参照アーキテクチャの策定
+    client: 中央省庁（デジタル・まちづくり政策）
+    role: 起草・調整担当
+    period: "2019–2021年"
+    scope: 全国自治体向けガイドの構成設計、実装指針の整理、関連政策との整合
+    result: 公表資料として継続参照される形で整備。自治体のDX・まちづくり計画のたたき台として利用
     public_links:
       - label: デジタル庁 スマートシティ関連資料
         url: "https://www.digital.go.jp/policies/smartcity"
 
-  - id: municipal-plan
+  - id: smartcity-intl-society
+    category: 国・政策
+    related_service: "大企業と自治体をつなぐ共創・実証のコーディネート"
+    title: スマートシティ国際学会の設立準備
+    client: 産官学の有識者・関係団体
+    role: 設立準備委員会メンバー／事務局
+    period: "2025年〜2026年"
+    scope: 学会設立に向けた規程・組織設計、準備委員会の運営、設立資料の整備
+    result: 2026年7月に事務局として就任。国際連携と国内実装をつなぐ学会基盤の立ち上げに参画
+
+  - id: policy-idea-contest
+    category: 国・政策
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: 政策アイデアコンテスト ファイナリスト向け研修
+    client: 国の政策立案支援プログラム
+    role: 講師・ファシリテーター
+    period: "2025年3月"
+    scope: ファイナリスト向けの政策立案・プレゼンテーション研修の設計と登壇
+    result: 参加者が政策提案を発表可能な水準まで整理。審査に向けたストーリー構成を支援
+
+  # --- 自治体 ---
+  - id: municipal-comprehensive-plan-aizu
     category: 自治体
+    related_service: "自治体の計画づくりと政策立案の伴走"
+    title: 中核市の新たな総合計画策定（市民会議）
+    client: 地方自治体（中核市・歴史文化都市）
+    role: 市民会議メンバー
+    period: "2025年〜"
+    scope: 市民会議の継続的な審議、住民の声の整理、計画文案への反映
+    result: 住民参加型の計画策定プロセスを継続運営。部局横断の議論と市民の意見を接続
+
+  - id: municipal-comprehensive-plan-izu
+    category: 自治体
+    related_service: "地域診断・産地／商店街の面的支援"
     title: 総合計画・地域診断の継続支援
-    client: 地方自治体（観光・農業が基幹の町、人口1万人台）
+    client: 地方自治体（観光・農業が基幹、人口1万人台の町）
     role: 総合計画審議委員／地域診断アドバイザー
     period: "2018年〜継続"
     scope: 地域診断、産業振興計画の検討、地域事業者への面的支援、庁内ワークショップの設計・進行
-    result: 計画策定プロセスを住民・事業者と共有し、複数年にわたる面的支援の土台を整備
+    result: 計画策定プロセスを住民・事業者と共有。複数年にわたる面的支援の土台を整備
 
-  - id: sme-productivity
+  - id: smartcity-advisor-kobe
+    category: 自治体
+    related_service: "自治体の計画づくりと政策立案の伴走"
+    title: 政令指定都市のスマートシティ実装アドバイザー
+    client: 地方自治体（政令指定都市・港湾都市）
+    role: スマートシティ推進アドバイザー
+    period: "2023年〜"
+    scope: フェア・シンポジウム登壇、フィールドリサーチ設計、ウォーターフロントWGのファシリテーション
+    result: 実証案件の選定支援と部局横断の議論の場を定例化。市民・事業者を巻き込む検討会を継続運営
+
+  - id: smartcity-advisor-kusatsu
+    category: 自治体
+    related_service: "自治体の計画づくりと政策立案の伴走"
+    title: 中核市のスマートシティ社会実装アドバイザー
+    client: 地方自治体（中核市・産業都市）
+    role: スマートシティ社会実装アドバイザー
+    period: "2025年〜"
+    scope: 実証案件の選定支援、関係部局間の調整、市民・事業者を巻き込む検討会の設計
+    result: 施策の優先順位づけと実装ロードマップのたたき台を整理
+
+  - id: smartcity-lecture-wakayama
+    category: 自治体
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: スマートシティ講演会・オープンデータワークショップ
+    client: 地方自治体（県庁所在地）
+    role: 講師・ワークショップ設計
+    period: "2026年1月"
+    scope: スマートシティ入門講演、オープンデータ活用の演習ワークショップ
+    result: 職員・市民がオープンデータの活用イメージを持てる形で設計・実施
+
+  - id: finance-dx-municipality
+    category: 自治体
+    related_service: "AI・ICT活用の導入支援（構想から実物まで）"
+    title: 自治体の財務・会計DX支援
+    client: 地方自治体（複数）
+    role: 財務・会計DXアドバイザー
+    period: "2023年〜"
+    scope: 経営・財務マネジメントの課題整理、DX施策の優先順位づけ、庁内ワークショップの進行
+    result: 会計データの活用方針と業務改革の接続点を明確化。現場職員が動ける粒度の改善案に落とし込み
+
+  - id: prefecture-dx-citizen
+    category: 自治体
+    related_service: "大企業と自治体をつなぐ共創・実証のコーディネート"
+    title: 県のDX推進における市民共創の場づくり
+    client: 地方自治体（県）
+    role: 市民共創推進部会 運営メンバー
+    period: "2022年〜"
+    scope: 有識者・市民・事業者を巻き込む検討会の設計、議論の進行、成果の整理
+    result: 県のDX方針と現場の声を接続する継続的な対話の場を運営
+    public_links:
+      - label: 千葉県 DX推進
+        url: "https://www.pref.chiba.lg.jp/chojusangyo/dx/index.html"
+
+  - id: municipal-opendata-ideathon
+    category: 自治体
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: オープンデータアイデアソン
+    client: 地方自治体（県内の市）
+    role: 企画・ファシリテーション
+    period: "2024年11月"
+    scope: オープンデータを活用したアイデア創出ワークショップの設計・運営
+    result: 市民・事業者がデータ活用のアイデアを具体化。行政へのフィードバック材料を整理
+
+  - id: municipal-citizen-program-aomori
+    category: 自治体
+    related_service: "NPO・地域活動向けの支援"
+    title: 市民参加型・地域課題解決プログラムの企画支援
+    client: 地方自治体（県庁所在地）
+    role: 企画アドバイザー
+    period: "2026年"
+    scope: 市民参加プログラムの企画打ち合わせ、シビックテック手法の導入検討
+    result: 行政主導ではなく市民起点の課題解決プログラムの設計方針を整理
+
+  - id: digital-local-creation-event
+    category: 自治体
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: デジタル公共財とWell-Beingに関するシンポジウム
+    client: 国の政策支援団体・自治体関係者
+    role: 企画・登壇
+    period: "2025年3月"
+    scope: デジタル公共財と地域のWell-Beingをテーマとしたイベントの企画・運営
+    result: 政策と現場実装をつなぐ対話の場を設計。参加者間のネットワーク形成を促進
+
+  # --- 中小企業 ---
+  - id: sme-food-manufacturing
     category: 中小企業
-    title: 製造業の生産性向上と経営数値の可視化
+    related_service: "生産性向上・業務改革の現場支援"
+    title: 食品製造業の生産性向上
     client: 従業員20名規模の食品製造業
-    role: 生産性向上支援・経営改善アドバイザー
+    role: 生産性向上支援アドバイザー
     period: "6か月"
     scope: 現場の時間観測、ボトルネック特定、改善計画と月次モニタリングの設計
-    result: リードタイムの短縮と稼働の見える化を実現。金融機関提出用の数値計画と接続
+    result: リードタイム短縮と稼働の見える化。金融機関提出用の数値計画と接続
 
-  - id: consortium
+  - id: sme-productivity-onoya
+    category: 中小企業
+    related_service: "生産性向上・業務改革の現場支援"
+    title: 製造業の生産性向上支援
+    client: 従業員10〜30名規模の製造業
+    role: よろず支援拠点サポーター
+    period: "2026年"
+    scope: 事前相談、初回訪問、現場観測、改善計画の策定
+    result: ボトルネックの可視化と改善の優先順位を整理。月次フォローの土台を整備
+
+  - id: sme-reconstruction-yamagaku
+    category: 中小企業
+    related_service: "中小企業の経営改善計画・数値計画の策定と実行支援"
+    title: 事業再生・経営改善計画の策定
+    client: 従業員10名規模の地域密着型事業者
+    role: 認定支援機関／中小企業診断士
+    period: "2026年"
+    scope: 資金繰りヒアリング、経営改善計画のキックオフ、金融機関とのバンクミーティング同席
+    result: 再生に向けた数値計画と金融機関との合意形成を支援
+
+  - id: sme-construction-rebuild
+    category: 中小企業
+    related_service: "中小企業の経営改善計画・数値計画の策定と実行支援"
+    title: 建設業の再建相談（資金繰り・入札再開）
+    client: 従業員10名規模の建設業
+    role: 中小企業診断士
+    period: "2026年"
+    scope: 資金繰り改善、入札再開に向けた経営体制の整理、金融機関との調整
+    result: 再建に向けた論点を整理し、実行可能な改善ステップを提示
+
+  - id: sme-fukushima-guarantee
+    category: 中小企業
+    related_service: "中小企業の経営改善計画・数値計画の策定と実行支援"
+    title: 信用保証協会 専門家派遣による経営診断
+    client: 小売・製造・手芸など複数業種（福島県内）
+    role: 専門家派遣／中小企業診断士
+    period: "2024年〜"
+    scope: 初回経営診断、経営改善計画の策定、金融機関への説明、モニタリング
+    result: 制度要件を満たす計画書の作成と、実行後の数値フォローまで伴走
+
+  - id: sme-auto-shop
+    category: 中小企業
+    related_service: "生産性向上・業務改革の現場支援"
+    title: 自動車関連サービス業の生産性向上推進
+    client: 従業員10名規模の自動車関連サービス業
+    role: 生産性向上支援アドバイザー
+    period: "2026年"
+    scope: 補助金申請書の作成、現地支援、実施報告書の作成
+    result: 補助金交付と現場改善を接続。業務フローの見える化を実施
+
+  - id: sme-ai-workshop
+    category: 中小企業
+    related_service: "AI・ICT活用の導入支援（構想から実物まで）"
+    title: 中小企業向け生成AI導入ワークショップ
+    client: 商工会・支援機関経由の中小企業（製造・小売・建設など）
+    role: 講師・導入支援
+    period: "90分〜半日（複数回）"
+    scope: 業務適用の演習、社内ルールのたたき台作成、小さな業務ツールの試作
+    result: 受講企業がその場で使える業務メモ・チェックリスト・プロンプト集を作成
+
+  - id: sme-business-plan
+    category: 中小企業
+    related_service: "中小企業の経営改善計画・数値計画の策定と実行支援"
+    title: 経営改善計画と金融機関調整
+    client: 従業員10〜30名規模の卸売・サービス業（複数社）
+    role: 認定支援機関／中小企業診断士
+    period: "3〜12か月／社"
+    scope: 決算分析、経営改善計画・資金繰り表の作成、金融機関への説明同席、モニタリング
+    result: 制度要件を満たす計画書の作成と、実行後の数値フォローまで伴走
+
+  - id: sme-craft-tradition
+    category: 中小企業
+    related_service: "地域診断・産地／商店街の面的支援"
+    title: 伝統工芸・地域産業の経営診断
+    client: 伝統工芸品を扱う事業者（経営ラボ経由）
+    role: 経営診断アドバイザー
+    period: "2026年"
+    scope: オンライン面談による経営状況の把握、改善の方向性の整理
+    result: 伝統産業の持続可能性と事業モデルの見直し論点を整理
+
+  - id: sme-retail-liquor-union
+    category: 中小企業
+    related_service: "中小企業の経営改善計画・数値計画の策定と実行支援"
+    title: 業界組合の不動産財産保全・譲渡に関する提言
+    client: 小売酒販組合（地方都市）
+    role: 専門家アドバイザー
+    period: "2026年"
+    scope: 不動産財産の現状整理、保全・譲渡に関する提言書の作成
+    result: 組合員の資産保全に向けた方針と実行ステップを文書化
+
+  # --- 大企業 ---
+  - id: enterprise-group-governance
+    category: 大企業
+    related_service: "成長企業のコーポレート機能・グループ経営の設計"
+    title: 大手企業グループのコーポレート変革
+    client: 大手電機・IT企業グループ（約400社）
+    role: 経営企画部門
+    period: "2003–2018年"
+    scope: トップサポート、全社会議体運営、間接部門のシェアードサービス化、全社稟議システム導入、グループ経営ポリシー策定
+    result: 経営意思決定の速度向上と、子会社を含むガバナンスの標準化。理念・バリューの浸透施策を設計
+
+  - id: consortium-300
     category: 大企業・自治体
+    related_service: "大企業と自治体をつなぐ共創・実証のコーディネート"
     title: 業界横断コンソーシアムの立ち上げと運営
     client: 企業・自治体・大学・NPOなど多様なステークホルダー
     role: 事務局代表／運営責任者
     period: "2022–2025年"
     scope: 参画団体の募集、運営規程・会議体の設計、共創案件のマッチング、公開イベントの企画
-    result: のべ約300団体の参画を得て、複数の実証・共創の場を継続運営
+    result: のべ約300団体の参画。複数の実証・共創の場を継続運営し、新規サービス創出の接点を形成
 
-  - id: npo-community
+  - id: infra-regional-advisory
+    category: 大企業・自治体
+    related_service: "大企業と自治体をつなぐ共創・実証のコーディネート"
+    title: インフラ利活用と地域防災の連携検討
+    client: 大手建設・インフラ関連企業と地方観光都市
+    role: 地域連携アドバイザー
+    period: "2025年〜"
+    scope: 調査計画の策定、企業と自治体の双方の論点整理、ワークショップ設計、実証に向けた論点の言語化
+    result: 双方の意思決定の作法の違いを踏まえた提案ストーリーを整理。次年度実証設計への接続
+
+  - id: sci-japan-forum
+    category: 大企業・自治体
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: スマートシティ社会実装フォーラム
+    client: スマートシティ推進団体・自治体・企業
+    role: 開会基調挨拶・講師
+    period: "2025年"
+    scope: 特別フォーラムの開会挨拶、フェロー更新講義
+    result: 全国のスマートシティ実装事例を共有する場の設計・運営に参画
+
+  - id: university-ppp-lecture
+    category: 大企業・自治体
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: 大学PPP講座（スマートシティ）
+    client: 私立大学（首都圏）
+    role: 講師
+    period: "2026年"
+    scope: 官民連携（PPP）とスマートシティをテーマとした講義
+    result: 学生・社会人受講者に実務に即したスマートシティの考え方を伝達
+
+  # --- NPO・地域活動 ---
+  - id: npo-jichilab
     category: NPO・地域活動
-    title: 住民主体の自治会活動改善（自治ラボ）
+    related_service: "NPO・地域活動向けの支援"
+    title: 住民主体の自治会活動改善
     client: 首都圏の市と地域住民団体
     role: ファシリテーター／企画運営
     period: "2023年〜"
-    scope: 住民ワークショップの設計、活動の見える化、デジタル活用の試行
+    scope: 住民ワークショップの設計、活動の見える化、デジタル活用の試行、学会発表の相談
     result: 参加しやすい場づくりと活動記録の仕組みを整備。継続的な改善サイクルを開始
 
-  - id: dx-training
+  - id: civic-tech-nagareyama
+    category: NPO・地域活動
+    related_service: "NPO・地域活動向けの支援"
+    title: シビックテックによる市民参加型まちづくり
+    client: 首都圏の市（市民団体・行政連携）
+    role: 企画・ファシリテーション
+    period: "2017年〜"
+    scope: オープンガバナンスチャレンジ、デザインスプリント、災害支援ナビゲーター、オープンデータ・AI活用
+    result: 市民が中心となった政策提案とデータ活用の実践。広域シビックテック連携のモデル事例
+
+  - id: kokorabo-ya
+    category: NPO・地域活動
+    related_service: "NPO・地域活動向けの支援"
+    title: 子ども・地域を軸とした社会起業の事業承継
+    client: 地域シビックテック団体（法人化）
+    role: 代表取締役（事業承継）
+    period: "2025年12月〜"
+    scope: 社名変更・代表移譲、ミッション・ビジョンの再設計、共助システム研究の推進
+    result: 地域活動の法人化と持続可能な事業モデルへの転換。子どもと地域をつなぐ活動基盤を整備
+
+  - id: civic-power-battle
+    category: NPO・地域活動
+    related_service: "大企業と自治体をつなぐ共創・実証のコーディネート"
+    title: シビックパワーバトル全国大会の運営
+    client: 全国の自治体・高校・市民団体
+    role: 実行委員会メンバー
+    period: "2025年〜2026年"
+    scope: 全国大会の企画・運営調整、出展・決勝説明のサポート
+    result: 市民起点のデータ活用コンテストの全国規模での展開を支援
+
+  - id: udc-chiba-hub
+    category: NPO・地域活動
+    related_service: "NPO・地域活動向けの支援"
+    title: アーバンデータチャレンジ（地域拠点）
+    client: 首都圏のシビックテック団体連携
+    role: 拠点運営・企画
+    period: "2025年"
+    scope: キックオフ、中間シンポジウムの企画・運営
+    result: 地域のオープンデータ活用チャレンジの拠点として活動を推進
+
+  - id: shopping-street-yanaka
+    category: NPO・地域活動
+    related_service: "地域診断・産地／商店街の面的支援"
+    title: 商店街のイベント企画・面的支援
+    client: 東京の歴史ある商店街
+    role: 経営支援アドバイザー
+    period: "2013–2016年"
+    scope: 七福猫フェスタの企画・運営、インバウンド交流会、理事会・青年部への説明、来街者調査
+    result: 商店街の来街促進イベントを企画運営。地域の魅力発信と関係者の巻き込みを実現
+
+  - id: innovation-tohoku
+    category: NPO・地域活動
+    related_service: "NPO・地域活動向けの支援"
+    title: 復興支援プログラムのサポーター運営
+    client: 国の復興支援プログラム
+    role: サポーター説明会 企画・運営
+    period: "2014年"
+    scope: プロボノ・サポート活動の説明会企画、メディア対応、サポーター会の運営
+    result: 中小企業診断士のプロボノ参画を促進。復興支援のネットワーク形成に貢献
+
+  - id: fukushima-innovation-mentor
+    category: NPO・地域活動
+    related_service: "NPO・地域活動向けの支援"
+    title: 地域イノベーションプログラムのメンタリング
+    client: 県のイノベーション支援プログラム
+    role: メンター
+    period: "2025年"
+    scope: ビジネスデザインセッション、中間発表のファシリテーション
+    result: 起業・事業化を目指す参加者のビジネスモデル整理と発表支援
+
+  # --- 研修・講演 ---
+  - id: training-municipal-dx
     category: 研修・講演
-    title: 自治体職員向けDX・AI活用研修
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: 自治体職員向けDX・業務改革研修
     client: 地方自治体・支援機関
     role: 講師・ワークショップ設計
     period: "複数回（90分〜半日）"
-    scope: 生成AIの業務適用、社内ルール整備、演習による業務フロー改善
+    scope: 生成AIの業務適用、庁内ルール整備、演習による業務フロー改善
     result: 受講者がその場で持ち帰れる成果物（業務メモ・チェックリスト）まで設計
+
+  - id: training-wellbeing
+    category: 研修・講演
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: well-being指標を使った対話の場づくり
+    client: 自治体・地域団体
+    role: ファシリテーター
+    period: "半日ワークショップ（複数回）"
+    scope: 指標の読み解き、住民・職員間の対話設計、合意形成の進行
+    result: 指標を「評価」ではなく「対話の材料」として使う進め方を現場に定着
+
+  - id: training-tech-academy-aizu
+    category: 研修・講演
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: 地域テクノロジーアカデミー講義
+    client: 地方の技術者・事業者向け教育プログラム
+    role: 講師
+    period: "2025年"
+    scope: 複数回にわたる講義（第4回〜第8回など）
+    result: 地域の技術者・事業者にデジタル・まちづくりの実務知識を伝達
+
+  - id: lecture-city-promotion
+    category: 研修・講演
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: シティプロモーションサミット登壇
+    client: まちづくり・観光関連の全国イベント
+    role: 講演・開会挨拶
+    period: "2026年1月"
+    scope: 都市プロモーションに関する講演、開会挨拶
+    result: 地域の魅力発信とデータ活用の考え方を全国の関係者に共有
+
+  - id: lecture-ai-business
+    category: 研修・講演
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: AIビジネス研究会講演「地域を動かすDX」
+    client: 経営者向け研究会
+    role: 講師
+    period: "2026年5月"
+    scope: 地域を動かすDXをテーマとした講演
+    result: 経営者向けにAI・DXの地域実装の考え方を共有
+
+  - id: lecture-chiba-od
+    category: 研修・講演
+    related_service: "研修・講演・ワークショップの設計と登壇"
+    title: オープンデータ基本研修
+    client: 県の行政・市民向け研修
+    role: 講師
+    period: "2020年"
+    scope: オープンデータの基礎と活用方法の講義
+    result: 行政・市民がオープンデータの活用イメージを持てる研修を実施

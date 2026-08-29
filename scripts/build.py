@@ -247,6 +247,12 @@ def build_html(d, portfolio):
         for p in d.get("publications", [])
     ) + "</ul>"
 
+    notes = "<ul class='plainlist pub-list'>" + "".join(
+        f'<li><a href="{e(n["url"])}">{e(n["title"])}</a>'
+        f'{" — " + e(n["theme"]) if n.get("theme") else ""}</li>'
+        for n in d.get("featured_notes", [])
+    ) + "</ul>"
+
     cases_preview = ""
     for c in (portfolio.get("cases") or [])[:3]:
         cases_preview += (
@@ -334,6 +340,8 @@ def build_html(d, portfolio):
     <h2>実績・公開成果物</h2>
     <p class="lead">匿名化した事例の詳細は<a href="portfolio.html">ポートフォリオページ</a>に掲載しています。</p>
     {cases_preview}
+    <h3 style="margin-top:28px">代表的な記事（note）</h3>
+    {notes}
     <h3 style="margin-top:28px">公開成果物</h3>
     {pubs}
   </section>
