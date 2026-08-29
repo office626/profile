@@ -1,417 +1,329 @@
+# ============================================================
+# profile.yaml — 土屋俊博 プロフィール 唯一の情報源
+# ============================================================
+
 meta:
-  updated: '2026-08-29'
-  github_user: office626
-  repo_name: profile
+  updated: "2026-08-29"
+  github_user: "office626"
+  repo_name: "profile"
+  availability: "2026年10月以降、新規の伴走支援に対応可能です（研修・講演は随時相談可）"
+
 layers:
-  kuni:
-    label: 国・政策
-    color: '#2E5E8A'
-  jichi:
-    label: 自治体
-    color: '#3F7A6E'
-  daikigyo:
-    label: 大企業
-    color: '#6B5B95'
-  chusho:
-    label: 中小・地域
-    color: '#B08423'
-  jinzai:
-    label: 人材育成・場づくり
-    color: '#A8553A'
+  kuni:     { label: "国・政策",           color: "#2E5E8A" }
+  jichi:    { label: "自治体",             color: "#3F7A6E" }
+  daikigyo: { label: "大企業",             color: "#6B5B95" }
+  chusho:   { label: "中小・地域",         color: "#B08423" }
+  jinzai:   { label: "人材育成・場づくり", color: "#A8553A" }
+
 basic:
-  name_ja: 土屋俊博
-  name_kana: つちや としひろ
-  name_en: Tsuchiya Toshihiro
-  organization: まちとしごととくらしの研究所
-  organization_note: 認定経営革新等支援機関 ／ 個人事業
-  title: 所長 ／ 主任研究員
-  website: https://www.office626.com/
-  hometown: 長野県小諸市 出身
-  base: 福島県会津若松市 ＋ 千葉県流山市（2024年4月より二拠点居住）
-  photo: ''
-tagline: 国の政策づくりから中小企業の現場まで、4つの立場を内側から経験した経営コンサルタント。
+  name_ja: "土屋俊博"
+  name_kana: "つちや としひろ"
+  name_en: "Tsuchiya Toshihiro"
+  organization: "まちとしごととくらしの研究所"
+  organization_note: "認定経営革新等支援機関"
+  title: "所長 ／ 主任研究員"
+  website: "https://www.office626.com/"
+  hometown: "長野県小諸市 出身"
+  base: "福島県会津若松市 ＋ 千葉県流山市（2024年4月より二拠点居住）"
+  photo: ""
+
+tagline: "国の政策づくりから中小企業の現場まで、4つの立場を内側から経験した経営コンサルタント。"
+
 intros:
-  short: '東京大学工学部卒業後、NECの経営企画部門でグループ経営やコーポレート変革に従事。
-
+  short: |
+    東京大学工学部卒業後、NECの経営企画部門でグループ経営やコーポレート変革に従事。
     内閣府への出向で科学技術・イノベーション基本計画とスマートシティ政策を担当した。
-
     中小企業診断士。現在は会津若松と流山の二拠点で、自治体の政策・DX支援と、
-
     中小企業の経営改善・AI活用支援を行っている。
-
-    '
-  medium: '東京大学工学部を卒業後、日本電気株式会社（NEC）に入社。経営企画部門でトップサポート、
-
+  medium: |
+    東京大学工学部を卒業後、日本電気株式会社（NEC）に入社。経営企画部門でトップサポート、
     全社会議体の運営、間接部門のシェアードサービス化、約400社のグループ経営、
-
     ビジョン・バリューの策定とカルチャー変革などに従事した。2019年から2021年まで
-
     内閣府科学技術・イノベーション推進事務局に出向し、科学技術・イノベーション基本計画の策定と
-
     スマートシティ関連政策を担当。2022年には一般社団法人スマートシティ社会実装コンソーシアムを設立し、
-
     のべ約300団体の参画による新たなデジタルサービス創出を推進した。2025年10月に
-
     「まちとしごととくらしの研究所」を設立。中小企業診断士として、自治体の政策立案・DX推進、
-
     中小企業の経営改善とAI活用の支援、研修・ワークショップの設計運営を手がけている。
-
-    '
-  long: '土屋俊博は、国の政策づくり、自治体との協働、大企業のコーポレート変革、中小企業の現場支援という
-
+  long: |
+    土屋俊博は、国の政策づくり、自治体との協働、大企業のコーポレート変革、中小企業の現場支援という
     4つの立場を、すべて内側から経験してきた経営コンサルタントである。
 
-
-    東京大学工学部を卒業後、日本電気株式会社（NEC）へ入社。経営企画部門では、経営トップの意思決定を支える
-
-    トップサポート業務と全社会議体の運営を担い、あわせて間接部門のシェアードサービス化、全社稟議システムの導入、
-
-    子会社約100社・孫会社を含め約400社に及ぶグループ経営とグループ経営ポリシーの策定、グローバルな人的リソース戦略、
-
+    東京大学工学部を卒業後、日本電気株式会社（NEC）へ入社（2003年4月〜2025年6月）。経営企画部門では、
+    経営トップの意思決定を支えるトップサポート業務と全社会議体の運営を担い、間接部門のシェアードサービス化、
+    全社稟議システムの導入、子会社約100社・孫会社を含め約400社のグループ経営とグループ経営ポリシーの策定、
     ビジョン・バリューの検討と社内浸透、他社との連携・共創による新事業創出支援に従事した。
 
-    その後、事業企画部門（スマートシティ分野）へ移り、自治体との連携による事業創出に取り組んでいる。
-
-
     2019年から2021年にかけては内閣府科学技術・イノベーション推進事務局に出向。科学技術・イノベーション基本計画の
-
     策定に携わるとともに、スマートシティリファレンスアーキテクチャの検討、スマートシティガイドブックの策定、
+    政府関連政策におけるスマートシティ計画の調整を担当した。
 
-    政府関連政策におけるスマートシティ計画の調整を担当した。2022年5月には一般社団法人スマートシティ社会実装
+    2025年10月に「まちとしごととくらしの研究所」を設立。2026年2月に経営革新等支援機関の認定を受け、
+    福島県会津若松市と千葉県流山市の二拠点から、自治体・中小企業・地域活動の支援を行っている。
 
-    コンソーシアムを設立し、のべ約300団体の企業・自治体・大学・非営利団体の参画を得て、新たなデジタルサービスの
+audience_guides:
+  - id: jichi
+    label: "自治体・行政の方"
+    summary: "計画策定、審議会・委員、庁内ワークショップ。オンライン参加可。年間の出席可能回数はご相談ください。"
+    anchor: offerings
+  - id: sme
+    label: "中小企業の経営者の方"
+    summary: "まずは無料相談の入り口から。経営改善計画・生産性向上・AI導入を、会津・関東を中心に伴走します。"
+    anchor: free-entry
+  - id: enterprise
+    label: "大企業の方"
+    summary: "自治体との共創・実証のコーディネート。NEC退職済みで、特定ベンダーとの専属関係はありません。"
+    anchor: offerings
+  - id: npo
+    label: "NPO・地域活動の方"
+    summary: "予算が限られる活動向けに、無償・減額の相談枠を設けています。合意形成の場づくりも対応します。"
+    anchor: npo-menu
+  - id: training
+    label: "研修・講演の主催者の方"
+    summary: "90分〜半日の演題を多数用意。司会・モデレートも承ります。"
+    anchor: training
 
-    創出を推進。2025年6月にNECを退職した。
+free_entry:
+  headline: "まずは無料・低額で相談できる入り口があります"
+  intro: "中小企業の経営者の方は、次の制度を入口にご利用いただけます。どれが使えるかは、短いヒアリングで整理します。"
+  items:
+    - title: "よろず支援拠点 生産性向上支援センター"
+      body: "福島県内の中小企業向け。初回相談は無料。現場の生産性向上・業務改善を伴走支援。"
+    - title: "経営革新等認定支援機関"
+      body: "経営改善計画の策定支援。補助金・制度活用の要件整理に対応。"
+    - title: "中小機構 中小企業アドバイザー／信用保証協会・中央会 専門家"
+      body: "派遣・紹介経由の支援。事業者負担が軽減されるケースがあります。"
 
+publications:
+  - title: "スマートシティガイドブック（国の公表物）"
+    url: "https://www.digital.go.jp/policies/smartcity"
+    note: "内閣府出向時に策定に関与"
+  - title: "デジタル庁 スマートシティ政策・資料"
+    url: "https://www.digital.go.jp/policies/smartcity"
+    note: "参照アーキテクチャ等の関連資料"
+  - title: "千葉県DX推進協議会（市民共創推進部会）"
+    url: "https://www.pref.chiba.lg.jp/chojusangyo/dx/index.html"
+    note: "運営メンバーとして参画"
 
-    2013年に中小企業診断士として登録。2025年10月に「まちとしごととくらしの研究所」を設立し、
+featured_notes:
+  - title: "まちとしごととくらしの研究所（note）"
+    url: "https://note.com/office626"
+    theme: "政策・地域・中小企業の実務メモ"
 
-    2026年2月には経営革新等支援機関の認定を受けている。現在は福島県会津若松市と千葉県流山市の二拠点を生活と
-
-    仕事の場とし、自治体の政策立案・DX推進の支援、中小企業の経営改善計画と生産性向上の伴走、
-
-    ICT・AI活用による業務改革の実践、研修やワークショップの企画運営とファシリテーションを行っている。
-
-    2026年1月からはエフエム会津のパーソナリティも務める。
-
-    '
 career:
-- period: 2025年10月〜
-  title: まちとしごととくらしの研究所 設立
-  org: 所長／主任研究員
-  layers:
-  - chusho
-  - jichi
-  detail: 自治体の政策・DX支援と、中小企業の経営改善・生産性向上支援を行う個人事業として設立。2026年2月に経営革新等支援機関の認定を取得。
-- period: 2022年5月〜2025年6月
-  title: 一般社団法人スマートシティ社会実装コンソーシアム 設立・運営
-  org: ''
-  layers:
-  - jichi
-  - daikigyo
-  - kuni
-  detail: のべ約300団体の企業・自治体・大学・非営利団体の参画により、新たなデジタルサービスの創出を推進。2025年6月にNECを退職。
-- period: 2019年〜2021年
-  title: 内閣府 科学技術・イノベーション推進事務局（出向）
-  org: ''
-  layers:
-  - kuni
-  detail: 科学技術・イノベーション基本計画の策定を担当。スマートシティリファレンスアーキテクチャの検討、スマートシティガイドブックの策定、政府関連政策におけるスマートシティ計画の調整に携わる。
-- period: NEC 事業企画部門（スマートシティ分野）
-  title: 自治体との連携による事業創出
-  org: 日本電気株式会社
-  layers:
-  - jichi
-  - daikigyo
-  detail: 自治体との連携によるスマートシティ関連の事業創出を担当。
-- period: NEC 経営企画部門
-  title: グループ経営・コーポレート変革
-  org: 日本電気株式会社
-  layers:
-  - daikigyo
-  detail: トップサポート業務、全社会議体の運営と経営意思決定の支援、コーポレート機能（間接部門）のシェアードサービス化、全社稟議のシステム導入、子会社約100社・孫会社含め約400社のグループ経営とグループ経営ポリシー策定、グローバルな人的リソース戦略策定、ビジョン・バリューの検討と周知展開、カルチャー変革、他社との連携・共創による新事業創出支援。
-- period: ''
-  title: 東京大学 工学部 卒業
-  org: ''
-  layers: []
-  detail: ''
+  - period: "2026年7月〜"
+    title: "スマートシティ国際学会 事務局"
+    org: ""
+    layers: [jichi, kuni]
+    detail: "学会運営・国際連携の事務局業務に就任。"
+  - period: "2025年10月〜"
+    title: "まちとしごととくらしの研究所 設立"
+    org: "所長／主任研究員"
+    layers: [chusho, jichi]
+    detail: "自治体の政策・DX支援と、中小企業の経営改善・生産性向上支援。2026年2月に経営革新等支援機関の認定を取得。"
+  - period: "2022年5月〜2025年6月"
+    title: "一般社団法人スマートシティ社会実装コンソーシアム 設立・運営"
+    org: ""
+    layers: [jichi, daikigyo, kuni]
+    detail: "のべ約300団体（企業・自治体・大学・NPO等）の参画により共創を推進。2025年6月にNECを退職。"
+  - period: "2019年〜2021年"
+    title: "内閣府 科学技術・イノベーション推進事務局（出向）"
+    org: ""
+    layers: [kuni]
+    detail: "科学技術・イノベーション基本計画の策定、スマートシティガイドブック・参照アーキテクチャ、関連政策の調整。"
+  - period: "2018年〜2025年"
+    title: "NEC 事業企画部門（スマートシティ分野）"
+    org: "日本電気株式会社"
+    layers: [jichi, daikigyo]
+    detail: "自治体との連携によるスマートシティ関連の事業創出を担当。"
+  - period: "2003年4月〜2018年"
+    title: "NEC 経営企画部門"
+    org: "日本電気株式会社"
+    layers: [daikigyo]
+    detail: "トップサポート、全社会議体運営、間接部門のシェアードサービス化、全社稟議システム導入、約400社のグループ経営、ビジョン・バリュー策定とカルチャー変革。"
+  - period: "2003年3月"
+    title: "東京大学 工学部 卒業"
+    org: ""
+    layers: []
+    detail: ""
+
 affiliations:
-- since: 2026年4月〜
-  name: 福島県よろず支援拠点 生産性向上支援センター サポーター
-  layers:
-  - chusho
-- since: 2026年1月〜
-  name: エフエム会津 パーソナリティ（毎週火曜 11:00–13:00「ひるキュン！パレット」）
-  layers:
-  - jinzai
-- since: 2025年12月〜
-  name: 株式会社子ラボ屋 代表取締役
-  layers:
-  - chusho
-- since: 2023年2月〜
-  name: 特定非営利活動法人 中小企業・地域創生ネットワーク 理事
-  layers:
-  - chusho
+  - since: "2026年7月〜"
+    name: "スマートシティ国際学会 事務局"
+    layers: [jichi, kuni]
+  - since: "2026年4月〜"
+    name: "福島県よろず支援拠点 生産性向上支援センター サポーター"
+    layers: [chusho]
+  - since: "2026年1月〜"
+    name: "エフエム会津 パーソナリティ（毎週火曜 11:00–13:00「ひるキュン！パレット」）"
+    layers: [jinzai]
+  - since: "2025年12月〜"
+    name: "株式会社子ラボ屋 代表取締役"
+    layers: [chusho]
+  - since: "2023年2月〜"
+    name: "特定非営利活動法人 中小企業・地域創生ネットワーク 理事"
+    layers: [chusho]
+
 credentials:
-- group: 行政とのかかわり
-  items:
-  - 総務省 地方公共団体の経営・財務マネジメント強化事業　財務・会計DXアドバイザー
-  - デジタル庁 well-being指標活用ファシリテーター認定講座 修了（第1期）
-  - デジタル庁認定　デジタル推進委員
-  - 千葉県DX推進協議会「市民共創推進部会」運営
-  - 千葉県流山市との連携による自治会活動改善活動「自治ラボ」運営
-  - 兵庫県神戸市 スマートシティアドバイザー
-  - 滋賀県草津市 スマートシティ社会実装アドバイザー
-  - 静岡県南伊豆町 総合計画審議委員（2018年より地域診断事業、産業振興計画の検討、地域事業者の面的支援）
-- group: 企業とのかかわり
-  items:
-  - 経済産業大臣認定　中小企業診断士（2013〜）
-  - 一般社団法人 福島県中小企業診断協会 会員（2024〜）
-  - 独立行政法人 中小企業基盤整備機構　中小企業アドバイザー［経営支援］（2024年4月〜）
-  - 経済産業省 経営革新等認定支援機関（2026年2月〜）
-  - 福島県よろず支援拠点 生産性向上支援センター サポーター（2026年4月〜）
-  - 福島県信用保証協会／中小企業団体中央会 等の専門家登録
-- group: AI・デジタル関連
-  items:
-  - JDLA Deep Learning for GENERAL 2025#3 検定合格
-  - Vibe Coder Bootcamp 修了（2026年3月）
+  - group: "行政とのかかわり"
+    items:
+      - "総務省 地方公共団体の経営・財務マネジメント強化事業　財務・会計DXアドバイザー"
+      - "デジタル庁 well-being指標活用ファシリテーター認定講座 修了（第1期）"
+      - "デジタル庁認定　デジタル推進委員"
+      - "千葉県DX推進協議会「市民共創推進部会」運営"
+      - "千葉県流山市との連携による自治会活動改善活動「自治ラボ」運営"
+      - "兵庫県神戸市 スマートシティアドバイザー"
+      - "滋賀県草津市 スマートシティ社会実装アドバイザー"
+      - "静岡県南伊豆町 総合計画審議委員（2018年より地域診断・面的支援）"
+  - group: "企業とのかかわり"
+    items:
+      - "経済産業大臣認定　中小企業診断士（2013〜）"
+      - "一般社団法人 福島県中小企業診断協会 会員（2024〜）"
+      - "独立行政法人 中小企業基盤整備機構　中小企業アドバイザー［経営支援］（2024年4月〜）"
+      - "経済産業省 経営革新等認定支援機関（2026年2月〜）"
+      - "福島県よろず支援拠点 生産性向上支援センター サポーター（2026年4月〜）"
+      - "福島県信用保証協会／中小企業団体中央会 等の専門家登録"
+  - group: "保有資格（ビジネス・専門）"
+    items:
+      - "経済産業大臣認定　中小企業診断士"
+      - "国内旅行業務取扱管理者"
+      - "GX検定 ベーシック"
+      - "ファイナンシャル・プランニング技能士 3級（日本FP協会）"
+      - "第二級海技士（小型船舶）"
+      - "普通自動車第一種運転免許（MT）"
+      - "一般社団法人日本合コン協会認定　合コンマスター"
+      - "温泉ソムリエ"
+      - "世界遺産検定 3級"
+      - "その他（各種検定・講座修了など）"
+  - group: "AI・デジタル関連"
+    items:
+      - "JDLA Deep Learning for GENERAL 2025#3 検定合格"
+      - "Vibe Coder Bootcamp 修了（2026年3月）"
+
 fields:
-- 地方公共団体における政策立案、DX推進に関する支援
-- 民間企業における事業戦略・事業計画策定、新規事業検討の支援
-- 研修・ワークショップの企画運営、イベント司会進行、ファシリテーション
-- ICT／AI活用による業務改革支援と実践
+  - "地方公共団体における政策立案、DX推進に関する支援"
+  - "民間企業における事業戦略・事業計画策定、新規事業検討の支援"
+  - "研修・ワークショップの企画運営、イベント司会進行、ファシリテーション"
+  - "ICT／AI活用による業務改革支援と実践"
+  - "NPO・地域コミュニティの合意形成と活動設計"
+
 offerings:
-- title: 自治体の計画づくりと政策立案の伴走
-  layers:
-  - jichi
-  - kuni
-  body: 総合計画・産業振興計画・DX推進計画の策定支援、審議会・有識者委員、庁内ワークショップの設計と進行。国の政策側で計画を書いた経験があるため、上位計画や交付金の要件と現場のやりたいことの間を、無理なく接続する形で書き分けられます。
-  proof: 内閣府での科学技術・イノベーション基本計画策定／静岡県南伊豆町 総合計画審議委員／神戸市・草津市アドバイザー
-- title: 中小企業の経営改善計画・数値計画の策定と実行支援
-  layers:
-  - chusho
-  body: 決算書の分析から、金融機関に出せる経営改善計画・資金繰り表・数値計画までを作り、その後のモニタリングまで伴走します。認定経営革新等支援機関として、制度上の要件を満たす形で作成できます。
-  proof: 中小企業診断士／経営革新等認定支援機関／中小機構 中小企業アドバイザー／信用保証協会 専門家登録
-- title: 生産性向上・業務改革の現場支援
-  layers:
-  - chusho
-  - daikigyo
-  body: 時間観測（サイクルタイム・リードタイム・稼働／非稼働）に基づく現場の可視化から、5M＋1Eの視点での改善計画づくりまで。大企業で間接部門のシェアードサービス化と全社稟議システム導入を実行した経験を、中小企業の規模に合わせて置き換えます。
-  proof: 福島県よろず支援拠点 生産性向上支援センター サポーター／NEC コーポレート変革
-- title: AI・ICT活用の導入支援（構想から実物まで）
-  layers:
-  - chusho
-  - jichi
-  body: 「AIで何ができるか」の勉強会で終わらせず、実際に業務で動くものを一緒に作るところまで。生成AIの業務適用、社内ルールの整備、小さな内製ツールの試作を行います。
-  proof: JDLA Deep Learning for GENERAL 合格／Vibe Coder Bootcamp 修了／総務省 財務・会計DXアドバイザー
-- title: 研修・講演・ワークショップの設計と登壇
-  layers:
-  - jinzai
-  body: 経営指導員・自治体職員・経営者向けの研修を、講義だけで終わらせず演習と成果物まで含めて設計します。司会進行、パネルのモデレート、イベント全体の企画運営も引き受けます。
-  proof: エフエム会津 パーソナリティ／各種研修・ワークショップの企画運営／デジタル庁 well-being指標活用ファシリテーター
-- title: 地域診断・産地／商店街の面的支援
-  layers:
-  - jichi
-  - chusho
-  body: 個社ではなく「面」で地域を見る診断。統計データの読み解き、地域経済循環の構造整理、キーパーソンの洗い出し、使える国の政策の紐づけまでを一つのレポートにまとめます。
-  proof: 静岡県南伊豆町での地域診断事業と面的支援（2018年〜）／NPO法人 中小企業・地域創生ネットワーク 理事
-- title: 大企業と自治体をつなぐ共創・実証のコーディネート
-  layers:
-  - daikigyo
-  - jichi
-  - kuni
-  body: 自治体と組みたい企業、企業と組みたい自治体の間に立ち、双方の意思決定の作法の違いを踏まえて話をまとめます。コンソーシアム型の場づくりそのものの設計もできます。
-  proof: スマートシティ社会実装コンソーシアム設立（のべ約300団体）／千葉県DX推進協議会 市民共創推進部会 運営
-- title: 成長企業のコーポレート機能・グループ経営の設計
-  layers:
-  - daikigyo
-  - chusho
-  body: 人が増えて管理が回らなくなった会社の、会議体の設計、決裁ルール、子会社を含めたガバナンス、理念やバリューの言語化と浸透。大企業の型をそのまま持ち込むのではなく、その規模で機能する最小構成に落とします。
-  proof: NEC 経営企画部門でのグループ経営（約400社）、全社会議体運営、稟議システム導入、ビジョン・バリュー策定
+  - title: "自治体の計画づくりと政策立案の伴走"
+    layers: [jichi, kuni]
+    body: "総合計画・産業振興計画・DX推進計画の策定支援、審議会・有識者委員、庁内ワークショップの設計と進行。国の政策側で計画を書いた経験を活かし、上位計画や交付金の要件と現場のやりたいことを無理なく接続します。オンライン参加可。契約形態は委員報酬・謝金・業務委託など、実績のある形態に対応します。"
+    proof: "内閣府での科学技術・イノベーション基本計画策定／総合計画審議委員・自治体アドバイザー多数"
+  - title: "中小企業の経営改善計画・数値計画の策定と実行支援"
+    layers: [chusho]
+    body: "決算書の分析から、金融機関に提出できる経営改善計画・資金繰り表・数値計画までを作成し、月次モニタリングまで伴走します。製造・卸売・サービスなど従業員5〜50名規模の支援実績があります。標準的には月1回訪問・6か月程度の伴走です。"
+    proof: "中小企業診断士／経営革新等認定支援機関／よろず支援拠点サポーター"
+  - title: "生産性向上・業務改革の現場支援"
+    layers: [chusho, daikigyo]
+    body: "時間観測に基づく現場の可視化から、改善計画づくりまで。大企業で実行した間接部門改革・稟議システム導入の経験を、中小企業の規模に合わせて置き換えます。"
+    proof: "福島県よろず支援拠点 生産性向上支援センター サポーター／NEC コーポレート変革"
+  - title: "AI・ICT活用の導入支援（構想から実物まで）"
+    layers: [chusho, jichi]
+    body: "勉強会で終わらせず、業務で動くものを一緒に作るところまで。生成AIの業務適用、社内ルール整備、小さな内製ツールの試作に対応します。"
+    proof: "JDLA Deep Learning for GENERAL 合格／総務省 財務・会計DXアドバイザー"
+  - title: "研修・講演・ワークショップの設計と登壇"
+    layers: [jinzai]
+    body: "経営指導員・自治体職員・経営者向けに、演習と持ち帰り成果物まで含めて設計。司会進行、パネルモデレート、イベント全体の企画運営も承ります。"
+    proof: "エフエム会津 パーソナリティ／デジタル庁 well-being指標活用ファシリテーター"
+  - title: "地域診断・産地／商店街の面的支援"
+    layers: [jichi, chusho]
+    body: "統計の読み解き、地域経済循環の整理、キーパーソン洗い出し、使える国の政策との接続までを一つのレポートにまとめます。"
+    proof: "地域診断・面的支援（2018年〜）／NPO 中小企業・地域創生ネットワーク 理事"
+  - title: "大企業と自治体をつなぐ共創・実証のコーディネート"
+    layers: [daikigyo, jichi, kuni]
+    body: "双方の意思決定の作法の違いを踏まえて話をまとめます。予算サイクルや稟議の実務感覚も共有できます。守秘契約の締結に対応します。"
+    proof: "スマートシティ社会実装コンソーシアム（のべ約300団体）／千葉県DX推進協議会"
+  - title: "成長企業のコーポレート機能・グループ経営の設計"
+    layers: [daikigyo, chusho]
+    body: "会議体・決裁ルール・ガバナンス、理念の言語化と浸透。大企業の型をそのまま持ち込まず、規模に合った最小構成に落とします。"
+    proof: "NEC 経営企画部門でのグループ経営（約400社）"
+
+npo_offering:
+  title: "NPO・地域活動向けの支援"
+  body: |
+    地域のNPO、市民団体、自治会活動向けに、無償または減額の相談枠を設けています。
+    助成金の整理、会計・組織運営の見直し、住民の合意形成の場づくり、デジタル活用の試行などに対応します。
+    まずはお気軽にご相談ください。
+
+training_topics:
+  - "中小企業のための生成AI入門（90分・演習付き）"
+  - "自治体職員向けDX・業務改革ワークショップ（半日）"
+  - "経営指導員向け・経営改善計画の書き方（90分〜半日）"
+  - "well-being指標を使った対話の場づくり（半日）"
+  - "スマートシティ・まちづくり入門（自治体・企業向け）"
+  - "司会・モデレート（イベント当日）"
+
+engagement:
+  steps:
+    - "お問い合わせ（フォームまたはWebサイト）"
+    - "30分程度のオンライン初回ヒアリング（無料）"
+    - "課題整理と支援方針・お見積りのご提示"
+    - "契約・キックオフ・伴走開始"
+  fees: |
+    内容・期間・契約形態により異なります。中小企業向けは制度活用により事業者負担を抑えられる場合があります。
+    自治体向けは委員報酬・謝金・業務委託のいずれかで、過去の契約実績に沿った形態をご提案します。
+    詳細は初回ヒアリング後にお見積りいたします。
+
+policies:
+  neutrality: "2025年6月にNECを退職済みです。現在、いかなるベンダーとも資本関係・販売関係・専属契約はありません。案件ごとに利益相反が生じる場合は、事前に開示し、必要に応じて辞退または役割を限定します。"
+  confidentiality: "守秘契約の締結に対応します。公開プロフィール・ポートフォリオに掲載する事例は、クライアントの許諾または匿名化・一般化した表現に限定します。"
+  remote: "オンライン参加・リモート伴走に対応します。福島県・千葉県・関東圏は対面訪問も可能です。"
+
+ordering_entities:
+  - entity: "まちとしごととくらしの研究所（土屋俊博）"
+    use_for: "コンサルティング、自治体委員・講師、中小企業支援、研修・講演"
+  - entity: "株式会社子ラボ屋"
+    use_for: "法人契約が必要な案件、商品・サービス開発関連（内容により使い分け）"
+
+invoice_note: "インボイス登録番号はお見積り時にご案内します。"
+
+contact_form:
+  action: "https://formsubmit.co/tutti@office626.com"
+  email: "tutti@office626.com"
+
 contacts:
-- label: Web
-  value: https://www.office626.com/
-  public: true
-  link: true
-- label: Mail
-  value: tutti@office626.com
-  public: false
-  link: false
-- label: note
-  value: https://note.com/office626
-  public: true
-  link: true
-- label: Spotify
-  value: https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3
-  public: true
-  link: true
-- label: Facebook
-  value: https://www.facebook.com/tutti666
-  public: true
-  link: true
-- label: Instagram
-  value: https://www.instagram.com/tutti0626/
-  public: true
-  link: true
-- label: オフィス
-  value: 福島県会津若松市
-  public: true
-  link: false
-- label: オフィス
-  value: 千葉県流山市
-  public: true
-  link: false
-- label: Tel
-  value: 090-4432-5156
-  public: false
-  link: false
-- label: 住所
-  value: 〒965-0817 福島県会津若松市千石町3-43-603号 エスパーダ千石
-  public: false
-  link: false
-- label: LINE
-  value: tutti666
-  public: false
-  link: false
-- label: 近影画像
-  value: https://drive.google.com/drive/folders/1fW3sSAY-vlogHv7KNYavox1v3d55R9A9
-  public: false
-  link: true
+  - { label: "Web",       value: "https://www.office626.com/",                    public: true,  link: true }
+  - { label: "Mail",      value: "tutti@office626.com",                            public: false, link: false }
+  - { label: "note",      value: "https://note.com/office626",                     public: true,  link: true }
+  - { label: "Spotify",   value: "https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3", public: true, link: true }
+  - { label: "Facebook",  value: "https://www.facebook.com/tutti666",              public: true,  link: true }
+  - { label: "Instagram", value: "https://www.instagram.com/tutti0626/",           public: true,  link: true }
+  - { label: "オフィス",  value: "福島県会津若松市",                              public: true,  link: false }
+  - { label: "オフィス",  value: "千葉県流山市",                                  public: true,  link: false }
+  - { label: "Tel",       value: "090-4432-5156",                                  public: false, link: false }
+  - { label: "住所",      value: "〒965-0817 福島県会津若松市千石町3-43-603号 エスパーダ千石", public: false, link: false }
+  - { label: "LINE",      value: "tutti666",                                       public: false, link: false }
+
+# 英語版（公開ページ下部に表示）
 en:
-  layers:
-    kuni:
-      label: National / Policy
-    jichi:
-      label: Local Government
-    daikigyo:
-      label: Large Enterprise
-    chusho:
-      label: SMEs / Regional
-    jinzai:
-      label: Talent / Community
-  basic:
-    organization: Institute for Towns, Work, and Living
-    organization_note: Certified Management Innovation Support Organization / Sole Proprietorship
-    title: Director / Lead Researcher
-    hometown: Born in Komoro, Nagano
-    base: Aizuwakamatsu, Fukushima & Nagareyama, Chiba (dual-base since April 2024)
-  tagline: A management consultant who has experienced four perspectives from the inside—from national policy to the front lines of SMEs.
-  intros:
-    medium: 'After graduating from the Faculty of Engineering at the University of Tokyo, Toshihiro Tsuchiya joined NEC Corporation.
-
-      In corporate planning, he supported top management, ran company-wide councils, led shared services for indirect functions,
-
-      and managed a group of roughly 400 subsidiaries while shaping vision, values, and culture change.
-
-      From 2019 to 2021 he was seconded to the Cabinet Office, where he worked on the Science, Technology and Innovation Basic Plan
-
-      and smart-city policy. In 2022 he founded the Smart City Social Implementation Consortium, bringing together roughly 300 organizations
-
-      to create new digital services. In October 2025 he established the Institute for Towns, Work, and Living.
-
-      As a certified SME management consultant, he supports local government policy and DX, SME business improvement and AI adoption,
-
-      and the design and delivery of training and workshops.
-
-      '
-  career:
-  - period: Oct 2025–
-    title: Founded the Institute for Towns, Work, and Living
-    org: Director / Lead Researcher
-    detail: Established as a sole proprietorship supporting local government policy and DX, and SME business improvement and productivity. Certified as a Management Innovation Support Organization in February 2026.
-  - period: May 2022–Jun 2025
-    title: Founded and operated the Smart City Social Implementation Consortium
-    org: ''
-    detail: Promoted new digital services with participation from roughly 300 companies, local governments, universities, and nonprofits. Left NEC in June 2025.
-  - period: 2019–2021
-    title: Cabinet Office, Headquarters for Science, Technology and Innovation (secondment)
-    org: ''
-    detail: Led work on the Science, Technology and Innovation Basic Plan, smart-city reference architecture, the Smart City Guidebook, and coordination of smart-city plans across government policies.
-  - period: NEC, Business Planning (Smart City)
-    title: Business development with local governments
-    org: NEC Corporation
-    detail: Created smart-city-related businesses through partnerships with municipalities.
-  - period: NEC, Corporate Planning
-    title: Group management and corporate transformation
-    org: NEC Corporation
-    detail: Top-support work, company-wide council operations, shared services for indirect functions, company-wide approval system implementation, group management for roughly 400 subsidiaries including about 100 direct subsidiaries, global HR strategy, vision and values development, culture change, and new business creation through partnerships.
-  - period: ''
-    title: Graduated, Faculty of Engineering, University of Tokyo
-    org: ''
-    detail: ''
-  affiliations:
-  - since: Apr 2026–
-    name: Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base
-  - since: Jan 2026–
-    name: FM Aizu personality (Tue 11:00–13:00, “Hirukyun! Palette”)
-  - since: Dec 2025–
-    name: Representative Director, Kodomo Laboya Inc.
-  - since: Feb 2023–
-    name: Board Member, NPO SME and Regional Revitalization Network
-  credentials:
-  - group: Government
-    items:
-    - Advisor for Financial and Accounting DX, Ministry of Internal Affairs and Communications program for strengthening local government management
-    - Completed Digital Agency Well-being Indicators Facilitator Training (Cohort 1)
-    - Certified Digital Promotion Officer, Digital Agency
-    - Operations, Chiba Prefecture DX Promotion Council, Citizen Co-creation Promotion Committee
-    - Operations, “Jichi Lab” community association improvement project with Nagareyama City, Chiba
-    - Smart City Advisor, Kobe City, Hyogo Prefecture
-    - Smart City Social Implementation Advisor, Kusatsu City, Shiga Prefecture
-    - Comprehensive Plan Review Committee Member, Minamiizu Town, Shizuoka (regional diagnosis, industrial promotion planning, and area-based business support since 2018)
-  - group: Business
-    items:
-    - Certified SME Management Consultant, METI (since 2013)
-    - Member, Fukushima SME Management Consultant Association (since 2024)
-    - SME Advisor [Management Support], Organization for SME and Regional Innovation (since Apr 2024)
-    - Certified Management Innovation Support Organization, METI (since Feb 2026)
-    - Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base (since Apr 2026)
-    - Registered expert with Fukushima Credit Guarantee Corporation, SME organizations, and related bodies
-  - group: AI & Digital
-    items:
-    - 'JDLA Deep Learning for GENERAL 2025 #3 (passed)'
-    - Vibe Coder Bootcamp (completed Mar 2026)
-  fields:
-  - Policy development and DX promotion support for local governments
-  - Business strategy, business planning, and new business development support for private companies
-  - Training and workshop design, event moderation, and facilitation
-  - Business reform through ICT and AI, including hands-on implementation
-  offerings:
-  - title: Local government planning and policy development
-    body: Support for comprehensive plans, industrial promotion plans, and DX promotion plans; advisory committees; and design and facilitation of in-house workshops. Experience drafting plans on the national policy side helps bridge upper-level plans and grant requirements with what communities actually want to do.
-    proof: Science, Technology and Innovation Basic Plan at the Cabinet Office / Comprehensive Plan Review Committee, Minamiizu Town / Advisor to Kobe and Kusatsu cities
-  - title: SME business improvement and financial planning with follow-through
-    body: From financial statement analysis to bank-ready improvement plans, cash-flow forecasts, and numerical plans—with ongoing monitoring. As a certified support organization, documents meet formal requirements.
-    proof: SME Management Consultant / Certified Management Innovation Support Organization / SME Advisor, Organization for SME and Regional Innovation / Credit Guarantee Corporation expert registration
-  - title: On-site productivity improvement and business reform
-    body: From time studies (cycle time, lead time, uptime/downtime) to improvement planning through the 5M+1E lens. Applies large-enterprise experience in shared services and approval systems at SME scale.
-    proof: Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base / NEC corporate transformation
-  - title: AI and ICT adoption—from concept to working tools
-    body: 'Goes beyond “what can AI do?” seminars to building things that actually work in operations: generative AI use cases, internal rules, and small in-house tool prototypes.'
-    proof: JDLA Deep Learning for GENERAL / Vibe Coder Bootcamp / Financial and Accounting DX Advisor, MIC
-  - title: Training, lectures, and workshop design and delivery
-    body: Programs for business advisors, government staff, and executives—designed with exercises and deliverables, not lectures alone. Also moderates panels and plans and runs events end to end.
-    proof: FM Aizu personality / training and workshop design / Digital Agency Well-being Indicators Facilitator
-  - title: Regional diagnosis and area-based support for industrial districts and shopping streets
-    body: 'Diagnosis at the area level, not company by company: reading statistics, mapping regional economic circulation, identifying key people, and linking usable national policies into one report.'
-    proof: Regional diagnosis and area support in Minamiizu Town since 2018 / Board Member, NPO SME and Regional Revitalization Network
-  - title: Co-creation and pilot coordination between large companies and local governments
-    body: Bridges companies that want to work with municipalities and municipalities that want corporate partners, accounting for differences in how each side decides. Can also design consortium-style platforms.
-    proof: Founded Smart City Social Implementation Consortium (~300 organizations) / Chiba Prefecture DX Promotion Council, Citizen Co-creation Promotion Committee
-  - title: Corporate functions and group management design for growing companies
-    body: Meeting structures, approval rules, governance including subsidiaries, and articulating and embedding vision and values—scaled down to what works at each company’s size, not copied from big-company playbooks.
-    proof: 'NEC corporate planning: group management (~400 companies), company-wide councils, approval system, vision and values'
-  ui:
-    eyebrow: Profile
-    offerings: What I Can Help With
-    offerings_legend: Tags show which stakeholder context each assignment fits.
-    proof: Relevant experience
-    career: Career
-    affiliations: Current Positions
-    credentials: Credentials & Appointments
-    fields: Areas of Practice
-    contact: Contact
-    office_label: Office
-    offices:
-    - Aizuwakamatsu, Fukushima Prefecture
-    - Nagareyama, Chiba Prefecture
+  tagline: "Management consultant with inside experience across national policy, local government, large enterprises, and SMEs."
+  audience_guides:
+    - label: "Government & public sector"
+      summary: "Planning, committees, workshops. Remote participation available."
+    - label: "SME owners"
+      summary: "Start with free consultation entry points. Business improvement and productivity support."
+    - label: "Large enterprises"
+      summary: "Public-private collaboration coordination. No vendor exclusivity."
+    - label: "NPOs & community groups"
+      summary: "Pro bono or reduced-fee consultation slots available."
+    - label: "Training & events"
+      summary: "Keynotes, workshops, moderation from 90 minutes to half-day."
+  free_entry:
+    headline: "Free or low-cost entry points are available"
+    intro: "SME owners in Fukushima can start through public support programs."
+  section_titles:
+    offerings: "Services"
+    portfolio: "Selected work"
+    publications: "Public deliverables"
+    career: "Career"
+    affiliations: "Current roles"
+    credentials: "Credentials & appointments"
+    fields: "Focus areas"
+    engagement: "How to engage"
+    policies: "Neutrality & confidentiality"
+    contact: "Contact"
+    training: "Training topics"
+    npo: "Support for NPOs & communities"
+  offerings_note: "See Japanese section above for full service descriptions."

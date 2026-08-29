@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>実績・ポートフォリオ｜土屋俊博</title>
+<style>
+:root {
+  --ink: #16232E; --ink-soft: #4A5A66; --paper: #F2F1ED; --panel: #FBFAF7;
+  --rule: #D8D5CC; --accent: #3F7A6E;
+  --mincho: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --gothic: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+  --mono: ui-monospace, "SFMono-Regular", "Menlo", monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--gothic);
+  line-height: 1.85; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 24px 96px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+.topnav { padding: 16px 0; font-size: 13px; display: flex; gap: 16px; flex-wrap: wrap; }
+.topnav a { text-decoration: none; font-family: var(--mono); letter-spacing: .06em; }
+header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: .18em;
+  color: var(--ink-soft); text-transform: uppercase; margin: 0 0 22px; }
+h1 { font-family: var(--mincho); font-weight: 600; font-size: clamp(38px, 7vw, 60px);
+  line-height: 1.15; margin: 0 0 6px; }
+.kana { font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); }
+.tagline { font-family: var(--mincho); font-size: clamp(17px, 2.6vw, 21px);
+  line-height: 1.8; margin: 28px 0 0; max-width: 36em; }
+.affil-line { margin: 26px 0 0; color: var(--ink-soft); font-size: 14px; }
+.affil-line strong { color: var(--ink); font-weight: 600; }
+.avail { margin-top: 12px; font-size: 13px; color: var(--accent); }
+section { padding: 48px 0 8px; border-bottom: 1px solid var(--rule); }
+section:last-of-type { border-bottom: 0; }
+h2 { font-family: var(--mincho); font-size: 21px; font-weight: 600; margin: 0 0 24px;
+  letter-spacing: .08em; display: flex; align-items: baseline; gap: 14px; }
+h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+h3 { font-family: var(--mincho); font-size: 17px; margin: 0 0 8px; }
+.lead { color: var(--ink-soft); font-size: 14.5px; margin: 0 0 20px; }
+.audience-grid { display: grid; gap: 12px; }
+.audience-card { background: var(--panel); border: 1px solid var(--rule); padding: 18px 20px; }
+.audience-card strong { display: block; margin-bottom: 6px; font-size: 15px; }
+.audience-card p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
+.highlight-box { background: color-mix(in srgb, var(--accent) 8%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--rule));
+  border-left: 3px solid var(--accent); padding: 22px 24px; margin-bottom: 16px; }
+.highlight-box h3 { color: var(--accent); font-size: 16px; margin-bottom: 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 2px;
+  color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 35%, transparent);
+  background: color-mix(in srgb, var(--c) 7%, transparent); }
+.cards { display: grid; gap: 14px; }
+.card { background: var(--panel); border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent); padding: 22px 24px; }
+.card h3 { font-size: 18px; margin: 10px 0 8px; }
+.card p { margin: 0; font-size: 14.5px; }
+.proof { margin-top: 12px; padding-top: 10px; border-top: 1px dotted var(--rule);
+  font-size: 12.5px; color: var(--ink-soft); }
+.proof span { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+  display: block; margin-bottom: 3px; color: var(--accent); }
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline > li { display: grid; grid-template-columns: 168px 1fr; gap: 24px; padding: 0 0 28px; }
+.when { font-family: var(--mono); font-size: 12px; color: var(--ink-soft);
+  padding-top: 5px; border-top: 2px solid var(--ink); }
+.what h3 { font-size: 17px; margin: 0 0 6px; }
+.what p { margin: 0 0 8px; font-size: 14px; color: var(--ink-soft); }
+.plainlist { list-style: none; margin: 0; padding: 0; }
+.plainlist li { padding: 10px 0; border-bottom: 1px dotted var(--rule); font-size: 14.5px; }
+.plainlist .when { display: inline-block; width: 118px; border: 0; padding: 0; }
+.creds { display: grid; gap: 28px; }
+.credgroup h3 { font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em;
+  color: var(--accent); margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+.credgroup ul { margin: 0; padding-left: 1.15em; }
+.credgroup li { font-size: 14px; margin-bottom: 6px; }
+dl.contact { margin: 0; }
+.row { display: grid; grid-template-columns: 118px 1fr; gap: 16px;
+  padding: 10px 0; border-bottom: 1px dotted var(--rule); }
+.row dt { font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); padding-top: 4px; }
+.row dd { margin: 0; font-size: 14.5px; word-break: break-word; }
+.pub-list li { margin-bottom: 10px; }
+.case-mini { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 14px; }
+.case-mini strong { color: var(--ink); }
+.form-grid { display: grid; gap: 14px; max-width: 560px; }
+.form-grid label { display: block; font-size: 13px; margin-bottom: 4px; color: var(--ink-soft); }
+.form-grid input, .form-grid textarea, .form-grid select {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 2px;
+  font: inherit; background: #fff; }
+.form-grid textarea { min-height: 120px; resize: vertical; }
+.btn { display: inline-block; padding: 12px 24px; background: var(--accent); color: #fff;
+  border: 0; border-radius: 2px; font: inherit; cursor: pointer; }
+.lang-divider { margin: 64px 0 32px; padding-top: 48px; border-top: 3px double var(--rule);
+  text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: .2em;
+  color: var(--ink-soft); }
+footer { padding: 40px 0 0; font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); }
+@media (max-width: 640px) {
+  .timeline > li { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="index.html">← プロフィールに戻る</a></nav>
+  <header>
+    <p class="eyebrow">Portfolio</p>
+    <h1>実績・ポートフォリオ</h1>
+    <p class="lead">守秘義務のある案件は、業種・規模・期間・関与内容・成果の5点に整理して掲載しています。
+詳細な事例や公開資料へのリンクは、個別のご相談でもお伝えできます。</p>
+  </header>
+  <section>
+    <div class="cards">
+        <article class="card">
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">国・政策</span></div>
+          <h3>スマートシティ関連の国の公表ガイド策定</h3>
+          <p><strong>クライアント：</strong>中央省庁（政策立案部門）</p>
+          <p><strong>関与：</strong>企画・起草チームのコアメンバー（2019–2021年）</p>
+          <p><strong>内容：</strong>全国自治体向けガイドブックと参照アーキテクチャの検討・文案作成、関連府省庁との調整</p>
+          <p><strong>成果：</strong>公表物として全国の自治体・事業者が参照できる形で整備。政策と現場実装の橋渡し資料として継続利用</p>
+          <ul><li><a href="https://www.digital.go.jp/policies/smartcity">デジタル庁 スマートシティ関連資料</a></li></ul>
+        </article>
+        <article class="card">
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span></div>
+          <h3>総合計画・地域診断の継続支援</h3>
+          <p><strong>クライアント：</strong>地方自治体（観光・農業が基幹の町、人口1万人台）</p>
+          <p><strong>関与：</strong>総合計画審議委員／地域診断アドバイザー（2018年〜継続）</p>
+          <p><strong>内容：</strong>地域診断、産業振興計画の検討、地域事業者への面的支援、庁内ワークショップの設計・進行</p>
+          <p><strong>成果：</strong>計画策定プロセスを住民・事業者と共有し、複数年にわたる面的支援の土台を整備</p>
+          
+        </article>
+        <article class="card">
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">中小企業</span></div>
+          <h3>製造業の生産性向上と経営数値の可視化</h3>
+          <p><strong>クライアント：</strong>従業員20名規模の食品製造業</p>
+          <p><strong>関与：</strong>生産性向上支援・経営改善アドバイザー（6か月）</p>
+          <p><strong>内容：</strong>現場の時間観測、ボトルネック特定、改善計画と月次モニタリングの設計</p>
+          <p><strong>成果：</strong>リードタイムの短縮と稼働の見える化を実現。金融機関提出用の数値計画と接続</p>
+          
+        </article>
+        <article class="card">
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">大企業・自治体</span></div>
+          <h3>業界横断コンソーシアムの立ち上げと運営</h3>
+          <p><strong>クライアント：</strong>企業・自治体・大学・NPOなど多様なステークホルダー</p>
+          <p><strong>関与：</strong>事務局代表／運営責任者（2022–2025年）</p>
+          <p><strong>内容：</strong>参画団体の募集、運営規程・会議体の設計、共創案件のマッチング、公開イベントの企画</p>
+          <p><strong>成果：</strong>のべ約300団体の参画を得て、複数の実証・共創の場を継続運営</p>
+          
+        </article>
+        <article class="card">
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">NPO・地域活動</span></div>
+          <h3>住民主体の自治会活動改善（自治ラボ）</h3>
+          <p><strong>クライアント：</strong>首都圏の市と地域住民団体</p>
+          <p><strong>関与：</strong>ファシリテーター／企画運営（2023年〜）</p>
+          <p><strong>内容：</strong>住民ワークショップの設計、活動の見える化、デジタル活用の試行</p>
+          <p><strong>成果：</strong>参加しやすい場づくりと活動記録の仕組みを整備。継続的な改善サイクルを開始</p>
+          
+        </article>
+        <article class="card">
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">研修・講演</span></div>
+          <h3>自治体職員向けDX・AI活用研修</h3>
+          <p><strong>クライアント：</strong>地方自治体・支援機関</p>
+          <p><strong>関与：</strong>講師・ワークショップ設計（複数回（90分〜半日））</p>
+          <p><strong>内容：</strong>生成AIの業務適用、社内ルール整備、演習による業務フロー改善</p>
+          <p><strong>成果：</strong>受講者がその場で持ち帰れる成果物（業務メモ・チェックリスト）まで設計</p>
+          
+        </article></div>
+  </section>
+  <section id="contact">
+    <h2>お仕事のご相談</h2>
+    <p class="lead">事例の詳細や類似案件のご相談は、<a href="index.html#contact">プロフィールページのフォーム</a>からお送りください。</p>
+    
+    <form class="form-grid" action="https://formsubmit.co/tutti@office626.com" method="POST">
+      <input type="hidden" name="_subject" value="プロフィールサイトからのお仕事のご相談">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <div><label for="name">お名前 *</label><input id="name" name="name" required></div>
+      <div><label for="org">ご所属</label><input id="org" name="organization"></div>
+      <div><label for="email">メールアドレス *</label><input id="email" name="email" type="email" required></div>
+      <div><label for="type">ご相談の種類</label>
+        <select id="type" name="inquiry_type">
+          <option>自治体・行政</option><option>中小企業</option><option>大企業</option>
+          <option>NPO・地域活動</option><option>研修・講演</option><option>その他</option>
+        </select></div>
+      <div><label for="message">ご相談内容 *</label>
+        <textarea id="message" name="message" required placeholder="課題・希望時期・予算感など"></textarea></div>
+      <button class="btn" type="submit">送信する</button>
+    </form>
+  </section>
+  <footer>LAST UPDATED 2026-08-29</footer>
+</div>
+</body>
+</html>

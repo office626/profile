@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - "profile.yaml"
+      - "portfolio.yaml"
       - "scripts/build.py"
       - ".github/workflows/build.yml"
   workflow_dispatch:
@@ -31,20 +32,22 @@ jobs:
 
       - name: 非公開情報が混ざっていないか確認
         run: |
-          python3 - <<'PY' > /tmp/private.txt
-          import yaml
-          for c in yaml.safe_load(open("profile.yaml", encoding="utf-8")).get("contacts", []):
-              if not c.get("public"):
-                  print(c["value"])
+          python3 - <<'PY'
+          import pathlib, re, sys, yaml
+          priv = [c["value"] for c in yaml.safe_load(open("profile.yaml", encoding="utf-8")).get("contacts", []) if not c.get("public")]
+          targets = list(pathlib.Path(".").glob("README.md")) + list(pathlib.Path("docs").rglob("*")) + list(pathlib.Path("out").rglob("*"))
+          fail = 0
+          for p in targets:
+              if not p.is_file():
+                  continue
+              text = p.read_text(encoding="utf-8", errors="ignore")
+              text = re.sub(r"https://formsubmit\.co/[^\"'\s>]+", "", text)
+              for v in priv:
+                  if v and v in text:
+                      print(f"::error::非公開の情報が生成物に含まれています: {v} ({p})")
+                      fail = 1
+          sys.exit(fail)
           PY
-          fail=0
-          while IFS= read -r v; do
-            [ -z "$v" ] && continue
-            if grep -rqF "$v" README.md docs/ out/; then
-              echo "::error::非公開の情報が生成物に含まれています: $v"; fail=1
-            fi
-          done < /tmp/private.txt
-          exit $fail
 
       - name: 変更があればコミット
         run: |

@@ -5,457 +5,419 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>土屋俊博｜まちとしごととくらしの研究所</title>
 <meta name="description" content="国の政策づくりから中小企業の現場まで、4つの立場を内側から経験した経営コンサルタント。">
-<meta property="og:title" content="土屋俊博｜まちとしごととくらしの研究所">
-<meta property="og:description" content="国の政策づくりから中小企業の現場まで、4つの立場を内側から経験した経営コンサルタント。">
-<meta property="og:type" content="profile">
 <style>
 :root {
-  --ink:      #16232E;
-  --ink-soft: #4A5A66;
-  --paper:    #F2F1ED;
-  --panel:    #FBFAF7;
-  --rule:     #D8D5CC;
-  --accent:   #3F7A6E;
-  --mincho: "Hiragino Mincho ProN", "Yu Mincho", "YuMincho", "Noto Serif JP", serif;
+  --ink: #16232E; --ink-soft: #4A5A66; --paper: #F2F1ED; --panel: #FBFAF7;
+  --rule: #D8D5CC; --accent: #3F7A6E;
+  --mincho: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
   --gothic: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
   --mono: ui-monospace, "SFMono-Regular", "Menlo", monospace;
-  --serif-en: Georgia, "Times New Roman", "Noto Serif", serif;
-  --sans-en: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
-body {
-  margin: 0; background: var(--paper); color: var(--ink);
-  font-family: var(--gothic); line-height: 1.85;
-  font-size: 15.5px; letter-spacing: .01em;
-  -webkit-font-smoothing: antialiased;
-}
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--gothic);
+  line-height: 1.85; font-size: 15.5px; -webkit-font-smoothing: antialiased; }
 .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px 96px; }
 a { color: var(--accent); text-underline-offset: 3px; }
-a:focus-visible, .chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-
-/* ---- header ---- */
-header { padding: 72px 0 40px; border-bottom: 1px solid var(--rule); }
-.eyebrow {
-  font-family: var(--mono); font-size: 11.5px; letter-spacing: .18em;
-  color: var(--ink-soft); text-transform: uppercase; margin: 0 0 22px;
-}
-h1 {
-  font-family: var(--mincho); font-weight: 600;
-  font-size: clamp(38px, 7vw, 60px); line-height: 1.15;
-  margin: 0 0 6px; letter-spacing: .04em;
-}
-.kana { font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); letter-spacing: .12em; }
-.tagline {
-  font-family: var(--mincho); font-size: clamp(17px, 2.6vw, 21px);
-  line-height: 1.8; margin: 28px 0 0; max-width: 34em; color: var(--ink);
-}
+.topnav { padding: 16px 0; font-size: 13px; display: flex; gap: 16px; flex-wrap: wrap; }
+.topnav a { text-decoration: none; font-family: var(--mono); letter-spacing: .06em; }
+header { padding: 48px 0 40px; border-bottom: 1px solid var(--rule); }
+.eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: .18em;
+  color: var(--ink-soft); text-transform: uppercase; margin: 0 0 22px; }
+h1 { font-family: var(--mincho); font-weight: 600; font-size: clamp(38px, 7vw, 60px);
+  line-height: 1.15; margin: 0 0 6px; }
+.kana { font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); }
+.tagline { font-family: var(--mincho); font-size: clamp(17px, 2.6vw, 21px);
+  line-height: 1.8; margin: 28px 0 0; max-width: 36em; }
 .affil-line { margin: 26px 0 0; color: var(--ink-soft); font-size: 14px; }
 .affil-line strong { color: var(--ink); font-weight: 600; }
-.portrait { width: 108px; height: 108px; object-fit: cover; border-radius: 2px; margin: 0 0 24px; }
-
-.lang-divider {
-  margin: 72px 0 0; padding-top: 8px;
-  border-top: 3px solid var(--ink);
-}
-.lang-en {
-  font-family: var(--sans-en);
-}
-.lang-en h1, .lang-en h2, .lang-en h3, .lang-en .tagline {
-  font-family: var(--serif-en);
-}
-.lang-en .kana { font-family: var(--mono); }
-
-/* ---- section ---- */
-section { padding: 56px 0 8px; border-bottom: 1px solid var(--rule); }
+.avail { margin-top: 12px; font-size: 13px; color: var(--accent); }
+section { padding: 48px 0 8px; border-bottom: 1px solid var(--rule); }
 section:last-of-type { border-bottom: 0; }
-h2 {
-  font-family: var(--mincho); font-size: 21px; font-weight: 600;
-  margin: 0 0 28px; letter-spacing: .08em; display: flex; align-items: baseline; gap: 14px;
-}
+h2 { font-family: var(--mincho); font-size: 21px; font-weight: 600; margin: 0 0 24px;
+  letter-spacing: .08em; display: flex; align-items: baseline; gap: 14px; }
 h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
-.lang-en h2 { font-family: var(--serif-en); letter-spacing: .04em; }
-
-/* ---- layer chips: this page's through-line ---- */
+h3 { font-family: var(--mincho); font-size: 17px; margin: 0 0 8px; }
+.lead { color: var(--ink-soft); font-size: 14.5px; margin: 0 0 20px; }
+.audience-grid { display: grid; gap: 12px; }
+.audience-card { background: var(--panel); border: 1px solid var(--rule); padding: 18px 20px; }
+.audience-card strong { display: block; margin-bottom: 6px; font-size: 15px; }
+.audience-card p { margin: 0; font-size: 13.5px; color: var(--ink-soft); }
+.highlight-box { background: color-mix(in srgb, var(--accent) 8%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, var(--rule));
+  border-left: 3px solid var(--accent); padding: 22px 24px; margin-bottom: 16px; }
+.highlight-box h3 { color: var(--accent); font-size: 16px; margin-bottom: 10px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip {
-  font-size: 11px; font-weight: 600; letter-spacing: .06em; line-height: 1;
-  padding: 5px 9px 6px; border-radius: 2px;
+.chip { font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 2px;
   color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 35%, transparent);
-  background: color-mix(in srgb, var(--c) 7%, transparent); white-space: nowrap;
-}
-.legend { margin: -14px 0 30px; }
-.legend p { font-size: 12.5px; color: var(--ink-soft); margin: 0 0 10px; }
-
-/* ---- offerings ---- */
+  background: color-mix(in srgb, var(--c) 7%, transparent); }
 .cards { display: grid; gap: 14px; }
-.card {
-  background: var(--panel); border: 1px solid var(--rule);
-  border-left: 3px solid var(--accent); padding: 24px 26px;
-}
-.card h3 { font-family: var(--mincho); font-size: 19px; margin: 12px 0 10px; letter-spacing: .03em; }
-.lang-en .card h3 { font-family: var(--serif-en); }
+.card { background: var(--panel); border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent); padding: 22px 24px; }
+.card h3 { font-size: 18px; margin: 10px 0 8px; }
 .card p { margin: 0; font-size: 14.5px; }
-.proof {
-  margin-top: 14px !important; padding-top: 12px; border-top: 1px dotted var(--rule);
-  font-size: 12.5px; color: var(--ink-soft);
-}
-.proof span {
-  font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
-  display: block; margin-bottom: 3px; color: var(--accent);
-}
-
-/* ---- timeline ---- */
+.proof { margin-top: 12px; padding-top: 10px; border-top: 1px dotted var(--rule);
+  font-size: 12.5px; color: var(--ink-soft); }
+.proof span { font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+  display: block; margin-bottom: 3px; color: var(--accent); }
 .timeline { list-style: none; margin: 0; padding: 0; }
-.timeline > li { display: grid; grid-template-columns: 168px 1fr; gap: 24px; padding: 0 0 34px; }
-.when {
-  font-family: var(--mono); font-size: 12px; color: var(--ink-soft);
-  letter-spacing: .04em; padding-top: 5px; border-top: 2px solid var(--ink);
-}
-.what h3 { font-family: var(--mincho); font-size: 17.5px; margin: 0 0 6px; letter-spacing: .03em; }
-.lang-en .what h3 { font-family: var(--serif-en); }
-.what p { margin: 0 0 10px; font-size: 14px; color: var(--ink-soft); }
-.what .org { font-size: 13px; margin-bottom: 6px; }
-
+.timeline > li { display: grid; grid-template-columns: 168px 1fr; gap: 24px; padding: 0 0 28px; }
+.when { font-family: var(--mono); font-size: 12px; color: var(--ink-soft);
+  padding-top: 5px; border-top: 2px solid var(--ink); }
+.what h3 { font-size: 17px; margin: 0 0 6px; }
+.what p { margin: 0 0 8px; font-size: 14px; color: var(--ink-soft); }
 .plainlist { list-style: none; margin: 0; padding: 0; }
-.plainlist li { padding: 11px 0; border-bottom: 1px dotted var(--rule); font-size: 14.5px; }
-.plainlist li:last-child { border-bottom: 0; }
+.plainlist li { padding: 10px 0; border-bottom: 1px dotted var(--rule); font-size: 14.5px; }
 .plainlist .when { display: inline-block; width: 118px; border: 0; padding: 0; }
-
-.creds { display: grid; gap: 34px; }
-.credgroup h3 {
-  font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em; color: var(--accent);
-  margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--rule);
-}
+.creds { display: grid; gap: 28px; }
+.credgroup h3 { font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em;
+  color: var(--accent); margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
 .credgroup ul { margin: 0; padding-left: 1.15em; }
-.credgroup li { font-size: 14px; margin-bottom: 7px; }
-
+.credgroup li { font-size: 14px; margin-bottom: 6px; }
 dl.contact { margin: 0; }
-.row { display: grid; grid-template-columns: 118px 1fr; gap: 16px; padding: 11px 0; border-bottom: 1px dotted var(--rule); }
-.row dt { font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em; color: var(--ink-soft); padding-top: 4px; }
-.row dd { margin: 0; font-size: 14.5px; word-break: break-all; }
-
-footer { padding: 40px 0 0; font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); letter-spacing: .06em; }
-
+.row { display: grid; grid-template-columns: 118px 1fr; gap: 16px;
+  padding: 10px 0; border-bottom: 1px dotted var(--rule); }
+.row dt { font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); padding-top: 4px; }
+.row dd { margin: 0; font-size: 14.5px; word-break: break-word; }
+.pub-list li { margin-bottom: 10px; }
+.case-mini { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 14px; }
+.case-mini strong { color: var(--ink); }
+.form-grid { display: grid; gap: 14px; max-width: 560px; }
+.form-grid label { display: block; font-size: 13px; margin-bottom: 4px; color: var(--ink-soft); }
+.form-grid input, .form-grid textarea, .form-grid select {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--rule); border-radius: 2px;
+  font: inherit; background: #fff; }
+.form-grid textarea { min-height: 120px; resize: vertical; }
+.btn { display: inline-block; padding: 12px 24px; background: var(--accent); color: #fff;
+  border: 0; border-radius: 2px; font: inherit; cursor: pointer; }
+.lang-divider { margin: 64px 0 32px; padding-top: 48px; border-top: 3px double var(--rule);
+  text-align: center; font-family: var(--mono); font-size: 12px; letter-spacing: .2em;
+  color: var(--ink-soft); }
+footer { padding: 40px 0 0; font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); }
 @media (max-width: 640px) {
-  .timeline > li { grid-template-columns: 1fr; gap: 10px; }
-  .when { display: inline-block; }
-  .row { grid-template-columns: 1fr; gap: 2px; }
-  header { padding-top: 48px; }
-}
-@media (prefers-reduced-motion: no-preference) {
-  section, header > * { animation: rise .5s ease both; }
-  @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+  .timeline > li { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
 <div class="wrap">
-
+  <nav class="topnav">
+    <a href="#services">サービス</a>
+    <a href="portfolio.html">実績・ポートフォリオ</a>
+    <a href="#contact">お仕事のご相談</a>
+    <a href="#english">English</a>
+  </nav>
 
   <header>
     <p class="eyebrow">Profile</p>
+    
     <h1>土屋俊博</h1>
-    <p class="kana">つちや としひろ &nbsp;/&nbsp; Tsuchiya Toshihiro</p>
+    <p class="kana">つちや としひろ / Tsuchiya Toshihiro</p>
     <p class="tagline">国の政策づくりから中小企業の現場まで、4つの立場を内側から経験した経営コンサルタント。</p>
     <p class="affil-line">
       <strong>まちとしごととくらしの研究所</strong>　所長 ／ 主任研究員<br>
-      認定経営革新等支援機関 ／ 個人事業<br>
+      認定経営革新等支援機関<br>
       長野県小諸市 出身／福島県会津若松市 ＋ 千葉県流山市（2024年4月より二拠点居住）
     </p>
+    <p class="avail">2026年10月以降、新規の伴走支援に対応可能です（研修・講演は随時相談可）</p>
   </header>
 
   <section>
+    <h2>どのお立場の方ですか？</h2>
+    <div class="audience-grid"><div class="audience-card" id="jichi"><strong>自治体・行政の方</strong><p>計画策定、審議会・委員、庁内ワークショップ。オンライン参加可。年間の出席可能回数はご相談ください。</p></div><div class="audience-card" id="sme"><strong>中小企業の経営者の方</strong><p>まずは無料相談の入り口から。経営改善計画・生産性向上・AI導入を、会津・関東を中心に伴走します。</p></div><div class="audience-card" id="enterprise"><strong>大企業の方</strong><p>自治体との共創・実証のコーディネート。NEC退職済みで、特定ベンダーとの専属関係はありません。</p></div><div class="audience-card" id="npo"><strong>NPO・地域活動の方</strong><p>予算が限られる活動向けに、無償・減額の相談枠を設けています。合意形成の場づくりも対応します。</p></div><div class="audience-card" id="training"><strong>研修・講演の主催者の方</strong><p>90分〜半日の演題を多数用意。司会・モデレートも承ります。</p></div></div>
+  </section>
+
+  <section id="free-entry">
+    <h2>まずは無料・低額で相談できる入り口があります</h2>
+    <p class="lead">中小企業の経営者の方は、次の制度を入口にご利用いただけます。どれが使えるかは、短いヒアリングで整理します。</p>
+    <div class="highlight-box"><h3>よろず支援拠点 生産性向上支援センター</h3><p>福島県内の中小企業向け。初回相談は無料。現場の生産性向上・業務改善を伴走支援。</p></div><div class="highlight-box"><h3>経営革新等認定支援機関</h3><p>経営改善計画の策定支援。補助金・制度活用の要件整理に対応。</p></div><div class="highlight-box"><h3>中小機構 中小企業アドバイザー／信用保証協会・中央会 専門家</h3><p>派遣・紹介経由の支援。事業者負担が軽減されるケースがあります。</p></div>
+  </section>
+
+  <section>
+    <h2>実績・公開成果物</h2>
+    <p class="lead">匿名化した事例の詳細は<a href="portfolio.html">ポートフォリオページ</a>に掲載しています。</p>
+    <p class="case-mini"><strong>スマートシティ関連の国の公表ガイド策定</strong> — 中央省庁（政策立案部門）／2019–2021年。公表物として全国の自治体・事業者が参照できる形で整備。政策と現場実装の橋渡し資料として継続利用…</p><p class="case-mini"><strong>総合計画・地域診断の継続支援</strong> — 地方自治体（観光・農業が基幹の町、人口1万人台）／2018年〜継続。計画策定プロセスを住民・事業者と共有し、複数年にわたる面的支援の土台を整備…</p><p class="case-mini"><strong>製造業の生産性向上と経営数値の可視化</strong> — 従業員20名規模の食品製造業／6か月。リードタイムの短縮と稼働の見える化を実現。金融機関提出用の数値計画と接続…</p>
+    <h3 style="margin-top:28px">公開成果物</h3>
+    <ul class='plainlist pub-list'><li><a href="https://www.digital.go.jp/policies/smartcity">スマートシティガイドブック（国の公表物）</a> — 内閣府出向時に策定に関与</li><li><a href="https://www.digital.go.jp/policies/smartcity">デジタル庁 スマートシティ政策・資料</a> — 参照アーキテクチャ等の関連資料</li><li><a href="https://www.pref.chiba.lg.jp/chojusangyo/dx/index.html">千葉県DX推進協議会（市民共創推進部会）</a> — 運営メンバーとして参画</li></ul>
+  </section>
+
+  <section id="services">
     <h2>お任せいただけること</h2>
-    <div class="legend">
-      <p>それぞれの依頼が、どの立場の相手に効くかを示しています。</p>
-      <div class="chips"><span class="chip" style="--c:#2E5E8A">国・政策</span><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#6B5B95">大企業</span><span class="chip" style="--c:#B08423">中小・地域</span><span class="chip" style="--c:#A8553A">人材育成・場づくり</span></div>
-    </div>
-    <div class="cards">
-      <article class="card">
+    <div class="cards"><article class="card">
         <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
         <h3>自治体の計画づくりと政策立案の伴走</h3>
-        <p>総合計画・産業振興計画・DX推進計画の策定支援、審議会・有識者委員、庁内ワークショップの設計と進行。国の政策側で計画を書いた経験があるため、上位計画や交付金の要件と現場のやりたいことの間を、無理なく接続する形で書き分けられます。</p>
-        <p class="proof"><span>根拠となる経験</span>内閣府での科学技術・イノベーション基本計画策定／静岡県南伊豆町 総合計画審議委員／神戸市・草津市アドバイザー</p>
-      </article>
-      <article class="card">
+        <p>総合計画・産業振興計画・DX推進計画の策定支援、審議会・有識者委員、庁内ワークショップの設計と進行。国の政策側で計画を書いた経験を活かし、上位計画や交付金の要件と現場のやりたいことを無理なく接続します。オンライン参加可。契約形態は委員報酬・謝金・業務委託など、実績のある形態に対応します。</p><p class="proof"><span>経験</span>内閣府での科学技術・イノベーション基本計画策定／総合計画審議委員・自治体アドバイザー多数</p></article><article class="card">
         <div class="chips"><span class="chip" style="--c:#B08423">中小・地域</span></div>
         <h3>中小企業の経営改善計画・数値計画の策定と実行支援</h3>
-        <p>決算書の分析から、金融機関に出せる経営改善計画・資金繰り表・数値計画までを作り、その後のモニタリングまで伴走します。認定経営革新等支援機関として、制度上の要件を満たす形で作成できます。</p>
-        <p class="proof"><span>根拠となる経験</span>中小企業診断士／経営革新等認定支援機関／中小機構 中小企業アドバイザー／信用保証協会 専門家登録</p>
-      </article>
-      <article class="card">
+        <p>決算書の分析から、金融機関に提出できる経営改善計画・資金繰り表・数値計画までを作成し、月次モニタリングまで伴走します。製造・卸売・サービスなど従業員5〜50名規模の支援実績があります。標準的には月1回訪問・6か月程度の伴走です。</p><p class="proof"><span>経験</span>中小企業診断士／経営革新等認定支援機関／よろず支援拠点サポーター</p></article><article class="card">
         <div class="chips"><span class="chip" style="--c:#B08423">中小・地域</span><span class="chip" style="--c:#6B5B95">大企業</span></div>
         <h3>生産性向上・業務改革の現場支援</h3>
-        <p>時間観測（サイクルタイム・リードタイム・稼働／非稼働）に基づく現場の可視化から、5M＋1Eの視点での改善計画づくりまで。大企業で間接部門のシェアードサービス化と全社稟議システム導入を実行した経験を、中小企業の規模に合わせて置き換えます。</p>
-        <p class="proof"><span>根拠となる経験</span>福島県よろず支援拠点 生産性向上支援センター サポーター／NEC コーポレート変革</p>
-      </article>
-      <article class="card">
+        <p>時間観測に基づく現場の可視化から、改善計画づくりまで。大企業で実行した間接部門改革・稟議システム導入の経験を、中小企業の規模に合わせて置き換えます。</p><p class="proof"><span>経験</span>福島県よろず支援拠点 生産性向上支援センター サポーター／NEC コーポレート変革</p></article><article class="card">
         <div class="chips"><span class="chip" style="--c:#B08423">中小・地域</span><span class="chip" style="--c:#3F7A6E">自治体</span></div>
         <h3>AI・ICT活用の導入支援（構想から実物まで）</h3>
-        <p>「AIで何ができるか」の勉強会で終わらせず、実際に業務で動くものを一緒に作るところまで。生成AIの業務適用、社内ルールの整備、小さな内製ツールの試作を行います。</p>
-        <p class="proof"><span>根拠となる経験</span>JDLA Deep Learning for GENERAL 合格／Vibe Coder Bootcamp 修了／総務省 財務・会計DXアドバイザー</p>
-      </article>
-      <article class="card">
+        <p>勉強会で終わらせず、業務で動くものを一緒に作るところまで。生成AIの業務適用、社内ルール整備、小さな内製ツールの試作に対応します。</p><p class="proof"><span>経験</span>JDLA Deep Learning for GENERAL 合格／総務省 財務・会計DXアドバイザー</p></article><article class="card">
         <div class="chips"><span class="chip" style="--c:#A8553A">人材育成・場づくり</span></div>
         <h3>研修・講演・ワークショップの設計と登壇</h3>
-        <p>経営指導員・自治体職員・経営者向けの研修を、講義だけで終わらせず演習と成果物まで含めて設計します。司会進行、パネルのモデレート、イベント全体の企画運営も引き受けます。</p>
-        <p class="proof"><span>根拠となる経験</span>エフエム会津 パーソナリティ／各種研修・ワークショップの企画運営／デジタル庁 well-being指標活用ファシリテーター</p>
-      </article>
-      <article class="card">
+        <p>経営指導員・自治体職員・経営者向けに、演習と持ち帰り成果物まで含めて設計。司会進行、パネルモデレート、イベント全体の企画運営も承ります。</p><p class="proof"><span>経験</span>エフエム会津 パーソナリティ／デジタル庁 well-being指標活用ファシリテーター</p></article><article class="card">
         <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#B08423">中小・地域</span></div>
         <h3>地域診断・産地／商店街の面的支援</h3>
-        <p>個社ではなく「面」で地域を見る診断。統計データの読み解き、地域経済循環の構造整理、キーパーソンの洗い出し、使える国の政策の紐づけまでを一つのレポートにまとめます。</p>
-        <p class="proof"><span>根拠となる経験</span>静岡県南伊豆町での地域診断事業と面的支援（2018年〜）／NPO法人 中小企業・地域創生ネットワーク 理事</p>
-      </article>
-      <article class="card">
+        <p>統計の読み解き、地域経済循環の整理、キーパーソン洗い出し、使える国の政策との接続までを一つのレポートにまとめます。</p><p class="proof"><span>経験</span>地域診断・面的支援（2018年〜）／NPO 中小企業・地域創生ネットワーク 理事</p></article><article class="card">
         <div class="chips"><span class="chip" style="--c:#6B5B95">大企業</span><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
         <h3>大企業と自治体をつなぐ共創・実証のコーディネート</h3>
-        <p>自治体と組みたい企業、企業と組みたい自治体の間に立ち、双方の意思決定の作法の違いを踏まえて話をまとめます。コンソーシアム型の場づくりそのものの設計もできます。</p>
-        <p class="proof"><span>根拠となる経験</span>スマートシティ社会実装コンソーシアム設立（のべ約300団体）／千葉県DX推進協議会 市民共創推進部会 運営</p>
-      </article>
-      <article class="card">
+        <p>双方の意思決定の作法の違いを踏まえて話をまとめます。予算サイクルや稟議の実務感覚も共有できます。守秘契約の締結に対応します。</p><p class="proof"><span>経験</span>スマートシティ社会実装コンソーシアム（のべ約300団体）／千葉県DX推進協議会</p></article><article class="card">
         <div class="chips"><span class="chip" style="--c:#6B5B95">大企業</span><span class="chip" style="--c:#B08423">中小・地域</span></div>
         <h3>成長企業のコーポレート機能・グループ経営の設計</h3>
-        <p>人が増えて管理が回らなくなった会社の、会議体の設計、決裁ルール、子会社を含めたガバナンス、理念やバリューの言語化と浸透。大企業の型をそのまま持ち込むのではなく、その規模で機能する最小構成に落とします。</p>
-        <p class="proof"><span>根拠となる経験</span>NEC 経営企画部門でのグループ経営（約400社）、全社会議体運営、稟議システム導入、ビジョン・バリュー策定</p>
-      </article>
-    </div>
+        <p>会議体・決裁ルール・ガバナンス、理念の言語化と浸透。大企業の型をそのまま持ち込まず、規模に合った最小構成に落とします。</p><p class="proof"><span>経験</span>NEC 経営企画部門でのグループ経営（約400社）</p></article></div>
+  </section>
+
+  <section id="npo-menu">
+    <h2>NPO・地域活動向けの支援</h2>
+    <p>地域のNPO、市民団体、自治会活動向けに、無償または減額の相談枠を設けています。
+助成金の整理、会計・組織運営の見直し、住民の合意形成の場づくり、デジタル活用の試行などに対応します。
+まずはお気軽にご相談ください。</p>
+  </section>
+
+  <section id="training">
+    <h2>講演・研修の演題例</h2>
+    <ul class="plainlist"><li>中小企業のための生成AI入門（90分・演習付き）</li><li>自治体職員向けDX・業務改革ワークショップ（半日）</li><li>経営指導員向け・経営改善計画の書き方（90分〜半日）</li><li>well-being指標を使った対話の場づくり（半日）</li><li>スマートシティ・まちづくり入門（自治体・企業向け）</li><li>司会・モデレート（イベント当日）</li></ul>
   </section>
 
   <section>
     <h2>経歴</h2>
-    <ul class="timeline">
-      <li>
+    <ul class="timeline"><li>
+        <div class="when">2026年7月〜</div>
+        <div class="what">
+          <h3>スマートシティ国際学会 事務局</h3>
+          
+          <p>学会運営・国際連携の事務局業務に就任。</p>
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
+        </div></li><li>
         <div class="when">2025年10月〜</div>
         <div class="what">
           <h3>まちとしごととくらしの研究所 設立</h3>
           <p class="org">所長／主任研究員</p>
-          <p>自治体の政策・DX支援と、中小企業の経営改善・生産性向上支援を行う個人事業として設立。2026年2月に経営革新等支援機関の認定を取得。</p>
+          <p>自治体の政策・DX支援と、中小企業の経営改善・生産性向上支援。2026年2月に経営革新等支援機関の認定を取得。</p>
           <div class="chips"><span class="chip" style="--c:#B08423">中小・地域</span><span class="chip" style="--c:#3F7A6E">自治体</span></div>
-        </div>
-      </li>
-      <li>
+        </div></li><li>
         <div class="when">2022年5月〜2025年6月</div>
         <div class="what">
           <h3>一般社団法人スマートシティ社会実装コンソーシアム 設立・運営</h3>
           
-          <p>のべ約300団体の企業・自治体・大学・非営利団体の参画により、新たなデジタルサービスの創出を推進。2025年6月にNECを退職。</p>
+          <p>のべ約300団体（企業・自治体・大学・NPO等）の参画により共創を推進。2025年6月にNECを退職。</p>
           <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#6B5B95">大企業</span><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
-        </div>
-      </li>
-      <li>
+        </div></li><li>
         <div class="when">2019年〜2021年</div>
         <div class="what">
           <h3>内閣府 科学技術・イノベーション推進事務局（出向）</h3>
           
-          <p>科学技術・イノベーション基本計画の策定を担当。スマートシティリファレンスアーキテクチャの検討、スマートシティガイドブックの策定、政府関連政策におけるスマートシティ計画の調整に携わる。</p>
+          <p>科学技術・イノベーション基本計画の策定、スマートシティガイドブック・参照アーキテクチャ、関連政策の調整。</p>
           <div class="chips"><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
-        </div>
-      </li>
-      <li>
-        <div class="when">NEC 事業企画部門（スマートシティ分野）</div>
+        </div></li><li>
+        <div class="when">2018年〜2025年</div>
         <div class="what">
-          <h3>自治体との連携による事業創出</h3>
+          <h3>NEC 事業企画部門（スマートシティ分野）</h3>
           <p class="org">日本電気株式会社</p>
           <p>自治体との連携によるスマートシティ関連の事業創出を担当。</p>
           <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#6B5B95">大企業</span></div>
-        </div>
-      </li>
-      <li>
-        <div class="when">NEC 経営企画部門</div>
+        </div></li><li>
+        <div class="when">2003年4月〜2018年</div>
         <div class="what">
-          <h3>グループ経営・コーポレート変革</h3>
+          <h3>NEC 経営企画部門</h3>
           <p class="org">日本電気株式会社</p>
-          <p>トップサポート業務、全社会議体の運営と経営意思決定の支援、コーポレート機能（間接部門）のシェアードサービス化、全社稟議のシステム導入、子会社約100社・孫会社含め約400社のグループ経営とグループ経営ポリシー策定、グローバルな人的リソース戦略策定、ビジョン・バリューの検討と周知展開、カルチャー変革、他社との連携・共創による新事業創出支援。</p>
+          <p>トップサポート、全社会議体運営、間接部門のシェアードサービス化、全社稟議システム導入、約400社のグループ経営、ビジョン・バリュー策定とカルチャー変革。</p>
           <div class="chips"><span class="chip" style="--c:#6B5B95">大企業</span></div>
-        </div>
-      </li>
-      <li>
-        <div class="when"></div>
+        </div></li><li>
+        <div class="when">2003年3月</div>
         <div class="what">
           <h3>東京大学 工学部 卒業</h3>
           
           
           <div class="chips"></div>
-        </div>
-      </li>
-    </ul>
+        </div></li></ul>
   </section>
 
   <section>
     <h2>現在の所属</h2>
-    <ul class="plainlist"><li><span class="when">2026年4月〜</span><span class="what">福島県よろず支援拠点 生産性向上支援センター サポーター</span></li><li><span class="when">2026年1月〜</span><span class="what">エフエム会津 パーソナリティ（毎週火曜 11:00–13:00「ひるキュン！パレット」）</span></li><li><span class="when">2025年12月〜</span><span class="what">株式会社子ラボ屋 代表取締役</span></li><li><span class="when">2023年2月〜</span><span class="what">特定非営利活動法人 中小企業・地域創生ネットワーク 理事</span></li></ul>
+    <ul class="plainlist"><li><span class="when">2026年7月〜</span><span>スマートシティ国際学会 事務局</span></li><li><span class="when">2026年4月〜</span><span>福島県よろず支援拠点 生産性向上支援センター サポーター</span></li><li><span class="when">2026年1月〜</span><span>エフエム会津 パーソナリティ（毎週火曜 11:00–13:00「ひるキュン！パレット」）</span></li><li><span class="when">2025年12月〜</span><span>株式会社子ラボ屋 代表取締役</span></li><li><span class="when">2023年2月〜</span><span>特定非営利活動法人 中小企業・地域創生ネットワーク 理事</span></li></ul>
   </section>
 
   <section>
     <h2>資格・委嘱</h2>
-    <div class="creds"><div class="credgroup"><h3>行政とのかかわり</h3><ul><li>総務省 地方公共団体の経営・財務マネジメント強化事業　財務・会計DXアドバイザー</li><li>デジタル庁 well-being指標活用ファシリテーター認定講座 修了（第1期）</li><li>デジタル庁認定　デジタル推進委員</li><li>千葉県DX推進協議会「市民共創推進部会」運営</li><li>千葉県流山市との連携による自治会活動改善活動「自治ラボ」運営</li><li>兵庫県神戸市 スマートシティアドバイザー</li><li>滋賀県草津市 スマートシティ社会実装アドバイザー</li><li>静岡県南伊豆町 総合計画審議委員（2018年より地域診断事業、産業振興計画の検討、地域事業者の面的支援）</li></ul></div><div class="credgroup"><h3>企業とのかかわり</h3><ul><li>経済産業大臣認定　中小企業診断士（2013〜）</li><li>一般社団法人 福島県中小企業診断協会 会員（2024〜）</li><li>独立行政法人 中小企業基盤整備機構　中小企業アドバイザー［経営支援］（2024年4月〜）</li><li>経済産業省 経営革新等認定支援機関（2026年2月〜）</li><li>福島県よろず支援拠点 生産性向上支援センター サポーター（2026年4月〜）</li><li>福島県信用保証協会／中小企業団体中央会 等の専門家登録</li></ul></div><div class="credgroup"><h3>AI・デジタル関連</h3><ul><li>JDLA Deep Learning for GENERAL 2025#3 検定合格</li><li>Vibe Coder Bootcamp 修了（2026年3月）</li></ul></div></div>
+    <div class="creds"><div class="credgroup"><h3>行政とのかかわり</h3><ul><li>総務省 地方公共団体の経営・財務マネジメント強化事業　財務・会計DXアドバイザー</li><li>デジタル庁 well-being指標活用ファシリテーター認定講座 修了（第1期）</li><li>デジタル庁認定　デジタル推進委員</li><li>千葉県DX推進協議会「市民共創推進部会」運営</li><li>千葉県流山市との連携による自治会活動改善活動「自治ラボ」運営</li><li>兵庫県神戸市 スマートシティアドバイザー</li><li>滋賀県草津市 スマートシティ社会実装アドバイザー</li><li>静岡県南伊豆町 総合計画審議委員（2018年より地域診断・面的支援）</li></ul></div><div class="credgroup"><h3>企業とのかかわり</h3><ul><li>経済産業大臣認定　中小企業診断士（2013〜）</li><li>一般社団法人 福島県中小企業診断協会 会員（2024〜）</li><li>独立行政法人 中小企業基盤整備機構　中小企業アドバイザー［経営支援］（2024年4月〜）</li><li>経済産業省 経営革新等認定支援機関（2026年2月〜）</li><li>福島県よろず支援拠点 生産性向上支援センター サポーター（2026年4月〜）</li><li>福島県信用保証協会／中小企業団体中央会 等の専門家登録</li></ul></div><div class="credgroup"><h3>保有資格（ビジネス・専門）</h3><ul><li>経済産業大臣認定　中小企業診断士</li><li>国内旅行業務取扱管理者</li><li>GX検定 ベーシック</li><li>ファイナンシャル・プランニング技能士 3級（日本FP協会）</li><li>第二級海技士（小型船舶）</li><li>普通自動車第一種運転免許（MT）</li><li>一般社団法人日本合コン協会認定　合コンマスター</li><li>温泉ソムリエ</li><li>世界遺産検定 3級</li><li>その他（各種検定・講座修了など）</li></ul></div><div class="credgroup"><h3>AI・デジタル関連</h3><ul><li>JDLA Deep Learning for GENERAL 2025#3 検定合格</li><li>Vibe Coder Bootcamp 修了（2026年3月）</li></ul></div></div>
   </section>
 
   <section>
     <h2>主な活動分野</h2>
-    <ul class="plainlist"><li>地方公共団体における政策立案、DX推進に関する支援</li><li>民間企業における事業戦略・事業計画策定、新規事業検討の支援</li><li>研修・ワークショップの企画運営、イベント司会進行、ファシリテーション</li><li>ICT／AI活用による業務改革支援と実践</li></ul>
+    <ul class="plainlist"><li>地方公共団体における政策立案、DX推進に関する支援</li><li>民間企業における事業戦略・事業計画策定、新規事業検討の支援</li><li>研修・ワークショップの企画運営、イベント司会進行、ファシリテーション</li><li>ICT／AI活用による業務改革支援と実践</li><li>NPO・地域コミュニティの合意形成と活動設計</li></ul>
   </section>
 
   <section>
-    <h2>連絡先</h2>
-    <dl class="contact"><div class="row"><dt>Web</dt><dd><a href="https://www.office626.com/">https://www.office626.com/</a></dd></div><div class="row"><dt>note</dt><dd><a href="https://note.com/office626">https://note.com/office626</a></dd></div><div class="row"><dt>Spotify</dt><dd><a href="https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3">https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3</a></dd></div><div class="row"><dt>Facebook</dt><dd><a href="https://www.facebook.com/tutti666">https://www.facebook.com/tutti666</a></dd></div><div class="row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/tutti0626/">https://www.instagram.com/tutti0626/</a></dd></div><div class="row"><dt>オフィス</dt><dd>福島県会津若松市</dd></div><div class="row"><dt>オフィス</dt><dd>千葉県流山市</dd></div></dl>
+    <h2>ご依頼の流れ・費用</h2>
+    <ol><li>お問い合わせ（フォームまたはWebサイト）</li><li>30分程度のオンライン初回ヒアリング（無料）</li><li>課題整理と支援方針・お見積りのご提示</li><li>契約・キックオフ・伴走開始</li></ol>
+    <p class="lead" style="margin-top:16px">内容・期間・契約形態により異なります。中小企業向けは制度活用により事業者負担を抑えられる場合があります。
+自治体向けは委員報酬・謝金・業務委託のいずれかで、過去の契約実績に沿った形態をご提案します。
+詳細は初回ヒアリング後にお見積りいたします。</p>
   </section>
 
+  <section>
+    <h2>方針</h2>
+    <p><strong>中立性：</strong>2025年6月にNECを退職済みです。現在、いかなるベンダーとも資本関係・販売関係・専属契約はありません。案件ごとに利益相反が生じる場合は、事前に開示し、必要に応じて辞退または役割を限定します。</p>
+    <p><strong>守秘：</strong>守秘契約の締結に対応します。公開プロフィール・ポートフォリオに掲載する事例は、クライアントの許諾または匿名化・一般化した表現に限定します。</p>
+    <p><strong>リモート：</strong>オンライン参加・リモート伴走に対応します。福島県・千葉県・関東圏は対面訪問も可能です。</p>
+  </section>
 
-  <div class="lang-divider" id="english"></div>
-  <header class="lang-en">
-    <p class="eyebrow">Profile (English)</p>
-    <h1>Tsuchiya Toshihiro</h1>
-    <p class="kana">土屋俊博 &nbsp;/&nbsp; つちや としひろ</p>
-    <p class="tagline">A management consultant who has experienced four perspectives from the inside—from national policy to the front lines of SMEs.</p>
-    <p class="affil-line">
-      <strong>Institute for Towns, Work, and Living</strong> — Director / Lead Researcher<br>
-      Certified Management Innovation Support Organization / Sole Proprietorship<br>
-      Born in Komoro, Nagano / Aizuwakamatsu, Fukushima &amp; Nagareyama, Chiba (dual-base since April 2024)
-    </p>
+  <section>
+    <h2>発注先の別</h2>
+    <ul class="plainlist"><li><strong>まちとしごととくらしの研究所（土屋俊博）</strong> — コンサルティング、自治体委員・講師、中小企業支援、研修・講演</li><li><strong>株式会社子ラボ屋</strong> — 法人契約が必要な案件、商品・サービス開発関連（内容により使い分け）</li></ul>
+    <p class="lead">インボイス登録番号はお見積り時にご案内します。</p>
+  </section>
+
+  <section id="contact">
+    <h2>連絡先・お仕事のご相談</h2>
+    <dl class="contact"><div class="row"><dt>Web</dt><dd><a href="https://www.office626.com/">https://www.office626.com/</a></dd></div><div class="row"><dt>note</dt><dd><a href="https://note.com/office626">https://note.com/office626</a></dd></div><div class="row"><dt>Spotify</dt><dd><a href="https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3">https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3</a></dd></div><div class="row"><dt>Facebook</dt><dd><a href="https://www.facebook.com/tutti666">https://www.facebook.com/tutti666</a></dd></div><div class="row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/tutti0626/">https://www.instagram.com/tutti0626/</a></dd></div><div class="row"><dt>オフィス</dt><dd>福島県会津若松市</dd></div><div class="row"><dt>オフィス</dt><dd>千葉県流山市</dd></div></dl>
+    <h3 style="margin-top:32px">お問い合わせフォーム</h3>
+    <p class="lead">初回のご相談は30分程度のオンライン面談から承ります。</p>
+    
+    <form class="form-grid" action="https://formsubmit.co/tutti@office626.com" method="POST">
+      <input type="hidden" name="_subject" value="プロフィールサイトからのお仕事のご相談">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <div><label for="name">お名前 *</label><input id="name" name="name" required></div>
+      <div><label for="org">ご所属</label><input id="org" name="organization"></div>
+      <div><label for="email">メールアドレス *</label><input id="email" name="email" type="email" required></div>
+      <div><label for="type">ご相談の種類</label>
+        <select id="type" name="inquiry_type">
+          <option>自治体・行政</option><option>中小企業</option><option>大企業</option>
+          <option>NPO・地域活動</option><option>研修・講演</option><option>その他</option>
+        </select></div>
+      <div><label for="message">ご相談内容 *</label>
+        <textarea id="message" name="message" required placeholder="課題・希望時期・予算感など"></textarea></div>
+      <button class="btn" type="submit">送信する</button>
+    </form>
+  </section>
+
+  <div class="lang-divider" id="english">ENGLISH PROFILE</div>
+
+  <header style="padding-top:24px;border:0">
+    <h1 style="font-size:clamp(28px,5vw,42px)">Tsuchiya Toshihiro</h1>
+    <p class="tagline">Management consultant with inside experience across national policy, local government, large enterprises, and SMEs.</p>
+    <p class="affil-line">まちとしごととくらしの研究所 — 所長 ／ 主任研究員</p>
   </header>
 
   <section>
-    <h2>What I Can Help With</h2>
-    <div class="legend">
-      <p>Tags show which stakeholder context each assignment fits.</p>
-      <div class="chips"><span class="chip" style="--c:#2E5E8A">National / Policy</span><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#6B5B95">Large Enterprise</span><span class="chip" style="--c:#B08423">SMEs / Regional</span><span class="chip" style="--c:#A8553A">Talent / Community</span></div>
-    </div>
-    <div class="cards">
-      <article class="card">
-        <div class="chips"><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#2E5E8A">National / Policy</span></div>
-        <h3>Local government planning and policy development</h3>
-        <p>Support for comprehensive plans, industrial promotion plans, and DX promotion plans; advisory committees; and design and facilitation of in-house workshops. Experience drafting plans on the national policy side helps bridge upper-level plans and grant requirements with what communities actually want to do.</p>
-        <p class="proof"><span>Relevant experience</span>Science, Technology and Innovation Basic Plan at the Cabinet Office / Comprehensive Plan Review Committee, Minamiizu Town / Advisor to Kobe and Kusatsu cities</p>
-      </article>
-      <article class="card">
-        <div class="chips"><span class="chip" style="--c:#B08423">SMEs / Regional</span></div>
-        <h3>SME business improvement and financial planning with follow-through</h3>
-        <p>From financial statement analysis to bank-ready improvement plans, cash-flow forecasts, and numerical plans—with ongoing monitoring. As a certified support organization, documents meet formal requirements.</p>
-        <p class="proof"><span>Relevant experience</span>SME Management Consultant / Certified Management Innovation Support Organization / SME Advisor, Organization for SME and Regional Innovation / Credit Guarantee Corporation expert registration</p>
-      </article>
-      <article class="card">
-        <div class="chips"><span class="chip" style="--c:#B08423">SMEs / Regional</span><span class="chip" style="--c:#6B5B95">Large Enterprise</span></div>
-        <h3>On-site productivity improvement and business reform</h3>
-        <p>From time studies (cycle time, lead time, uptime/downtime) to improvement planning through the 5M+1E lens. Applies large-enterprise experience in shared services and approval systems at SME scale.</p>
-        <p class="proof"><span>Relevant experience</span>Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base / NEC corporate transformation</p>
-      </article>
-      <article class="card">
-        <div class="chips"><span class="chip" style="--c:#B08423">SMEs / Regional</span><span class="chip" style="--c:#3F7A6E">Local Government</span></div>
-        <h3>AI and ICT adoption—from concept to working tools</h3>
-        <p>Goes beyond “what can AI do?” seminars to building things that actually work in operations: generative AI use cases, internal rules, and small in-house tool prototypes.</p>
-        <p class="proof"><span>Relevant experience</span>JDLA Deep Learning for GENERAL / Vibe Coder Bootcamp / Financial and Accounting DX Advisor, MIC</p>
-      </article>
-      <article class="card">
-        <div class="chips"><span class="chip" style="--c:#A8553A">Talent / Community</span></div>
-        <h3>Training, lectures, and workshop design and delivery</h3>
-        <p>Programs for business advisors, government staff, and executives—designed with exercises and deliverables, not lectures alone. Also moderates panels and plans and runs events end to end.</p>
-        <p class="proof"><span>Relevant experience</span>FM Aizu personality / training and workshop design / Digital Agency Well-being Indicators Facilitator</p>
-      </article>
-      <article class="card">
-        <div class="chips"><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#B08423">SMEs / Regional</span></div>
-        <h3>Regional diagnosis and area-based support for industrial districts and shopping streets</h3>
-        <p>Diagnosis at the area level, not company by company: reading statistics, mapping regional economic circulation, identifying key people, and linking usable national policies into one report.</p>
-        <p class="proof"><span>Relevant experience</span>Regional diagnosis and area support in Minamiizu Town since 2018 / Board Member, NPO SME and Regional Revitalization Network</p>
-      </article>
-      <article class="card">
-        <div class="chips"><span class="chip" style="--c:#6B5B95">Large Enterprise</span><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#2E5E8A">National / Policy</span></div>
-        <h3>Co-creation and pilot coordination between large companies and local governments</h3>
-        <p>Bridges companies that want to work with municipalities and municipalities that want corporate partners, accounting for differences in how each side decides. Can also design consortium-style platforms.</p>
-        <p class="proof"><span>Relevant experience</span>Founded Smart City Social Implementation Consortium (~300 organizations) / Chiba Prefecture DX Promotion Council, Citizen Co-creation Promotion Committee</p>
-      </article>
-      <article class="card">
-        <div class="chips"><span class="chip" style="--c:#6B5B95">Large Enterprise</span><span class="chip" style="--c:#B08423">SMEs / Regional</span></div>
-        <h3>Corporate functions and group management design for growing companies</h3>
-        <p>Meeting structures, approval rules, governance including subsidiaries, and articulating and embedding vision and values—scaled down to what works at each company’s size, not copied from big-company playbooks.</p>
-        <p class="proof"><span>Relevant experience</span>NEC corporate planning: group management (~400 companies), company-wide councils, approval system, vision and values</p>
-      </article>
-    </div>
+    <h2>For whom</h2>
+    <div class="audience-grid"><div class="audience-card"><strong>Government &amp; public sector</strong><p>Planning, committees, workshops. Remote participation available.</p></div><div class="audience-card"><strong>SME owners</strong><p>Start with free consultation entry points. Business improvement and productivity support.</p></div><div class="audience-card"><strong>Large enterprises</strong><p>Public-private collaboration coordination. No vendor exclusivity.</p></div><div class="audience-card"><strong>NPOs &amp; community groups</strong><p>Pro bono or reduced-fee consultation slots available.</p></div><div class="audience-card"><strong>Training &amp; events</strong><p>Keynotes, workshops, moderation from 90 minutes to half-day.</p></div></div>
+  </section>
+
+  <section>
+    <h2>Services</h2>
+    <p class="lead">See Japanese section above for full service descriptions.</p>
+    <div class="cards"><article class="card">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
+        <h3>自治体の計画づくりと政策立案の伴走</h3>
+        <p>総合計画・産業振興計画・DX推進計画の策定支援、審議会・有識者委員、庁内ワークショップの設計と進行。国の政策側で計画を書いた経験を活かし、上位計画や交付金の要件と現場のやりたいことを無理なく接続します。オンライン参加可。契約形態は委員報酬・謝金・業務委託など、実績のある形態に対応します。</p><p class="proof"><span>Experience</span>内閣府での科学技術・イノベーション基本計画策定／総合計画審議委員・自治体アドバイザー多数</p></article><article class="card">
+        <div class="chips"><span class="chip" style="--c:#B08423">中小・地域</span></div>
+        <h3>中小企業の経営改善計画・数値計画の策定と実行支援</h3>
+        <p>決算書の分析から、金融機関に提出できる経営改善計画・資金繰り表・数値計画までを作成し、月次モニタリングまで伴走します。製造・卸売・サービスなど従業員5〜50名規模の支援実績があります。標準的には月1回訪問・6か月程度の伴走です。</p><p class="proof"><span>Experience</span>中小企業診断士／経営革新等認定支援機関／よろず支援拠点サポーター</p></article><article class="card">
+        <div class="chips"><span class="chip" style="--c:#B08423">中小・地域</span><span class="chip" style="--c:#6B5B95">大企業</span></div>
+        <h3>生産性向上・業務改革の現場支援</h3>
+        <p>時間観測に基づく現場の可視化から、改善計画づくりまで。大企業で実行した間接部門改革・稟議システム導入の経験を、中小企業の規模に合わせて置き換えます。</p><p class="proof"><span>Experience</span>福島県よろず支援拠点 生産性向上支援センター サポーター／NEC コーポレート変革</p></article><article class="card">
+        <div class="chips"><span class="chip" style="--c:#B08423">中小・地域</span><span class="chip" style="--c:#3F7A6E">自治体</span></div>
+        <h3>AI・ICT活用の導入支援（構想から実物まで）</h3>
+        <p>勉強会で終わらせず、業務で動くものを一緒に作るところまで。生成AIの業務適用、社内ルール整備、小さな内製ツールの試作に対応します。</p><p class="proof"><span>Experience</span>JDLA Deep Learning for GENERAL 合格／総務省 財務・会計DXアドバイザー</p></article><article class="card">
+        <div class="chips"><span class="chip" style="--c:#A8553A">人材育成・場づくり</span></div>
+        <h3>研修・講演・ワークショップの設計と登壇</h3>
+        <p>経営指導員・自治体職員・経営者向けに、演習と持ち帰り成果物まで含めて設計。司会進行、パネルモデレート、イベント全体の企画運営も承ります。</p><p class="proof"><span>Experience</span>エフエム会津 パーソナリティ／デジタル庁 well-being指標活用ファシリテーター</p></article><article class="card">
+        <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#B08423">中小・地域</span></div>
+        <h3>地域診断・産地／商店街の面的支援</h3>
+        <p>統計の読み解き、地域経済循環の整理、キーパーソン洗い出し、使える国の政策との接続までを一つのレポートにまとめます。</p><p class="proof"><span>Experience</span>地域診断・面的支援（2018年〜）／NPO 中小企業・地域創生ネットワーク 理事</p></article><article class="card">
+        <div class="chips"><span class="chip" style="--c:#6B5B95">大企業</span><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
+        <h3>大企業と自治体をつなぐ共創・実証のコーディネート</h3>
+        <p>双方の意思決定の作法の違いを踏まえて話をまとめます。予算サイクルや稟議の実務感覚も共有できます。守秘契約の締結に対応します。</p><p class="proof"><span>Experience</span>スマートシティ社会実装コンソーシアム（のべ約300団体）／千葉県DX推進協議会</p></article><article class="card">
+        <div class="chips"><span class="chip" style="--c:#6B5B95">大企業</span><span class="chip" style="--c:#B08423">中小・地域</span></div>
+        <h3>成長企業のコーポレート機能・グループ経営の設計</h3>
+        <p>会議体・決裁ルール・ガバナンス、理念の言語化と浸透。大企業の型をそのまま持ち込まず、規模に合った最小構成に落とします。</p><p class="proof"><span>Experience</span>NEC 経営企画部門でのグループ経営（約400社）</p></article></div>
   </section>
 
   <section>
     <h2>Career</h2>
-    <ul class="timeline">
-      <li>
-        <div class="when">Oct 2025–</div>
+    <ul class="timeline"><li>
+        <div class="when">2026年7月〜</div>
         <div class="what">
-          <h3>Founded the Institute for Towns, Work, and Living</h3>
-          <p class="org">Director / Lead Researcher</p>
-          <p>Established as a sole proprietorship supporting local government policy and DX, and SME business improvement and productivity. Certified as a Management Innovation Support Organization in February 2026.</p>
-          <div class="chips"><span class="chip" style="--c:#B08423">SMEs / Regional</span><span class="chip" style="--c:#3F7A6E">Local Government</span></div>
-        </div>
-      </li>
-      <li>
-        <div class="when">May 2022–Jun 2025</div>
-        <div class="what">
-          <h3>Founded and operated the Smart City Social Implementation Consortium</h3>
+          <h3>スマートシティ国際学会 事務局</h3>
           
-          <p>Promoted new digital services with participation from roughly 300 companies, local governments, universities, and nonprofits. Left NEC in June 2025.</p>
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#6B5B95">Large Enterprise</span><span class="chip" style="--c:#2E5E8A">National / Policy</span></div>
-        </div>
-      </li>
-      <li>
-        <div class="when">2019–2021</div>
+          <p>学会運営・国際連携の事務局業務に就任。</p>
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
+        </div></li><li>
+        <div class="when">2025年10月〜</div>
         <div class="what">
-          <h3>Cabinet Office, Headquarters for Science, Technology and Innovation (secondment)</h3>
+          <h3>まちとしごととくらしの研究所 設立</h3>
+          <p class="org">所長／主任研究員</p>
+          <p>自治体の政策・DX支援と、中小企業の経営改善・生産性向上支援。2026年2月に経営革新等支援機関の認定を取得。</p>
+          <div class="chips"><span class="chip" style="--c:#B08423">中小・地域</span><span class="chip" style="--c:#3F7A6E">自治体</span></div>
+        </div></li><li>
+        <div class="when">2022年5月〜2025年6月</div>
+        <div class="what">
+          <h3>一般社団法人スマートシティ社会実装コンソーシアム 設立・運営</h3>
           
-          <p>Led work on the Science, Technology and Innovation Basic Plan, smart-city reference architecture, the Smart City Guidebook, and coordination of smart-city plans across government policies.</p>
-          <div class="chips"><span class="chip" style="--c:#2E5E8A">National / Policy</span></div>
-        </div>
-      </li>
-      <li>
-        <div class="when">NEC, Business Planning (Smart City)</div>
+          <p>のべ約300団体（企業・自治体・大学・NPO等）の参画により共創を推進。2025年6月にNECを退職。</p>
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#6B5B95">大企業</span><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
+        </div></li><li>
+        <div class="when">2019年〜2021年</div>
         <div class="what">
-          <h3>Business development with local governments</h3>
-          <p class="org">NEC Corporation</p>
-          <p>Created smart-city-related businesses through partnerships with municipalities.</p>
-          <div class="chips"><span class="chip" style="--c:#3F7A6E">Local Government</span><span class="chip" style="--c:#6B5B95">Large Enterprise</span></div>
-        </div>
-      </li>
-      <li>
-        <div class="when">NEC, Corporate Planning</div>
+          <h3>内閣府 科学技術・イノベーション推進事務局（出向）</h3>
+          
+          <p>科学技術・イノベーション基本計画の策定、スマートシティガイドブック・参照アーキテクチャ、関連政策の調整。</p>
+          <div class="chips"><span class="chip" style="--c:#2E5E8A">国・政策</span></div>
+        </div></li><li>
+        <div class="when">2018年〜2025年</div>
         <div class="what">
-          <h3>Group management and corporate transformation</h3>
-          <p class="org">NEC Corporation</p>
-          <p>Top-support work, company-wide council operations, shared services for indirect functions, company-wide approval system implementation, group management for roughly 400 subsidiaries including about 100 direct subsidiaries, global HR strategy, vision and values development, culture change, and new business creation through partnerships.</p>
-          <div class="chips"><span class="chip" style="--c:#6B5B95">Large Enterprise</span></div>
-        </div>
-      </li>
-      <li>
-        <div class="when"></div>
+          <h3>NEC 事業企画部門（スマートシティ分野）</h3>
+          <p class="org">日本電気株式会社</p>
+          <p>自治体との連携によるスマートシティ関連の事業創出を担当。</p>
+          <div class="chips"><span class="chip" style="--c:#3F7A6E">自治体</span><span class="chip" style="--c:#6B5B95">大企業</span></div>
+        </div></li><li>
+        <div class="when">2003年4月〜2018年</div>
         <div class="what">
-          <h3>Graduated, Faculty of Engineering, University of Tokyo</h3>
+          <h3>NEC 経営企画部門</h3>
+          <p class="org">日本電気株式会社</p>
+          <p>トップサポート、全社会議体運営、間接部門のシェアードサービス化、全社稟議システム導入、約400社のグループ経営、ビジョン・バリュー策定とカルチャー変革。</p>
+          <div class="chips"><span class="chip" style="--c:#6B5B95">大企業</span></div>
+        </div></li><li>
+        <div class="when">2003年3月</div>
+        <div class="what">
+          <h3>東京大学 工学部 卒業</h3>
           
           
           <div class="chips"></div>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Current Positions</h2>
-    <ul class="plainlist"><li><span class="when">Apr 2026–</span><span class="what">Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base</span></li><li><span class="when">Jan 2026–</span><span class="what">FM Aizu personality (Tue 11:00–13:00, “Hirukyun! Palette”)</span></li><li><span class="when">Dec 2025–</span><span class="what">Representative Director, Kodomo Laboya Inc.</span></li><li><span class="when">Feb 2023–</span><span class="what">Board Member, NPO SME and Regional Revitalization Network</span></li></ul>
-  </section>
-
-  <section>
-    <h2>Credentials &amp; Appointments</h2>
-    <div class="creds"><div class="credgroup"><h3>Government</h3><ul><li>Advisor for Financial and Accounting DX, Ministry of Internal Affairs and Communications program for strengthening local government management</li><li>Completed Digital Agency Well-being Indicators Facilitator Training (Cohort 1)</li><li>Certified Digital Promotion Officer, Digital Agency</li><li>Operations, Chiba Prefecture DX Promotion Council, Citizen Co-creation Promotion Committee</li><li>Operations, “Jichi Lab” community association improvement project with Nagareyama City, Chiba</li><li>Smart City Advisor, Kobe City, Hyogo Prefecture</li><li>Smart City Social Implementation Advisor, Kusatsu City, Shiga Prefecture</li><li>Comprehensive Plan Review Committee Member, Minamiizu Town, Shizuoka (regional diagnosis, industrial promotion planning, and area-based business support since 2018)</li></ul></div><div class="credgroup"><h3>Business</h3><ul><li>Certified SME Management Consultant, METI (since 2013)</li><li>Member, Fukushima SME Management Consultant Association (since 2024)</li><li>SME Advisor [Management Support], Organization for SME and Regional Innovation (since Apr 2024)</li><li>Certified Management Innovation Support Organization, METI (since Feb 2026)</li><li>Productivity Improvement Support Center Supporter, Fukushima Yorozu Support Base (since Apr 2026)</li><li>Registered expert with Fukushima Credit Guarantee Corporation, SME organizations, and related bodies</li></ul></div><div class="credgroup"><h3>AI &amp; Digital</h3><ul><li>JDLA Deep Learning for GENERAL 2025 #3 (passed)</li><li>Vibe Coder Bootcamp (completed Mar 2026)</li></ul></div></div>
-  </section>
-
-  <section>
-    <h2>Areas of Practice</h2>
-    <ul class="plainlist"><li>Policy development and DX promotion support for local governments</li><li>Business strategy, business planning, and new business development support for private companies</li><li>Training and workshop design, event moderation, and facilitation</li><li>Business reform through ICT and AI, including hands-on implementation</li></ul>
+        </div></li></ul>
   </section>
 
   <section>
     <h2>Contact</h2>
-    <dl class="contact"><div class="row"><dt>Web</dt><dd><a href="https://www.office626.com/">https://www.office626.com/</a></dd></div><div class="row"><dt>note</dt><dd><a href="https://note.com/office626">https://note.com/office626</a></dd></div><div class="row"><dt>Spotify</dt><dd><a href="https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3">https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3</a></dd></div><div class="row"><dt>Facebook</dt><dd><a href="https://www.facebook.com/tutti666">https://www.facebook.com/tutti666</a></dd></div><div class="row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/tutti0626/">https://www.instagram.com/tutti0626/</a></dd></div><div class="row"><dt>Office</dt><dd>Aizuwakamatsu, Fukushima Prefecture</dd></div><div class="row"><dt>Office</dt><dd>Nagareyama, Chiba Prefecture</dd></div></dl>
+    <dl class="contact"><div class="row"><dt>Web</dt><dd><a href="https://www.office626.com/">https://www.office626.com/</a></dd></div><div class="row"><dt>note</dt><dd><a href="https://note.com/office626">https://note.com/office626</a></dd></div><div class="row"><dt>Spotify</dt><dd><a href="https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3">https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3</a></dd></div><div class="row"><dt>Facebook</dt><dd><a href="https://www.facebook.com/tutti666">https://www.facebook.com/tutti666</a></dd></div><div class="row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/tutti0626/">https://www.instagram.com/tutti0626/</a></dd></div><div class="row"><dt>オフィス</dt><dd>福島県会津若松市</dd></div><div class="row"><dt>オフィス</dt><dd>千葉県流山市</dd></div></dl>
+    
+    <form class="form-grid" action="https://formsubmit.co/tutti@office626.com" method="POST">
+      <input type="hidden" name="_subject" value="プロフィールサイトからのお仕事のご相談">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <div><label for="name">お名前 *</label><input id="name" name="name" required></div>
+      <div><label for="org">ご所属</label><input id="org" name="organization"></div>
+      <div><label for="email">メールアドレス *</label><input id="email" name="email" type="email" required></div>
+      <div><label for="type">ご相談の種類</label>
+        <select id="type" name="inquiry_type">
+          <option>自治体・行政</option><option>中小企業</option><option>大企業</option>
+          <option>NPO・地域活動</option><option>研修・講演</option><option>その他</option>
+        </select></div>
+      <div><label for="message">ご相談内容 *</label>
+        <textarea id="message" name="message" required placeholder="課題・希望時期・予算感など"></textarea></div>
+      <button class="btn" type="submit">送信する</button>
+    </form>
   </section>
 
-
-  <footer>LAST UPDATED 2026-08-29</footer>
+  <footer>LAST UPDATED 2026-08-29 ｜
+    <a href="https://github.com/office626/profile">Source</a>
+  </footer>
 </div>
 </body>
 </html>
