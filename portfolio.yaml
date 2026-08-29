@@ -258,15 +258,55 @@ cases:
     result: 組合員の資産保全に向けた方針と実行ステップを文書化
 
   # --- 大企業 ---
-  - id: enterprise-group-governance
+  - id: enterprise-top-support
     category: 大企業
     related_service: "成長企業のコーポレート機能・グループ経営の設計"
-    title: 大手企業グループのコーポレート変革
+    title: 経営トップの意思決定支援（トップサポート）
     client: 大手電機・IT企業グループ（約400社）
     role: 経営企画部門
     period: "2003–2018年"
-    scope: トップサポート、全社会議体運営、間接部門のシェアードサービス化、全社稟議システム導入、グループ経営ポリシー策定
-    result: 経営意思決定の速度向上と、子会社を含むガバナンスの標準化。理念・バリューの浸透施策を設計
+    scope: 経営トップ向けの論点整理と資料作成、社内外の関係者調整、意思決定に必要な情報の集約
+    result: 経営トップが短時間で判断できる論点整理の型を定着。意思決定の速度向上に寄与
+
+  - id: enterprise-governance-meetings
+    category: 大企業
+    related_service: "成長企業のコーポレート機能・グループ経営の設計"
+    title: 全社会議体の設計・運営
+    client: 大手電機・IT企業グループ（約400社）
+    role: 経営企画部門
+    period: "2003–2018年"
+    scope: 全社的な会議体の位置づけ整理、付議基準・運営ルールの設計、議事運営と決定事項の追跡
+    result: 会議体ごとの役割と付議基準を明確化。決定から実行までの引き継ぎ漏れを抑制
+
+  - id: enterprise-shared-service
+    category: 大企業
+    related_service: "生産性向上・業務改革の現場支援"
+    title: 間接部門のシェアードサービス化
+    client: 大手電機・IT企業グループ（約400社）
+    role: 経営企画部門
+    period: "2003–2018年"
+    scope: 間接業務の棚卸しと標準化、集約対象業務の切り出し、移管計画の策定と関係部門調整
+    result: 間接部門の業務を集約し標準化。重複業務の削減と品質のばらつき低減を実現
+
+  - id: enterprise-workflow-system
+    category: 大企業
+    related_service: "AI・ICT活用の導入支援（構想から実物まで）"
+    title: 全社稟議システムの導入
+    client: 大手電機・IT企業グループ（約400社）
+    role: 経営企画部門
+    period: "2003–2018年"
+    scope: 決裁ルールの整理と業務要件の定義、システム導入の推進、全社展開に向けた運用設計と定着支援
+    result: 紙・属人的な決裁プロセスを電子化。決裁状況の可視化と処理期間の短縮を実現
+
+  - id: enterprise-group-policy
+    category: 大企業
+    related_service: "成長企業のコーポレート機能・グループ経営の設計"
+    title: グループ経営ポリシーの策定と理念・バリューの浸透
+    client: 大手電機・IT企業グループ（約400社）
+    role: 経営企画部門
+    period: "2003–2018年"
+    scope: グループ経営ポリシーの策定、子会社を含む統制範囲の整理、ビジョン・バリューの検討と社内浸透施策の設計
+    result: 子会社を含むガバナンスの標準化。理念・バリューを行動に落とす浸透施策を設計・展開
 
   - id: consortium-300
     category: 大企業・自治体
