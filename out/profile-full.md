@@ -72,10 +72,10 @@ ICT・AI活用による業務改革の実践、研修やワークショップの
 ## 連絡先
 
 - Web：https://www.office626.com/
-- Mail：tutti@office626.com
 - note：https://note.com/office626
 - Spotify：https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3
 - Facebook：https://www.facebook.com/tutti666
 - Instagram：https://www.instagram.com/tutti0626/
-- 拠点：福島県会津若松市／千葉県流山市
+- オフィス：福島県会津若松市
+- オフィス：千葉県流山市
 

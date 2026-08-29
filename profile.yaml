@@ -208,12 +208,13 @@ offerings:
 # ------------------------------------------------------------
 contacts:
   - { label: "Web",       value: "https://www.office626.com/",                    public: true,  link: true }
-  - { label: "Mail",      value: "tutti@office626.com",                            public: true,  link: false }
+  - { label: "Mail",      value: "tutti@office626.com",                            public: false, link: false }
   - { label: "note",      value: "https://note.com/office626",                     public: true,  link: true }
   - { label: "Spotify",   value: "https://open.spotify.com/show/3BgfnR4LDB2UuyMtOLALk3", public: true, link: true }
   - { label: "Facebook",  value: "https://www.facebook.com/tutti666",              public: true,  link: true }
   - { label: "Instagram", value: "https://www.instagram.com/tutti0626/",           public: true,  link: true }
-  - { label: "拠点",      value: "福島県会津若松市／千葉県流山市",                  public: true,  link: false }
+  - { label: "オフィス",  value: "福島県会津若松市",                              public: true,  link: false }
+  - { label: "オフィス",  value: "千葉県流山市",                                  public: true,  link: false }
   - { label: "Tel",       value: "090-4432-5156",                                  public: false, link: false }
   - { label: "住所",      value: "〒965-0817 福島県会津若松市千石町3-43-603号 エスパーダ千石", public: false, link: false }
   - { label: "LINE",      value: "tutti666",                                       public: false, link: false }

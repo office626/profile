@@ -1,7 +1,7 @@
 {
   "meta": {
     "updated": "2026-08-29",
-    "github_user": "CHANGE-ME",
+    "github_user": "office626",
     "repo_name": "profile"
   },
   "layers": {
@@ -252,12 +252,6 @@
       "link": true
     },
     {
-      "label": "Mail",
-      "value": "tutti@office626.com",
-      "public": true,
-      "link": false
-    },
-    {
       "label": "note",
       "value": "https://note.com/office626",
       "public": true,
@@ -282,8 +276,14 @@
       "link": true
     },
     {
-      "label": "拠点",
-      "value": "福島県会津若松市／千葉県流山市",
+      "label": "オフィス",
+      "value": "福島県会津若松市",
+      "public": true,
+      "link": false
+    },
+    {
+      "label": "オフィス",
+      "value": "千葉県流山市",
       "public": true,
       "link": false
     }
