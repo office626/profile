@@ -659,6 +659,7 @@ def main():
 
     pub = dict(d)
     pub["contacts"] = public_contacts(d)
+    pub.pop("contact_form", None)
     write("out/profile.json", json.dumps(pub, ensure_ascii=False, indent=2) + "\n")
 
     print("\n完了しました。")

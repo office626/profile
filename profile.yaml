@@ -411,7 +411,6 @@ endnotes:
 
 contact_form:
   action: "https://formsubmit.co/tutti@office626.com"
-  email: "tutti@office626.com"
 
 contacts:
   - { label: "Web",       value: "https://www.office626.com/",                    public: true,  link: true }
