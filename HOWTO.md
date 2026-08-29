@@ -18,8 +18,8 @@ README.md も docs/index.html も、すべてそこから自動生成されま�
 
 終わると2つのURLが表示されます。
 
-- `https://office626.github.io/tsuchiya-profile/` … お客様に送るのはこちら（読みやすいページ）
-- `https://github.com/office626/tsuchiya-profile` … テキストで見たい方向け
+- `https://office626.github.io/profile/` … お客様に送るのはこちら（読みやすいページ）
+- `https://github.com/office626/profile` … テキストで見たい方向け
 
 ---
 
