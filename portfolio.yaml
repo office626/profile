@@ -288,10 +288,10 @@ cases:
     scope: 調査計画の策定、企業と自治体の双方の論点整理、ワークショップ設計、実証に向けた論点の言語化
     result: 双方の意思決定の作法の違いを踏まえた提案ストーリーを整理。次年度実証設計への接続
 
-  - id: sci-japan-forum
+  - id: smartcity-industry-event
     category: 大企業・自治体
     related_service: "研修・講演・ワークショップの設計と登壇"
-    title: スマートシティ社会実装フォーラム
+    title: スマートシティ関連業界のイベント企画運営
     client: スマートシティ推進団体・自治体・企業
     role: 開会基調挨拶・講師
     period: "2025年"
