@@ -194,6 +194,65 @@ def build_career_html(d):
     return out
 
 
+def build_media_html(mc):
+    e = html.escape
+    if not mc or not mc.get("items"):
+        return ""
+    items = ""
+    for it in mc["items"]:
+        date = f'<span class="when">{e(it.get("date", ""))}</span> ' if it.get("date") else ""
+        media = (
+            f' <span style="color:var(--ink-soft);font-size:13px">（{e(it["media"])}）</span>'
+            if it.get("media") else ""
+        )
+        if it.get("url"):
+            title = f'<a href="{e(it["url"])}">{e(it["title"])}</a>'
+        else:
+            title = e(it["title"])
+        note = f' — {e(it["note"])}' if it.get("note") else ""
+        items += f"<li>{date}{title}{media}{note}</li>"
+    return (
+        f'<h3 style="margin-top:28px">メディア掲載・取材</h3>'
+        f'<p class="lead">{e(mc.get("intro", ""))}</p>'
+        f'<ul class="plainlist pub-list">{items}</ul>'
+    )
+
+
+def build_writings_html(wr):
+    e = html.escape
+    if not wr:
+        return ""
+    pages = ""
+    if wr.get("author_pages"):
+        pages = "<ul class='plainlist pub-list'>" + "".join(
+            f'<li><a href="{e(p["url"])}">{e(p["label"])}</a></li>'
+            for p in wr["author_pages"]
+        ) + "</ul>"
+    items = ""
+    for it in wr.get("items", []):
+        date = f'<span class="when">{e(it.get("date", ""))}</span> ' if it.get("date") else ""
+        pub = (
+            f' <span style="color:var(--ink-soft);font-size:13px">（{e(it["publication"])}）</span>'
+            if it.get("publication") else ""
+        )
+        if it.get("url"):
+            title = f'<a href="{e(it["url"])}">{e(it["title"])}</a>'
+        else:
+            title = e(it["title"])
+        note = f' — {e(it["note"])}' if it.get("note") else ""
+        items += f"<li>{date}{title}{pub}{note}</li>"
+    body = pages
+    if items:
+        body += f'<ul class="plainlist pub-list">{items}</ul>'
+    if not body:
+        return ""
+    return (
+        f'<h3 style="margin-top:28px">執筆・コラム</h3>'
+        f'<p class="lead">{e(wr.get("intro", ""))}</p>'
+        f"{body}"
+    )
+
+
 def build_contact_form(d):
     e = html.escape
     cf = d.get("contact_form", {})
@@ -254,6 +313,9 @@ def build_html(d, portfolio):
         f'{" — " + e(n["theme"]) if n.get("theme") else ""}</li>'
         for n in d.get("featured_notes", [])
     ) + "</ul>"
+
+    media_block = build_media_html(d.get("media_coverage", {}))
+    writings_block = build_writings_html(d.get("writings", {}))
 
     cases_preview = ""
     for c in (portfolio.get("cases") or [])[:3]:
@@ -344,6 +406,8 @@ def build_html(d, portfolio):
     {cases_preview}
     <h3 style="margin-top:28px">代表的な記事（note）</h3>
     {notes}
+    {media_block}
+    {writings_block}
     <h3 style="margin-top:28px">公開成果物</h3>
     {pubs}
   </section>
@@ -536,6 +600,42 @@ def build_readme(d, portfolio):
         else:
             a(f"- **{it['title']}** — {it['body']}")
     a("")
+    mc = d.get("media_coverage", {})
+    if mc.get("items"):
+        a("## メディア掲載・取材")
+        a("")
+        a(mc.get("intro", ""))
+        a("")
+        for it in mc["items"]:
+            line = f"- {it.get('date', '—')} / {it.get('media', '')}"
+            if it.get("url"):
+                line += f" — [{it['title']}]({it['url']})"
+            else:
+                line += f" — {it['title']}"
+            if it.get("note"):
+                line += f" — {it['note']}"
+            a(line)
+        a("")
+    wr = d.get("writings", {})
+    if wr.get("items") or wr.get("author_pages"):
+        a("## 執筆・コラム")
+        a("")
+        a(wr.get("intro", ""))
+        a("")
+        for p in wr.get("author_pages", []):
+            a(f"- [{p['label']}]({p['url']})")
+        if wr.get("author_pages") and wr.get("items"):
+            a("")
+        for it in wr.get("items", []):
+            line = f"- {it.get('date', '—')} / {it.get('publication', '')}"
+            if it.get("url"):
+                line += f" — [{it['title']}]({it['url']})"
+            else:
+                line += f" — {it['title']}"
+            if it.get("note"):
+                line += f" — {it['note']}"
+            a(line)
+        a("")
     a("## お任せいただけること")
     a("")
     for x in d.get("offerings", []):
