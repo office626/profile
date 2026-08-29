@@ -8,3 +8,8 @@ __pycache__/
 プロフィールページ_プレビュー.html
 tsuchiya-profile-repo.zip
 unzipped-profile/
+downloads/
+
+# 写真の元データ（公開用は docs/assets/ に配置したものを使う）
+assets/*.jpg
+assets/*.JPG

@@ -23,6 +23,7 @@ cases:
     result: 全国の自治体・研究機関・事業者が参照する上位計画として公表。政策と現場実装をつなぐ共通言語を整備
 
   - id: smartcity-guidebook
+    featured: true
     category: 国・政策
     related_service: "自治体の計画づくりと政策立案の伴走"
     title: スマートシティガイドブック・参照アーキテクチャの策定
@@ -76,6 +77,7 @@ cases:
     result: 住民参加型の計画策定プロセスを継続運営。部局横断の議論と市民の意見を接続
 
   - id: municipal-comprehensive-plan-town
+    featured: true
     category: 自治体
     related_service: "地域診断・産地／商店街の面的支援"
     title: 総合計画・地域診断の継続支援
@@ -86,6 +88,7 @@ cases:
     result: 計画策定プロセスを住民・事業者と共有。複数年にわたる面的支援の土台を整備
 
   - id: smartcity-advisor-designated-city
+    featured: true
     category: 自治体
     related_service: "自治体の計画づくりと政策立案の伴走"
     title: 政令指定都市のスマートシティ実装アドバイザー
@@ -116,6 +119,7 @@ cases:
     result: 職員・市民がオープンデータの活用イメージを持てる形で設計・実施
 
   - id: finance-dx-municipality
+    featured: true
     category: 自治体
     related_service: "AI・ICT活用の導入支援（構想から実物まで）"
     title: 自治体の財務・会計DX支援
@@ -167,6 +171,7 @@ cases:
 
   # --- 中小企業 ---
   - id: sme-food-manufacturing
+    featured: true
     category: 中小企業
     related_service: "生産性向上・業務改革の現場支援"
     title: 食品製造業の生産性向上
@@ -207,6 +212,7 @@ cases:
     result: 再建に向けた論点を整理し、実行可能な改善ステップを提示
 
   - id: sme-credit-guarantee
+    featured: true
     category: 中小企業
     related_service: "中小企業の経営改善計画・数値計画の策定と実行支援"
     title: 信用保証協会 専門家派遣による経営診断
@@ -227,6 +233,7 @@ cases:
     result: 補助金交付と現場改善を接続。業務フローの見える化を実施
 
   - id: sme-ai-workshop
+    featured: true
     category: 中小企業
     related_service: "AI・ICT活用の導入支援（構想から実物まで）"
     title: 中小企業向け生成AI導入ワークショップ
@@ -288,6 +295,7 @@ cases:
     result: 会議体ごとの役割と付議基準を明確化。決定から実行までの引き継ぎ漏れを抑制
 
   - id: enterprise-shared-service
+    featured: true
     category: 大企業
     related_service: "生産性向上・業務改革の現場支援"
     title: 間接部門のシェアードサービス化
@@ -318,6 +326,7 @@ cases:
     result: 子会社を含むガバナンスの標準化。理念・バリューを行動に落とす浸透施策を設計・展開
 
   - id: consortium-300
+    featured: true
     category: 大企業・自治体
     related_service: "大企業と自治体をつなぐ共創・実証のコーディネート"
     title: 業界横断コンソーシアムの立ち上げと運営
@@ -440,6 +449,7 @@ cases:
 
   # --- 研修・講演 ---
   - id: training-municipal-dx
+    featured: true
     category: 研修・講演
     related_service: "研修・講演・ワークショップの設計と登壇"
     title: 自治体職員向けDX・業務改革研修
