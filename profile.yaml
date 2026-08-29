@@ -10,7 +10,7 @@
 meta:
   updated: "2026-08-29"          # 更新するたびに書き換える（build.pyが未更新なら警告）
   github_user: "office626"       # GitHubユーザー名
-  repo_name: "profile"           # ← リポジトリ名（変えたい場合のみ）
+  repo_name: "tsuchiya-profile"  # GitHubリポジトリ名
 
 # ------------------------------------------------------------
 # 領域タグ：この人が「どの層に効くか」を示す共通の分類。
