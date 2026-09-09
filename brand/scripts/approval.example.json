@@ -1,0 +1,21 @@
+{
+  "status":"draft",
+  "kind":"case",
+  "id":"auto-example-project",
+  "source":"公開用に編集した資料.pdf",
+  "sha256":"収集結果のSHA-256に置き換える",
+  "reviewedBy":"本人の確認後に記載",
+  "reviewedAt":"2026-09-09",
+  "publishAttachment":false,
+  "attachmentLabel":"公開資料",
+  "public":{
+    "title":"実績タイトル",
+    "category":"中小企業",
+    "client":"公開可能な対象の表記",
+    "role":"担当した役割",
+    "period":"実施時期",
+    "scope":"実際に支援した範囲",
+    "result":"根拠が確認できる成果",
+    "related_service":"対応する支援メニュー"
+  }
+}

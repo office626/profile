@@ -1,0 +1,1 @@
+import Link from'next/link';export default function Page(){return <main className="wrap page-head"><p className="eyebrow">404</p><h1>ページが見つかりません。</h1><p className="lead">URLをご確認いただくか、メニューからお探しください。</p><Link className="button" href="/services">相談できることを見る →</Link></main>}

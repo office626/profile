@@ -1,0 +1,3 @@
+import fs from 'node:fs';import path from 'node:path';import YAML from 'yaml';
+const root=process.argv[2];if(!root)throw Error('Specify the existing profile repository');const p=YAML.parse(fs.readFileSync(path.join(root,'profile.yaml'),'utf8'));p.contacts=(p.contacts||[]).filter(c=>c.public===true);const portfolio=YAML.parse(fs.readFileSync(path.join(root,'portfolio.yaml'),'utf8'));for(const c of portfolio.cases){if(!c.id||!c.title)throw Error('Invalid portfolio record')}
+fs.writeFileSync('content/profile.json',JSON.stringify(p,null,2)+'\n');fs.writeFileSync('content/portfolio.json',JSON.stringify(portfolio,null,2)+'\n');console.log('Public profile and portfolio refreshed');
