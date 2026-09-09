@@ -1,63 +1,66 @@
-# profile.yaml を編集して保存するだけで、README とサイトを自動で作り直す。
-# スマホやブラウザから GitHub 上で直接編集した場合も動く。
-name: プロフィールを再生成
-
+name: ブランドサイトを検証・公開
 on:
   push:
     branches: [main]
-    paths:
-      - "profile.yaml"
-      - "portfolio.yaml"
-      - "scripts/build.py"
-      - ".github/workflows/build.yml"
+    paths: ['profile.yaml', 'portfolio.yaml', 'brand/**', '.github/workflows/build.yml']
+  pull_request:
+    paths: ['profile.yaml', 'portfolio.yaml', 'brand/**', '.github/workflows/build.yml']
   workflow_dispatch:
-
 permissions:
-  contents: write
-
+  contents: read
+concurrency:
+  group: portfolio-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-node@v4
         with:
-          python-version: "3.12"
-
-      - run: pip install pyyaml
-
-      - name: 生成
-        run: python3 scripts/build.py
-
-      - name: 非公開情報が混ざっていないか確認
+          node-version: '24.13.0'
+          cache: npm
+          cache-dependency-path: brand/package-lock.json
+      - name: Install
+        run: npm ci
+        working-directory: brand
+      - name: Import public source data
+        run: node scripts/import-profile.mjs ..
+        working-directory: brand
+      - name: Validate collector and types
         run: |
-          python3 - <<'PY'
-          import pathlib, re, sys, yaml
-          contacts = yaml.safe_load(open("profile.yaml", encoding="utf-8")).get("contacts", [])
-          priv = [c["value"] for c in contacts if not c.get("public")]
-          shown = [c["value"] for c in contacts if c.get("public")]
-          targets = list(pathlib.Path(".").glob("README.md")) + list(pathlib.Path("docs").rglob("*")) + list(pathlib.Path("out").rglob("*"))
-          fail = 0
-          for p in targets:
-              if not p.is_file():
-                  continue
-              text = p.read_text(encoding="utf-8", errors="ignore")
-              # 問い合わせフォームの送信先と公開済みの値は、非公開値と文字列が一部重なるため除外する
-              text = re.sub(r"https://formsubmit\.co/[^\"'\s>]+", "", text)
-              for s in shown:
-                  text = text.replace(s, "")
-              for v in priv:
-                  if v and v in text:
-                      print(f"::error::非公開の情報が生成物に含まれています: {v} ({p})")
-                      fail = 1
-          sys.exit(fail)
-          PY
+          npm test
+          npx tsc --noEmit
+        working-directory: brand
+      - name: Build all pages and validate internal links
+        run: npm run build:pages
+        working-directory: brand
+        env:
+          NEXT_PUBLIC_BASE_PATH: /profile
+          SITE_ORIGIN: https://office626.github.io
+      - name: Upload review artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-static-site
+          path: brand/dist/client
+          include-hidden-files: true
+      - name: Upload Pages artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: brand/dist/client
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
 
-      - name: 変更があればコミット
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md docs out
-          git diff --cached --quiet || git commit -m "自動生成: profile.yaml の変更を反映"
-          git push
